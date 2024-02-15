@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public enum BattleState { START, PLAYERTURN, ENEMYTURN, WON, LOST }
 
 public class BattleSystem : MonoBehaviour
-{
+{/*
 
     public GameObject playerPrefab;
     public GameObject enemyPrefab;
@@ -141,5 +141,5 @@ public class BattleSystem : MonoBehaviour
 
         StartCoroutine(PlayerHeal());
     }
-
+*/
 }
