@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: a295833575ef6c848a1284e63c3bbdc2
+guid: 7988e475be3c5f34a896b42e2f4be91a
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -130,7 +130,7 @@ ScriptedImporter:
       y: 64
       width: 15
       height: 21
-    spriteID: 93828fd2653abae4ab0fc7f28bc297c9
+    spriteID: 90be2abd9c8cb4e49b57367002c1f6d5
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -150,7 +150,7 @@ ScriptedImporter:
       y: 180
       width: 15
       height: 20
-    spriteID: 03ceb760bc42de545afe6f67c6c6d8fe
+    spriteID: cc4f1cc8ff8c63740ae6283b443209e9
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -170,7 +170,7 @@ ScriptedImporter:
       y: 4
       width: 15
       height: 22
-    spriteID: 7111c42f596cfb645aeb8c2228ff949b
+    spriteID: e97ffc273b197454ba0cd9bfdbc45438
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -190,7 +190,7 @@ ScriptedImporter:
       y: 118
       width: 16
       height: 21
-    spriteID: 901aca05acd77834687b9cff6756ecc4
+    spriteID: 54c1e401bc84fc84aacb3a970289d136
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -210,7 +210,7 @@ ScriptedImporter:
       y: 147
       width: 16
       height: 21
-    spriteID: 54688945ea46f864baeafe166daaf3df
+    spriteID: 537e6d0c2a903f949af77828e6089628
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -230,7 +230,7 @@ ScriptedImporter:
       y: 93
       width: 15
       height: 21
-    spriteID: 864e6c2883205614a8a980e9df809d71
+    spriteID: 4e10d5e2fbba5a348a33bccac963e7a6
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -250,7 +250,7 @@ ScriptedImporter:
       y: 122
       width: 15
       height: 21
-    spriteID: fc4e0b57f48ef9c4e98bd25f4ed520be
+    spriteID: e102fcef38e010247b146cfbdf29b6cb
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -270,7 +270,7 @@ ScriptedImporter:
       y: 208
       width: 15
       height: 20
-    spriteID: 5b61c4f157462ed4c9c01faf5fbd1d48
+    spriteID: a3fc967dd9b07dc4488079734c983887
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -290,7 +290,7 @@ ScriptedImporter:
       y: 34
       width: 15
       height: 22
-    spriteID: e732f9f7bb2d3034981669bc18827ea5
+    spriteID: 95e91c8a94ca5a547937f5fa2c044b7e
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -310,7 +310,7 @@ ScriptedImporter:
       y: 151
       width: 15
       height: 21
-    spriteID: b0c9d8ffa1970c742966fd382c3a7295
+    spriteID: b5e7463650a3e28469ac43ed8699e975
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -330,7 +330,7 @@ ScriptedImporter:
       y: 176
       width: 16
       height: 21
-    spriteID: af221539da3a57645950e8b59683aaef
+    spriteID: 277cb5ea22f23c043aaa067351dd4309
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -350,7 +350,7 @@ ScriptedImporter:
       y: 205
       width: 16
       height: 21
-    spriteID: eca054eb5763930489c52818215d4968
+    spriteID: 2b38501831bd3054989e44df678e97d2
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -370,7 +370,7 @@ ScriptedImporter:
       y: 64
       width: 20
       height: 21
-    spriteID: b8f2cdb535c4c8e49b3a6fe234ac9afe
+    spriteID: d0a60a11587087b49a160d7073046bbb
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -390,7 +390,7 @@ ScriptedImporter:
       y: 62
       width: 20
       height: 20
-    spriteID: 397b23fb5e03da04786c74abc200bd37
+    spriteID: 330ce8efc915a024e9db7f7b8e966147
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -410,7 +410,7 @@ ScriptedImporter:
       y: 4
       width: 20
       height: 22
-    spriteID: 9902daa1bcb521845aa066c7478b4317
+    spriteID: 3cd8a798fd6d67d4ea9b6c6c7281de23
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -430,7 +430,7 @@ ScriptedImporter:
       y: 93
       width: 20
       height: 21
-    spriteID: cdf37712aafbc15468acb5292f88e59f
+    spriteID: 58566a7b3791cca4c9f110346f366ad1
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -450,7 +450,7 @@ ScriptedImporter:
       y: 122
       width: 20
       height: 21
-    spriteID: b3236903bc0c5034aa9e45e10f3ecd83
+    spriteID: ed85d6d1d53386b4da8e5bef8b953749
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -470,7 +470,7 @@ ScriptedImporter:
       y: 151
       width: 20
       height: 21
-    spriteID: 885ca22df5abb3a408a4e01425631084
+    spriteID: af1ba9871dfa70948bf21f835b7ec05d
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -490,7 +490,7 @@ ScriptedImporter:
       y: 180
       width: 20
       height: 21
-    spriteID: 0484b669ed8537141b44c448d8b8a863
+    spriteID: 134012e6d4d21364c839519e19b95eba
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -510,7 +510,7 @@ ScriptedImporter:
       y: 90
       width: 20
       height: 20
-    spriteID: 5956b52ea6dc5a04f88514bc8d1d0aeb
+    spriteID: f227960c839595a45960111c7d29c06c
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -530,7 +530,7 @@ ScriptedImporter:
       y: 34
       width: 20
       height: 22
-    spriteID: 77bfbd7aa9691994f88c744a5a3f5e81
+    spriteID: 4455d967e25efca47b920099d3d7ff6b
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -550,7 +550,7 @@ ScriptedImporter:
       y: 209
       width: 20
       height: 21
-    spriteID: 1881ef5d6fe9361408562bdd1f9170b8
+    spriteID: 5c95b2114e835c4458069ea10ea1c91c
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -570,7 +570,7 @@ ScriptedImporter:
       y: 4
       width: 20
       height: 21
-    spriteID: 04c4254bbf95e88468a7dd23eb4e8b61
+    spriteID: 1c043556ba2af7d47a1f9e866c84688a
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -590,7 +590,7 @@ ScriptedImporter:
       y: 33
       width: 20
       height: 21
-    spriteID: ad0874855bd5c7647ac3b1f6968a8d2b
+    spriteID: 8964c861e11cc4e47aafc76c26d9276d
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -615,7 +615,7 @@ ScriptedImporter:
         y: 3
         width: 15
         height: 21
-      spriteId: 93828fd2653abae4ab0fc7f28bc297c9
+      spriteId: 90be2abd9c8cb4e49b57367002c1f6d5
     - name: ChibiTheFallenOneLayersMerged_Frame_1
       frameIndex: 1
       cellRect:
@@ -623,7 +623,7 @@ ScriptedImporter:
         y: 3
         width: 15
         height: 20
-      spriteId: 03ceb760bc42de545afe6f67c6c6d8fe
+      spriteId: cc4f1cc8ff8c63740ae6283b443209e9
     - name: ChibiTheFallenOneLayersMerged_Frame_2
       frameIndex: 2
       cellRect:
@@ -631,7 +631,7 @@ ScriptedImporter:
         y: 3
         width: 15
         height: 22
-      spriteId: 7111c42f596cfb645aeb8c2228ff949b
+      spriteId: e97ffc273b197454ba0cd9bfdbc45438
     - name: ChibiTheFallenOneLayersMerged_Frame_3
       frameIndex: 3
       cellRect:
@@ -639,7 +639,7 @@ ScriptedImporter:
         y: 3
         width: 16
         height: 21
-      spriteId: 901aca05acd77834687b9cff6756ecc4
+      spriteId: 54c1e401bc84fc84aacb3a970289d136
     - name: ChibiTheFallenOneLayersMerged_Frame_4
       frameIndex: 4
       cellRect:
@@ -647,7 +647,7 @@ ScriptedImporter:
         y: 3
         width: 16
         height: 21
-      spriteId: 54688945ea46f864baeafe166daaf3df
+      spriteId: 537e6d0c2a903f949af77828e6089628
     - name: ChibiTheFallenOneLayersMerged_Frame_5
       frameIndex: 5
       cellRect:
@@ -655,7 +655,7 @@ ScriptedImporter:
         y: 3
         width: 15
         height: 21
-      spriteId: 864e6c2883205614a8a980e9df809d71
+      spriteId: 4e10d5e2fbba5a348a33bccac963e7a6
     - name: ChibiTheFallenOneLayersMerged_Frame_6
       frameIndex: 6
       cellRect:
@@ -663,7 +663,7 @@ ScriptedImporter:
         y: 3
         width: 15
         height: 21
-      spriteId: fc4e0b57f48ef9c4e98bd25f4ed520be
+      spriteId: e102fcef38e010247b146cfbdf29b6cb
     - name: ChibiTheFallenOneLayersMerged_Frame_7
       frameIndex: 7
       cellRect:
@@ -671,7 +671,7 @@ ScriptedImporter:
         y: 3
         width: 15
         height: 20
-      spriteId: 5b61c4f157462ed4c9c01faf5fbd1d48
+      spriteId: a3fc967dd9b07dc4488079734c983887
     - name: ChibiTheFallenOneLayersMerged_Frame_8
       frameIndex: 8
       cellRect:
@@ -679,7 +679,7 @@ ScriptedImporter:
         y: 3
         width: 15
         height: 22
-      spriteId: e732f9f7bb2d3034981669bc18827ea5
+      spriteId: 95e91c8a94ca5a547937f5fa2c044b7e
     - name: ChibiTheFallenOneLayersMerged_Frame_9
       frameIndex: 9
       cellRect:
@@ -687,7 +687,7 @@ ScriptedImporter:
         y: 3
         width: 15
         height: 21
-      spriteId: b0c9d8ffa1970c742966fd382c3a7295
+      spriteId: b5e7463650a3e28469ac43ed8699e975
     - name: ChibiTheFallenOneLayersMerged_Frame_10
       frameIndex: 10
       cellRect:
@@ -695,7 +695,7 @@ ScriptedImporter:
         y: 3
         width: 16
         height: 21
-      spriteId: af221539da3a57645950e8b59683aaef
+      spriteId: 277cb5ea22f23c043aaa067351dd4309
     - name: ChibiTheFallenOneLayersMerged_Frame_11
       frameIndex: 11
       cellRect:
@@ -703,7 +703,7 @@ ScriptedImporter:
         y: 3
         width: 16
         height: 21
-      spriteId: eca054eb5763930489c52818215d4968
+      spriteId: 2b38501831bd3054989e44df678e97d2
     - name: ChibiTheFallenOneLayersMerged_Frame_12
       frameIndex: 12
       cellRect:
@@ -711,7 +711,7 @@ ScriptedImporter:
         y: 3
         width: 20
         height: 21
-      spriteId: b8f2cdb535c4c8e49b3a6fe234ac9afe
+      spriteId: d0a60a11587087b49a160d7073046bbb
     - name: ChibiTheFallenOneLayersMerged_Frame_13
       frameIndex: 13
       cellRect:
@@ -719,7 +719,7 @@ ScriptedImporter:
         y: 3
         width: 20
         height: 20
-      spriteId: 397b23fb5e03da04786c74abc200bd37
+      spriteId: 330ce8efc915a024e9db7f7b8e966147
     - name: ChibiTheFallenOneLayersMerged_Frame_14
       frameIndex: 14
       cellRect:
@@ -727,7 +727,7 @@ ScriptedImporter:
         y: 3
         width: 20
         height: 22
-      spriteId: 9902daa1bcb521845aa066c7478b4317
+      spriteId: 3cd8a798fd6d67d4ea9b6c6c7281de23
     - name: ChibiTheFallenOneLayersMerged_Frame_15
       frameIndex: 15
       cellRect:
@@ -735,7 +735,7 @@ ScriptedImporter:
         y: 3
         width: 20
         height: 21
-      spriteId: cdf37712aafbc15468acb5292f88e59f
+      spriteId: 58566a7b3791cca4c9f110346f366ad1
     - name: ChibiTheFallenOneLayersMerged_Frame_16
       frameIndex: 16
       cellRect:
@@ -743,7 +743,7 @@ ScriptedImporter:
         y: 3
         width: 20
         height: 21
-      spriteId: b3236903bc0c5034aa9e45e10f3ecd83
+      spriteId: ed85d6d1d53386b4da8e5bef8b953749
     - name: ChibiTheFallenOneLayersMerged_Frame_17
       frameIndex: 17
       cellRect:
@@ -751,7 +751,7 @@ ScriptedImporter:
         y: 3
         width: 20
         height: 21
-      spriteId: 885ca22df5abb3a408a4e01425631084
+      spriteId: af1ba9871dfa70948bf21f835b7ec05d
     - name: ChibiTheFallenOneLayersMerged_Frame_18
       frameIndex: 18
       cellRect:
@@ -759,7 +759,7 @@ ScriptedImporter:
         y: 3
         width: 20
         height: 21
-      spriteId: 0484b669ed8537141b44c448d8b8a863
+      spriteId: 134012e6d4d21364c839519e19b95eba
     - name: ChibiTheFallenOneLayersMerged_Frame_19
       frameIndex: 19
       cellRect:
@@ -767,7 +767,7 @@ ScriptedImporter:
         y: 3
         width: 20
         height: 20
-      spriteId: 5956b52ea6dc5a04f88514bc8d1d0aeb
+      spriteId: f227960c839595a45960111c7d29c06c
     - name: ChibiTheFallenOneLayersMerged_Frame_20
       frameIndex: 20
       cellRect:
@@ -775,7 +775,7 @@ ScriptedImporter:
         y: 3
         width: 20
         height: 22
-      spriteId: 77bfbd7aa9691994f88c744a5a3f5e81
+      spriteId: 4455d967e25efca47b920099d3d7ff6b
     - name: ChibiTheFallenOneLayersMerged_Frame_21
       frameIndex: 21
       cellRect:
@@ -783,7 +783,7 @@ ScriptedImporter:
         y: 3
         width: 20
         height: 21
-      spriteId: 1881ef5d6fe9361408562bdd1f9170b8
+      spriteId: 5c95b2114e835c4458069ea10ea1c91c
     - name: ChibiTheFallenOneLayersMerged_Frame_22
       frameIndex: 22
       cellRect:
@@ -791,7 +791,7 @@ ScriptedImporter:
         y: 3
         width: 20
         height: 21
-      spriteId: 04c4254bbf95e88468a7dd23eb4e8b61
+      spriteId: 1c043556ba2af7d47a1f9e866c84688a
     - name: ChibiTheFallenOneLayersMerged_Frame_23
       frameIndex: 23
       cellRect:
@@ -799,7 +799,7 @@ ScriptedImporter:
         y: 3
         width: 20
         height: 21
-      spriteId: ad0874855bd5c7647ac3b1f6968a8d2b
+      spriteId: 8964c861e11cc4e47aafc76c26d9276d
     linkedCells: []
     parentIndex: -1
   platformSettings: []
