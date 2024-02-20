@@ -1,0 +1,808 @@
+fileFormatVersion: 2
+guid: a295833575ef6c848a1284e63c3bbdc2
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 0
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  previousAsepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  asepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 0
+  textureAssetName: 
+  singleSpriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  animatedSpriteImportData:
+  - name: ChibiTheFallenOneLayersMerged_Frame_0
+    originalName: 
+    pivot: {x: 0.73333335, y: -0.14285715}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 60
+      y: 64
+      width: 15
+      height: 21
+    spriteID: 93828fd2653abae4ab0fc7f28bc297c9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 60, y: 64}
+  - name: ChibiTheFallenOneLayersMerged_Frame_1
+    originalName: 
+    pivot: {x: 0.73333335, y: -0.15}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 60
+      y: 180
+      width: 15
+      height: 20
+    spriteID: 03ceb760bc42de545afe6f67c6c6d8fe
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 60, y: 180}
+  - name: ChibiTheFallenOneLayersMerged_Frame_2
+    originalName: 
+    pivot: {x: 0.73333335, y: -0.13636364}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 60
+      y: 4
+      width: 15
+      height: 22
+    spriteID: 7111c42f596cfb645aeb8c2228ff949b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 60, y: 4}
+  - name: ChibiTheFallenOneLayersMerged_Frame_3
+    originalName: 
+    pivot: {x: 0.6875, y: -0.14285715}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 32
+      y: 118
+      width: 16
+      height: 21
+    spriteID: 901aca05acd77834687b9cff6756ecc4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 32, y: 118}
+  - name: ChibiTheFallenOneLayersMerged_Frame_4
+    originalName: 
+    pivot: {x: 0.6875, y: -0.14285715}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 32
+      y: 147
+      width: 16
+      height: 21
+    spriteID: 54688945ea46f864baeafe166daaf3df
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 32, y: 147}
+  - name: ChibiTheFallenOneLayersMerged_Frame_5
+    originalName: 
+    pivot: {x: 0.73333335, y: -0.14285715}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 60
+      y: 93
+      width: 15
+      height: 21
+    spriteID: 864e6c2883205614a8a980e9df809d71
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 60, y: 93}
+  - name: ChibiTheFallenOneLayersMerged_Frame_6
+    originalName: 
+    pivot: {x: 0.26666668, y: -0.14285715}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 60
+      y: 122
+      width: 15
+      height: 21
+    spriteID: fc4e0b57f48ef9c4e98bd25f4ed520be
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 60, y: 122}
+  - name: ChibiTheFallenOneLayersMerged_Frame_7
+    originalName: 
+    pivot: {x: 0.26666668, y: -0.15}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 60
+      y: 208
+      width: 15
+      height: 20
+    spriteID: 5b61c4f157462ed4c9c01faf5fbd1d48
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 60, y: 208}
+  - name: ChibiTheFallenOneLayersMerged_Frame_8
+    originalName: 
+    pivot: {x: 0.26666668, y: -0.13636364}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 60
+      y: 34
+      width: 15
+      height: 22
+    spriteID: e732f9f7bb2d3034981669bc18827ea5
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 60, y: 34}
+  - name: ChibiTheFallenOneLayersMerged_Frame_9
+    originalName: 
+    pivot: {x: 0.26666668, y: -0.14285715}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 60
+      y: 151
+      width: 15
+      height: 21
+    spriteID: b0c9d8ffa1970c742966fd382c3a7295
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 60, y: 151}
+  - name: ChibiTheFallenOneLayersMerged_Frame_10
+    originalName: 
+    pivot: {x: 0.3125, y: -0.14285715}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 32
+      y: 176
+      width: 16
+      height: 21
+    spriteID: af221539da3a57645950e8b59683aaef
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 32, y: 176}
+  - name: ChibiTheFallenOneLayersMerged_Frame_11
+    originalName: 
+    pivot: {x: 0.3125, y: -0.14285715}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 32
+      y: 205
+      width: 16
+      height: 21
+    spriteID: eca054eb5763930489c52818215d4968
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 32, y: 205}
+  - name: ChibiTheFallenOneLayersMerged_Frame_12
+    originalName: 
+    pivot: {x: 0.5, y: -0.14285715}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 64
+      width: 20
+      height: 21
+    spriteID: b8f2cdb535c4c8e49b3a6fe234ac9afe
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 64}
+  - name: ChibiTheFallenOneLayersMerged_Frame_13
+    originalName: 
+    pivot: {x: 0.5, y: -0.15}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 32
+      y: 62
+      width: 20
+      height: 20
+    spriteID: 397b23fb5e03da04786c74abc200bd37
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 32, y: 62}
+  - name: ChibiTheFallenOneLayersMerged_Frame_14
+    originalName: 
+    pivot: {x: 0.5, y: -0.13636364}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 20
+      height: 22
+    spriteID: 9902daa1bcb521845aa066c7478b4317
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+  - name: ChibiTheFallenOneLayersMerged_Frame_15
+    originalName: 
+    pivot: {x: 0.5, y: -0.14285715}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 93
+      width: 20
+      height: 21
+    spriteID: cdf37712aafbc15468acb5292f88e59f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 93}
+  - name: ChibiTheFallenOneLayersMerged_Frame_16
+    originalName: 
+    pivot: {x: 0.5, y: -0.14285715}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 122
+      width: 20
+      height: 21
+    spriteID: b3236903bc0c5034aa9e45e10f3ecd83
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 122}
+  - name: ChibiTheFallenOneLayersMerged_Frame_17
+    originalName: 
+    pivot: {x: 0.5, y: -0.14285715}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 151
+      width: 20
+      height: 21
+    spriteID: 885ca22df5abb3a408a4e01425631084
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 151}
+  - name: ChibiTheFallenOneLayersMerged_Frame_18
+    originalName: 
+    pivot: {x: 0.5, y: -0.14285715}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 180
+      width: 20
+      height: 21
+    spriteID: 0484b669ed8537141b44c448d8b8a863
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 180}
+  - name: ChibiTheFallenOneLayersMerged_Frame_19
+    originalName: 
+    pivot: {x: 0.5, y: -0.15}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 32
+      y: 90
+      width: 20
+      height: 20
+    spriteID: 5956b52ea6dc5a04f88514bc8d1d0aeb
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 32, y: 90}
+  - name: ChibiTheFallenOneLayersMerged_Frame_20
+    originalName: 
+    pivot: {x: 0.5, y: -0.13636364}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 34
+      width: 20
+      height: 22
+    spriteID: 77bfbd7aa9691994f88c744a5a3f5e81
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 34}
+  - name: ChibiTheFallenOneLayersMerged_Frame_21
+    originalName: 
+    pivot: {x: 0.5, y: -0.14285715}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 209
+      width: 20
+      height: 21
+    spriteID: 1881ef5d6fe9361408562bdd1f9170b8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 209}
+  - name: ChibiTheFallenOneLayersMerged_Frame_22
+    originalName: 
+    pivot: {x: 0.5, y: -0.14285715}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 32
+      y: 4
+      width: 20
+      height: 21
+    spriteID: 04c4254bbf95e88468a7dd23eb4e8b61
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 32, y: 4}
+  - name: ChibiTheFallenOneLayersMerged_Frame_23
+    originalName: 
+    pivot: {x: 0.5, y: -0.14285715}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 32
+      y: 33
+      width: 20
+      height: 21
+    spriteID: ad0874855bd5c7647ac3b1f6968a8d2b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 32, y: 33}
+  spriteSheetImportData: []
+  asepriteLayers:
+  - layerIndex: 0
+    guid: -1802437856
+    name: ChibiTheFallenOneLayersMerged
+    layerFlags: 0
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: ChibiTheFallenOneLayersMerged_Frame_0
+      frameIndex: 0
+      cellRect:
+        x: 5
+        y: 3
+        width: 15
+        height: 21
+      spriteId: 93828fd2653abae4ab0fc7f28bc297c9
+    - name: ChibiTheFallenOneLayersMerged_Frame_1
+      frameIndex: 1
+      cellRect:
+        x: 5
+        y: 3
+        width: 15
+        height: 20
+      spriteId: 03ceb760bc42de545afe6f67c6c6d8fe
+    - name: ChibiTheFallenOneLayersMerged_Frame_2
+      frameIndex: 2
+      cellRect:
+        x: 5
+        y: 3
+        width: 15
+        height: 22
+      spriteId: 7111c42f596cfb645aeb8c2228ff949b
+    - name: ChibiTheFallenOneLayersMerged_Frame_3
+      frameIndex: 3
+      cellRect:
+        x: 5
+        y: 3
+        width: 16
+        height: 21
+      spriteId: 901aca05acd77834687b9cff6756ecc4
+    - name: ChibiTheFallenOneLayersMerged_Frame_4
+      frameIndex: 4
+      cellRect:
+        x: 5
+        y: 3
+        width: 16
+        height: 21
+      spriteId: 54688945ea46f864baeafe166daaf3df
+    - name: ChibiTheFallenOneLayersMerged_Frame_5
+      frameIndex: 5
+      cellRect:
+        x: 5
+        y: 3
+        width: 15
+        height: 21
+      spriteId: 864e6c2883205614a8a980e9df809d71
+    - name: ChibiTheFallenOneLayersMerged_Frame_6
+      frameIndex: 6
+      cellRect:
+        x: 12
+        y: 3
+        width: 15
+        height: 21
+      spriteId: fc4e0b57f48ef9c4e98bd25f4ed520be
+    - name: ChibiTheFallenOneLayersMerged_Frame_7
+      frameIndex: 7
+      cellRect:
+        x: 12
+        y: 3
+        width: 15
+        height: 20
+      spriteId: 5b61c4f157462ed4c9c01faf5fbd1d48
+    - name: ChibiTheFallenOneLayersMerged_Frame_8
+      frameIndex: 8
+      cellRect:
+        x: 12
+        y: 3
+        width: 15
+        height: 22
+      spriteId: e732f9f7bb2d3034981669bc18827ea5
+    - name: ChibiTheFallenOneLayersMerged_Frame_9
+      frameIndex: 9
+      cellRect:
+        x: 12
+        y: 3
+        width: 15
+        height: 21
+      spriteId: b0c9d8ffa1970c742966fd382c3a7295
+    - name: ChibiTheFallenOneLayersMerged_Frame_10
+      frameIndex: 10
+      cellRect:
+        x: 11
+        y: 3
+        width: 16
+        height: 21
+      spriteId: af221539da3a57645950e8b59683aaef
+    - name: ChibiTheFallenOneLayersMerged_Frame_11
+      frameIndex: 11
+      cellRect:
+        x: 11
+        y: 3
+        width: 16
+        height: 21
+      spriteId: eca054eb5763930489c52818215d4968
+    - name: ChibiTheFallenOneLayersMerged_Frame_12
+      frameIndex: 12
+      cellRect:
+        x: 6
+        y: 3
+        width: 20
+        height: 21
+      spriteId: b8f2cdb535c4c8e49b3a6fe234ac9afe
+    - name: ChibiTheFallenOneLayersMerged_Frame_13
+      frameIndex: 13
+      cellRect:
+        x: 6
+        y: 3
+        width: 20
+        height: 20
+      spriteId: 397b23fb5e03da04786c74abc200bd37
+    - name: ChibiTheFallenOneLayersMerged_Frame_14
+      frameIndex: 14
+      cellRect:
+        x: 6
+        y: 3
+        width: 20
+        height: 22
+      spriteId: 9902daa1bcb521845aa066c7478b4317
+    - name: ChibiTheFallenOneLayersMerged_Frame_15
+      frameIndex: 15
+      cellRect:
+        x: 6
+        y: 3
+        width: 20
+        height: 21
+      spriteId: cdf37712aafbc15468acb5292f88e59f
+    - name: ChibiTheFallenOneLayersMerged_Frame_16
+      frameIndex: 16
+      cellRect:
+        x: 6
+        y: 3
+        width: 20
+        height: 21
+      spriteId: b3236903bc0c5034aa9e45e10f3ecd83
+    - name: ChibiTheFallenOneLayersMerged_Frame_17
+      frameIndex: 17
+      cellRect:
+        x: 6
+        y: 3
+        width: 20
+        height: 21
+      spriteId: 885ca22df5abb3a408a4e01425631084
+    - name: ChibiTheFallenOneLayersMerged_Frame_18
+      frameIndex: 18
+      cellRect:
+        x: 6
+        y: 3
+        width: 20
+        height: 21
+      spriteId: 0484b669ed8537141b44c448d8b8a863
+    - name: ChibiTheFallenOneLayersMerged_Frame_19
+      frameIndex: 19
+      cellRect:
+        x: 6
+        y: 3
+        width: 20
+        height: 20
+      spriteId: 5956b52ea6dc5a04f88514bc8d1d0aeb
+    - name: ChibiTheFallenOneLayersMerged_Frame_20
+      frameIndex: 20
+      cellRect:
+        x: 6
+        y: 3
+        width: 20
+        height: 22
+      spriteId: 77bfbd7aa9691994f88c744a5a3f5e81
+    - name: ChibiTheFallenOneLayersMerged_Frame_21
+      frameIndex: 21
+      cellRect:
+        x: 6
+        y: 3
+        width: 20
+        height: 21
+      spriteId: 1881ef5d6fe9361408562bdd1f9170b8
+    - name: ChibiTheFallenOneLayersMerged_Frame_22
+      frameIndex: 22
+      cellRect:
+        x: 6
+        y: 3
+        width: 20
+        height: 21
+      spriteId: 04c4254bbf95e88468a7dd23eb4e8b61
+    - name: ChibiTheFallenOneLayersMerged_Frame_23
+      frameIndex: 23
+      cellRect:
+        x: 6
+        y: 3
+        width: 20
+        height: 21
+      spriteId: ad0874855bd5c7647ac3b1f6968a8d2b
+    linkedCells: []
+    parentIndex: -1
+  platformSettings: []
+  secondarySpriteTextures: []
+  spritePackingTag: 
+  canvasSize: {x: 32, y: 32}
