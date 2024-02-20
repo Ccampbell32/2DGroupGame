@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: HellWalls_3
   m_EditorClassIdentifier: 
-  m_Sprite: {fileID: 677779885, guid: c348388e672099344b5f3d23db6af867, type: 3}
+  m_Sprite: {fileID: 677779885, guid: 4a32fa07346495d49a7e1ac755c885dc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:
     e00: 1
