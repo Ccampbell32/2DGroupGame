@@ -57,7 +57,7 @@ public class PlayerMovement : MonoBehaviour
 
 
     }
-    private void Update()
+    /*private void Update()
     {
         if (Input.GetKey(KeyCode.E))
         {
@@ -74,5 +74,5 @@ public class PlayerMovement : MonoBehaviour
 
 
     }
-
+    */
 }
