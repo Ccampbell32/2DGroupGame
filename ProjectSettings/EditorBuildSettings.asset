@@ -11,7 +11,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_ProjectFIles/Scenes/FirstScene/FirstScene.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
-  - enabled: 1
+  - enabled: 0
     path: Assets/_ProjectFIles/Scenes/Test.unity
     guid: dff26b41a8d4e3d4583a00a9ddf733fb
+  - enabled: 1
+    path: Assets/_ProjectFIles/Scenes/FirstScene/Room2.unity
+    guid: eb5e6b8d09a93944898404debde8a6f4
   m_configObjects: {}
