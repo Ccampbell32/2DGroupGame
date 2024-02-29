@@ -12,7 +12,7 @@ public class EnemyMove : MonoBehaviour
     private void Start()
     {
         animator = GetComponent<Animator>();
-        Rigidbody rb = GetComponent<Rigidbody>();
+        Rigidbody2D rb = GetComponent<Rigidbody2D>();
         moveenemyright();
 
     }
