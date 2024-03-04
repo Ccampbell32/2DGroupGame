@@ -19,7 +19,7 @@ public class EnemyMove1 : MonoBehaviour
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         currentPoint = pointB.transform;
-        animator.SetBool("IsMoving (Up)", true);
+        animator.SetBool("IsMoving (Down)", true);
     }
 
     void Update()
@@ -27,49 +27,63 @@ public class EnemyMove1 : MonoBehaviour
         Vector2 point = currentPoint.position - transform.position;
         if (currentPoint == pointB.transform)
         {
-            rb.velocity = new Vector2(0, speed);
+            rb.velocity = new Vector2(0, -speed);
 
         }
         else
         {
-            rb.velocity = new Vector2(0, -speed);
+            rb.velocity = new Vector2(0, speed);
         }
 
         if (Vector2.Distance(transform.position, currentPoint.position) < 0.5f && currentPoint == pointB.transform)
         {
-            StartCoroutine(WaitAndFlip()); // Start waiting coroutine
             currentPoint = pointA.transform;
+            StartCoroutine(WaitAndFlip()); // Start waiting coroutine
+            animator.SetBool("IsMoving (Down)", true);
         }
         if (Vector2.Distance(transform.position, currentPoint.position) < 0.5f && currentPoint == pointA.transform)
         {
-            StartCoroutine(WaitAndFlip()); // Start waiting coroutine
             currentPoint = pointB.transform;
-            
+            StartCoroutine(WaitAndFlip()); // Start waiting coroutine
+            animator.SetBool("IsMoving (Up)", true);
         }
     }
 
     IEnumerator WaitAndFlip()
     {
-        speed = 0; // Stop the object
-        if (animator.GetBool("IsMoving (Up)") == true)
-        {
-            animator.SetBool("IsMoving (Up)", false);
-            yield return new WaitForSeconds(4f); // Wait for 4 seconds
-
-        }
-        animator.SetBool("IsMoving (Up)", false); // Set animation to idle
-        if (animator.GetBool("IsMoving (Down)") == true)
-        {
-            animator.SetBool("IsMoving (Down)", false);
-            yield return new WaitForSeconds(4f); // Wait for 4 seconds
-
-        }
-
-        speed = 5; // Move again
-        
+      speed = 0; // Stop the object
+          
+      yield return new WaitForSeconds(4f); // Wait for 4 seconds
+      Flip();
+      speed = 5; // Move again
+      if (speed == 0 && currentPoint == pointA.transform)
+      {
+            animator.SetFloat("Y", 1);
+      }
     }
 
-    
+
+    private void Flip()
+    {
+        if (currentPoint == pointA.transform)
+        {
+            animator.SetBool("IsMoving (Down)", false);
+            
+            animator.SetBool("IsMoving (Up)", true);
+        }
+
+        if (currentPoint == pointB.transform)
+        {
+            animator.SetBool("IsMoving (Up)", false);
+            animator.SetFloat("Y", -1);
+            animator.SetBool("IsMoving (Down)", true);
+
+        }
+       
+
+    }
+
+
 
     private void OnDrawGizmos()
     {
