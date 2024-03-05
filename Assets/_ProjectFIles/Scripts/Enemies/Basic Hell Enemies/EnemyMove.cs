@@ -19,7 +19,7 @@ public class EnemyMove : MonoBehaviour
     public PolygonCollider2D detector;
     public Transform playerTransform;
     public bool isChasing;
-    public bool chaseDistance;
+    Transform target;
     
    
     void Start()
@@ -29,6 +29,7 @@ public class EnemyMove : MonoBehaviour
         currentPoint = pointB.transform;
         animator.SetBool("IsMoving (LeftRight)", true);
         detector = GetComponent<PolygonCollider2D>();
+        target = GameObject.FindWithTag("Player").transform;
 
     }
 
@@ -39,7 +40,10 @@ public class EnemyMove : MonoBehaviour
         //chase
         if (isChasing)
         {
+             
+            
 
+            
 
 
         }
