@@ -14,6 +14,7 @@ public class EnemyMove : MonoBehaviour
     public GameObject pointB;
     private Transform currentPoint;
 
+   
     void Start()
     {
         animator = GetComponent<Animator>();
@@ -70,5 +71,9 @@ public class EnemyMove : MonoBehaviour
         Gizmos.DrawWireSphere(pointB.transform.position, 0.5f);
         Gizmos.DrawLine(pointA.transform.position, pointB.transform.position);
     }
+
+
+
+
 }
 
