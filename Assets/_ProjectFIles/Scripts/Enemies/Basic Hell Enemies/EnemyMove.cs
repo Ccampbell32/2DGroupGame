@@ -14,6 +14,13 @@ public class EnemyMove : MonoBehaviour
     public GameObject pointB;
     private Transform currentPoint;
 
+
+    //detection variables
+    public PolygonCollider2D detector;
+    public Transform playerTransform;
+    public bool isChasing;
+    public bool chaseDistance;
+    
    
     void Start()
     {
@@ -21,32 +28,69 @@ public class EnemyMove : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         currentPoint = pointB.transform;
         animator.SetBool("IsMoving (LeftRight)", true);
+        detector = GetComponent<PolygonCollider2D>();
+
     }
 
     void Update()
     {
-        Vector2 point = currentPoint.position - transform.position;
-        if (currentPoint == pointB.transform)
+
+
+        //chase
+        if (isChasing)
         {
-            rb.velocity = new Vector2(speed, 0);
+
+
+
         }
+        //not in chase
         else
         {
-            rb.velocity = new Vector2(-speed, 0);
+            
+          
+            Vector2 point = currentPoint.position - transform.position;
+            if (currentPoint == pointB.transform)
+            {
+                rb.velocity = new Vector2(speed, 0);
+            }
+            else
+            {
+                rb.velocity = new Vector2(-speed, 0);
+            }
+
+            if (Vector2.Distance(transform.position, currentPoint.position) < 0.5f && currentPoint == pointB.transform)
+            {
+                StartCoroutine(WaitAndFlip()); // Start waiting coroutine
+                currentPoint = pointA.transform;
+            }
+            if (Vector2.Distance(transform.position, currentPoint.position) < 0.5f && currentPoint == pointA.transform)
+            {
+                StartCoroutine(WaitAndFlip()); // Start waiting coroutine
+                currentPoint = pointB.transform;
+
+            }
+
+
+
+        }
+        
+
+     
+
+    }
+
+    public void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+            isChasing = true;
+
+
         }
 
-        if (Vector2.Distance(transform.position, currentPoint.position) < 0.5f && currentPoint == pointB.transform)
-        {
-            StartCoroutine(WaitAndFlip()); // Start waiting coroutine
-            currentPoint = pointA.transform;
-        }
-        if (Vector2.Distance(transform.position, currentPoint.position) < 0.5f && currentPoint == pointA.transform)
-        {
-            StartCoroutine(WaitAndFlip()); // Start waiting coroutine
-            currentPoint = pointB.transform;
-            
-        }
+
     }
+
 
     IEnumerator WaitAndFlip()
     {
