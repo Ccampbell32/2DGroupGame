@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: bfa2c2b8f7fb10a4ab9d432a0aef833c
+guid: c77f10e304c79054988ad7dc10fbf24c
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -119,18 +119,18 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: ChibiDemon_Frame_0
+  - name: ChibiHellAngel_Frame_0
     originalName: 
-    pivot: {x: 0.6, y: -0.15789473}
+    pivot: {x: 0.75, y: -0.13636364}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 41
-      y: 4
-      width: 10
-      height: 19
-    spriteID: b3edf47143b54bb47a7a505aafa10ade
+      x: 60
+      y: 66
+      width: 16
+      height: 22
+    spriteID: 9f08576a6b1d3a1428cc1fbe13c122c1
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -138,19 +138,19 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 41, y: 4}
-  - name: ChibiDemon_Frame_1
+    uvTransform: {x: 60, y: 66}
+  - name: ChibiHellAngel_Frame_1
     originalName: 
-    pivot: {x: 0.6, y: -0.16666667}
+    pivot: {x: 0.75, y: -0.14285715}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 95
-      y: 4
-      width: 10
-      height: 18
-    spriteID: f4f8568f1b9cc43449cccf6e3e23fddd
+      x: 60
+      y: 186
+      width: 16
+      height: 21
+    spriteID: ed637886bd01aea47acc1a91824e09a8
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -158,19 +158,19 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 95, y: 4}
-  - name: ChibiDemon_Frame_2
+    uvTransform: {x: 60, y: 186}
+  - name: ChibiHellAngel_Frame_2
     originalName: 
-    pivot: {x: 0.6, y: -0.15}
+    pivot: {x: 0.75, y: -0.13043478}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 23
+      x: 60
       y: 4
-      width: 10
-      height: 20
-    spriteID: 973906080ba0d5c428e292cc6c3bbb5a
+      width: 16
+      height: 23
+    spriteID: 9e274c1e019f5414c96e0371ba505097
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -178,19 +178,239 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 23, y: 4}
-  - name: ChibiDemon_Frame_3
+    uvTransform: {x: 60, y: 4}
+  - name: ChibiHellAngel_Frame_3
     originalName: 
-    pivot: {x: 0.54545456, y: -0.15789473}
+    pivot: {x: 0.7058824, y: -0.13636364}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 32
+      y: 122
+      width: 17
+      height: 22
+    spriteID: 4fe53d1cb318ed24eb9adeed03d06156
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 32, y: 122}
+  - name: ChibiHellAngel_Frame_4
+    originalName: 
+    pivot: {x: 0.7058824, y: -0.13636364}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 32
+      y: 152
+      width: 17
+      height: 22
+    spriteID: 9775da8718b48d04a8052aa662322a34
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 32, y: 152}
+  - name: ChibiHellAngel_Frame_5
+    originalName: 
+    pivot: {x: 0.75, y: -0.13636364}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 60
+      y: 96
+      width: 16
+      height: 22
+    spriteID: f9fcefed80050be46ae70ba064d6e867
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 60, y: 96}
+  - name: ChibiHellAngel_Frame_6
+    originalName: 
+    pivot: {x: 0.25, y: -0.13636364}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 60
+      y: 126
+      width: 16
+      height: 22
+    spriteID: fb7ebe578cccb8048835dde8ffbe2a70
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 60, y: 126}
+  - name: ChibiHellAngel_Frame_7
+    originalName: 
+    pivot: {x: 0.25, y: -0.14285715}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 60
+      y: 215
+      width: 16
+      height: 21
+    spriteID: 391b891f9214dbb4ea9db34209be96cd
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 60, y: 215}
+  - name: ChibiHellAngel_Frame_8
+    originalName: 
+    pivot: {x: 0.25, y: -0.13043478}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 60
+      y: 35
+      width: 16
+      height: 23
+    spriteID: 0dadc7201aa173c4d8679c21802ef3ed
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 60, y: 35}
+  - name: ChibiHellAngel_Frame_9
+    originalName: 
+    pivot: {x: 0.25, y: -0.13636364}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 60
+      y: 156
+      width: 16
+      height: 22
+    spriteID: ad927369adb39fc49a85f9ddd904eec7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 60, y: 156}
+  - name: ChibiHellAngel_Frame_10
+    originalName: 
+    pivot: {x: 0.29411766, y: -0.13636364}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 32
+      y: 182
+      width: 17
+      height: 22
+    spriteID: ee092ed919665f44a8cc6cef538f39ea
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 32, y: 182}
+  - name: ChibiHellAngel_Frame_11
+    originalName: 
+    pivot: {x: 0.29411766, y: -0.13636364}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 32
+      y: 212
+      width: 17
+      height: 22
+    spriteID: f5b1a4a3080d1384c8fe6b2b698621dd
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 32, y: 212}
+  - name: ChibiHellAngel_Frame_12
+    originalName: 
+    pivot: {x: 0.5, y: -0.13636364}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 66
+      width: 20
+      height: 22
+    spriteID: 9038b11fff5eac342918996932e51b6d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 66}
+  - name: ChibiHellAngel_Frame_13
+    originalName: 
+    pivot: {x: 0.5, y: -0.14285715}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 32
+      y: 64
+      width: 20
+      height: 21
+    spriteID: e407b9e87ad28494f9bfe90f533407bc
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 32, y: 64}
+  - name: ChibiHellAngel_Frame_14
+    originalName: 
+    pivot: {x: 0.5, y: -0.13043478}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 11
-      height: 19
-    spriteID: 70c5812fee5f22a49946cdca8a172e01
+      width: 20
+      height: 23
+    spriteID: 2a2945bde8d0e844fac70b10a66a60a7
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -199,18 +419,18 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 4}
-  - name: ChibiDemon_Frame_4
+  - name: ChibiHellAngel_Frame_15
     originalName: 
-    pivot: {x: 0.54545456, y: -0.15789473}
+    pivot: {x: 0.5, y: -0.13636364}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
-      y: 31
-      width: 11
-      height: 19
-    spriteID: f5696b4dbff1ee549b7636f39111143a
+      y: 96
+      width: 20
+      height: 22
+    spriteID: 5df7a2ecc27f2514490ac3c1d2f15bfb
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -218,119 +438,19 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 31}
-  - name: ChibiDemon_Frame_5
+    uvTransform: {x: 4, y: 96}
+  - name: ChibiHellAngel_Frame_16
     originalName: 
-    pivot: {x: 0.6, y: -0.15789473}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 41
-      y: 31
-      width: 10
-      height: 19
-    spriteID: 34269ac19af29ae4795cda2a4af5cb31
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 41, y: 31}
-  - name: ChibiDemon_Frame_6
-    originalName: 
-    pivot: {x: 0.4, y: -0.15789473}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 41
-      y: 58
-      width: 10
-      height: 19
-    spriteID: c2923b0b4b1d8f746b794dd2d127ffb1
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 41, y: 58}
-  - name: ChibiDemon_Frame_7
-    originalName: 
-    pivot: {x: 0.4, y: -0.16666667}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 95
-      y: 30
-      width: 10
-      height: 18
-    spriteID: 11ef930495bd94c4b8f6935b2cb6237c
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 95, y: 30}
-  - name: ChibiDemon_Frame_8
-    originalName: 
-    pivot: {x: 0.4, y: -0.15}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 23
-      y: 32
-      width: 10
-      height: 20
-    spriteID: c553b6ff0d7aa9342a31ec3b8c72c7e5
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 23, y: 32}
-  - name: ChibiDemon_Frame_9
-    originalName: 
-    pivot: {x: 0.4, y: -0.15789473}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 41
-      y: 85
-      width: 10
-      height: 19
-    spriteID: 4a6d6491d32450c438b4415bc110ff44
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 41, y: 85}
-  - name: ChibiDemon_Frame_10
-    originalName: 
-    pivot: {x: 0.45454547, y: -0.15789473}
+    pivot: {x: 0.5, y: -0.13636364}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
-      y: 58
-      width: 11
-      height: 19
-    spriteID: 9201fc256eb8ce64cafbbde0992e2aca
+      y: 126
+      width: 20
+      height: 22
+    spriteID: 7b0964ce01db39648b0156c2dafe7e50
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -338,19 +458,19 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 58}
-  - name: ChibiDemon_Frame_11
+    uvTransform: {x: 4, y: 126}
+  - name: ChibiHellAngel_Frame_17
     originalName: 
-    pivot: {x: 0.45454547, y: -0.15789473}
+    pivot: {x: 0.5, y: -0.13636364}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
-      y: 85
-      width: 11
-      height: 19
-    spriteID: 7ae071cd3f5e380449531d8805cd1627
+      y: 156
+      width: 20
+      height: 22
+    spriteID: 412a540bcd819dd4dace1a21ca4953c2
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -358,19 +478,99 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 85}
-  - name: ChibiDemon_Frame_12
+    uvTransform: {x: 4, y: 156}
+  - name: ChibiHellAngel_Frame_18
     originalName: 
-    pivot: {x: 0.5, y: -0.15789473}
+    pivot: {x: 0.5, y: -0.13636364}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 59
+      x: 4
+      y: 186
+      width: 20
+      height: 22
+    spriteID: 770a8b99ebaa6a04cbf4003fea898cdb
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 186}
+  - name: ChibiHellAngel_Frame_19
+    originalName: 
+    pivot: {x: 0.5, y: -0.14285715}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 32
+      y: 93
+      width: 20
+      height: 21
+    spriteID: a8f41d6e313e3c94a804620b8003a239
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 32, y: 93}
+  - name: ChibiHellAngel_Frame_20
+    originalName: 
+    pivot: {x: 0.5, y: -0.13043478}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 35
+      width: 20
+      height: 23
+    spriteID: 51b7d36fb6ecb6d43adeb39f5a362510
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 35}
+  - name: ChibiHellAngel_Frame_21
+    originalName: 
+    pivot: {x: 0.5, y: -0.13636364}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 216
+      width: 20
+      height: 22
+    spriteID: 1c81508dffc373940a1b6ab62c2d5c13
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 216}
+  - name: ChibiHellAngel_Frame_22
+    originalName: 
+    pivot: {x: 0.5, y: -0.13636364}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 32
       y: 4
-      width: 10
-      height: 19
-    spriteID: 711ea20a921b21b40a2f650826c52a2b
+      width: 20
+      height: 22
+    spriteID: 2fba81e717f1f2e459d241b3d8c5d367
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -378,19 +578,19 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 59, y: 4}
-  - name: ChibiDemon_Frame_13
+    uvTransform: {x: 32, y: 4}
+  - name: ChibiHellAngel_Frame_23
     originalName: 
-    pivot: {x: 0.5, y: -0.16666667}
+    pivot: {x: 0.5, y: -0.13636364}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 95
-      y: 56
-      width: 10
-      height: 18
-    spriteID: 753b705e3233b0245acd626b0ff1734c
+      x: 32
+      y: 34
+      width: 20
+      height: 22
+    spriteID: ccc8b068240db044e9f29ed14dcc5c40
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -398,408 +598,208 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 95, y: 56}
-  - name: ChibiDemon_Frame_14
-    originalName: 
-    pivot: {x: 0.5, y: -0.15}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 23
-      y: 60
-      width: 10
-      height: 20
-    spriteID: 538535494c1188741bc00d415b8d2d40
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 23, y: 60}
-  - name: ChibiDemon_Frame_15
-    originalName: 
-    pivot: {x: 0.5, y: -0.15789473}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 59
-      y: 31
-      width: 10
-      height: 19
-    spriteID: 16cee9c6ad4111b4c996e6dace2bf00e
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 59, y: 31}
-  - name: ChibiDemon_Frame_16
-    originalName: 
-    pivot: {x: 0.5, y: -0.15789473}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 59
-      y: 58
-      width: 10
-      height: 19
-    spriteID: f6d317c175ede574580edd962ec94b43
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 59, y: 58}
-  - name: ChibiDemon_Frame_17
-    originalName: 
-    pivot: {x: 0.5, y: -0.15789473}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 59
-      y: 85
-      width: 10
-      height: 19
-    spriteID: 1591ba7b6a94dd647ad775101abe43e4
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 59, y: 85}
-  - name: ChibiDemon_Frame_18
-    originalName: 
-    pivot: {x: 0.5, y: -0.15789473}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 77
-      y: 4
-      width: 10
-      height: 19
-    spriteID: b1157e9600189614f969fe8bc7554855
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 77, y: 4}
-  - name: ChibiDemon_Frame_19
-    originalName: 
-    pivot: {x: 0.5, y: -0.16666667}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 95
-      y: 82
-      width: 10
-      height: 18
-    spriteID: 03642ef3c258a2b48bf02ad31cabeda5
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 95, y: 82}
-  - name: ChibiDemon_Frame_20
-    originalName: 
-    pivot: {x: 0.5, y: -0.15}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 23
-      y: 88
-      width: 10
-      height: 20
-    spriteID: 3fe5a063427ea5642a37c11af17eceaa
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 23, y: 88}
-  - name: ChibiDemon_Frame_21
-    originalName: 
-    pivot: {x: 0.5, y: -0.15789473}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 77
-      y: 31
-      width: 10
-      height: 19
-    spriteID: 2705f586dfe57464eb0005736ee69d98
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 77, y: 31}
-  - name: ChibiDemon_Frame_22
-    originalName: 
-    pivot: {x: 0.5, y: -0.15789473}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 77
-      y: 58
-      width: 10
-      height: 19
-    spriteID: 575a1991d9f26ab40982e16d0749c9bb
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 77, y: 58}
-  - name: ChibiDemon_Frame_23
-    originalName: 
-    pivot: {x: 0.5, y: -0.15789473}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 77
-      y: 85
-      width: 10
-      height: 19
-    spriteID: b66c0e1fafa85c24cb4aed0de396a55f
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 77, y: 85}
+    uvTransform: {x: 32, y: 34}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: -2136582524
-    name: ChibiDemon
+    guid: 1248812757
+    name: ChibiHellAngel
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: ChibiDemon_Frame_0
+    - name: ChibiHellAngel_Frame_0
       frameIndex: 0
       cellRect:
-        x: 10
+        x: 4
         y: 3
-        width: 10
-        height: 19
-      spriteId: b3edf47143b54bb47a7a505aafa10ade
-    - name: ChibiDemon_Frame_1
+        width: 16
+        height: 22
+      spriteId: 9f08576a6b1d3a1428cc1fbe13c122c1
+    - name: ChibiHellAngel_Frame_1
       frameIndex: 1
       cellRect:
-        x: 10
+        x: 4
         y: 3
-        width: 10
-        height: 18
-      spriteId: f4f8568f1b9cc43449cccf6e3e23fddd
-    - name: ChibiDemon_Frame_2
+        width: 16
+        height: 21
+      spriteId: ed637886bd01aea47acc1a91824e09a8
+    - name: ChibiHellAngel_Frame_2
       frameIndex: 2
       cellRect:
-        x: 10
+        x: 4
         y: 3
-        width: 10
-        height: 20
-      spriteId: 973906080ba0d5c428e292cc6c3bbb5a
-    - name: ChibiDemon_Frame_3
+        width: 16
+        height: 23
+      spriteId: 9e274c1e019f5414c96e0371ba505097
+    - name: ChibiHellAngel_Frame_3
       frameIndex: 3
       cellRect:
-        x: 10
+        x: 4
         y: 3
-        width: 11
-        height: 19
-      spriteId: 70c5812fee5f22a49946cdca8a172e01
-    - name: ChibiDemon_Frame_4
+        width: 17
+        height: 22
+      spriteId: 4fe53d1cb318ed24eb9adeed03d06156
+    - name: ChibiHellAngel_Frame_4
       frameIndex: 4
       cellRect:
-        x: 10
+        x: 4
         y: 3
-        width: 11
-        height: 19
-      spriteId: f5696b4dbff1ee549b7636f39111143a
-    - name: ChibiDemon_Frame_5
+        width: 17
+        height: 22
+      spriteId: 9775da8718b48d04a8052aa662322a34
+    - name: ChibiHellAngel_Frame_5
       frameIndex: 5
       cellRect:
-        x: 10
+        x: 4
         y: 3
-        width: 10
-        height: 19
-      spriteId: 34269ac19af29ae4795cda2a4af5cb31
-    - name: ChibiDemon_Frame_6
+        width: 16
+        height: 22
+      spriteId: f9fcefed80050be46ae70ba064d6e867
+    - name: ChibiHellAngel_Frame_6
       frameIndex: 6
       cellRect:
         x: 12
         y: 3
-        width: 10
-        height: 19
-      spriteId: c2923b0b4b1d8f746b794dd2d127ffb1
-    - name: ChibiDemon_Frame_7
+        width: 16
+        height: 22
+      spriteId: fb7ebe578cccb8048835dde8ffbe2a70
+    - name: ChibiHellAngel_Frame_7
       frameIndex: 7
       cellRect:
         x: 12
         y: 3
-        width: 10
-        height: 18
-      spriteId: 11ef930495bd94c4b8f6935b2cb6237c
-    - name: ChibiDemon_Frame_8
+        width: 16
+        height: 21
+      spriteId: 391b891f9214dbb4ea9db34209be96cd
+    - name: ChibiHellAngel_Frame_8
       frameIndex: 8
       cellRect:
         x: 12
         y: 3
-        width: 10
-        height: 20
-      spriteId: c553b6ff0d7aa9342a31ec3b8c72c7e5
-    - name: ChibiDemon_Frame_9
+        width: 16
+        height: 23
+      spriteId: 0dadc7201aa173c4d8679c21802ef3ed
+    - name: ChibiHellAngel_Frame_9
       frameIndex: 9
       cellRect:
         x: 12
         y: 3
-        width: 10
-        height: 19
-      spriteId: 4a6d6491d32450c438b4415bc110ff44
-    - name: ChibiDemon_Frame_10
+        width: 16
+        height: 22
+      spriteId: ad927369adb39fc49a85f9ddd904eec7
+    - name: ChibiHellAngel_Frame_10
       frameIndex: 10
       cellRect:
         x: 11
         y: 3
-        width: 11
-        height: 19
-      spriteId: 9201fc256eb8ce64cafbbde0992e2aca
-    - name: ChibiDemon_Frame_11
+        width: 17
+        height: 22
+      spriteId: ee092ed919665f44a8cc6cef538f39ea
+    - name: ChibiHellAngel_Frame_11
       frameIndex: 11
       cellRect:
         x: 11
         y: 3
-        width: 11
-        height: 19
-      spriteId: 7ae071cd3f5e380449531d8805cd1627
-    - name: ChibiDemon_Frame_12
+        width: 17
+        height: 22
+      spriteId: f5b1a4a3080d1384c8fe6b2b698621dd
+    - name: ChibiHellAngel_Frame_12
       frameIndex: 12
       cellRect:
-        x: 11
+        x: 6
         y: 3
-        width: 10
-        height: 19
-      spriteId: 711ea20a921b21b40a2f650826c52a2b
-    - name: ChibiDemon_Frame_13
+        width: 20
+        height: 22
+      spriteId: 9038b11fff5eac342918996932e51b6d
+    - name: ChibiHellAngel_Frame_13
       frameIndex: 13
       cellRect:
-        x: 11
+        x: 6
         y: 3
-        width: 10
-        height: 18
-      spriteId: 753b705e3233b0245acd626b0ff1734c
-    - name: ChibiDemon_Frame_14
+        width: 20
+        height: 21
+      spriteId: e407b9e87ad28494f9bfe90f533407bc
+    - name: ChibiHellAngel_Frame_14
       frameIndex: 14
       cellRect:
-        x: 11
+        x: 6
         y: 3
-        width: 10
-        height: 20
-      spriteId: 538535494c1188741bc00d415b8d2d40
-    - name: ChibiDemon_Frame_15
+        width: 20
+        height: 23
+      spriteId: 2a2945bde8d0e844fac70b10a66a60a7
+    - name: ChibiHellAngel_Frame_15
       frameIndex: 15
       cellRect:
-        x: 11
+        x: 6
         y: 3
-        width: 10
-        height: 19
-      spriteId: 16cee9c6ad4111b4c996e6dace2bf00e
-    - name: ChibiDemon_Frame_16
+        width: 20
+        height: 22
+      spriteId: 5df7a2ecc27f2514490ac3c1d2f15bfb
+    - name: ChibiHellAngel_Frame_16
       frameIndex: 16
       cellRect:
-        x: 11
+        x: 6
         y: 3
-        width: 10
-        height: 19
-      spriteId: f6d317c175ede574580edd962ec94b43
-    - name: ChibiDemon_Frame_17
+        width: 20
+        height: 22
+      spriteId: 7b0964ce01db39648b0156c2dafe7e50
+    - name: ChibiHellAngel_Frame_17
       frameIndex: 17
       cellRect:
-        x: 11
+        x: 6
         y: 3
-        width: 10
-        height: 19
-      spriteId: 1591ba7b6a94dd647ad775101abe43e4
-    - name: ChibiDemon_Frame_18
+        width: 20
+        height: 22
+      spriteId: 412a540bcd819dd4dace1a21ca4953c2
+    - name: ChibiHellAngel_Frame_18
       frameIndex: 18
       cellRect:
-        x: 11
+        x: 6
         y: 3
-        width: 10
-        height: 19
-      spriteId: b1157e9600189614f969fe8bc7554855
-    - name: ChibiDemon_Frame_19
+        width: 20
+        height: 22
+      spriteId: 770a8b99ebaa6a04cbf4003fea898cdb
+    - name: ChibiHellAngel_Frame_19
       frameIndex: 19
       cellRect:
-        x: 11
+        x: 6
         y: 3
-        width: 10
-        height: 18
-      spriteId: 03642ef3c258a2b48bf02ad31cabeda5
-    - name: ChibiDemon_Frame_20
+        width: 20
+        height: 21
+      spriteId: a8f41d6e313e3c94a804620b8003a239
+    - name: ChibiHellAngel_Frame_20
       frameIndex: 20
       cellRect:
-        x: 11
+        x: 6
         y: 3
-        width: 10
-        height: 20
-      spriteId: 3fe5a063427ea5642a37c11af17eceaa
-    - name: ChibiDemon_Frame_21
+        width: 20
+        height: 23
+      spriteId: 51b7d36fb6ecb6d43adeb39f5a362510
+    - name: ChibiHellAngel_Frame_21
       frameIndex: 21
       cellRect:
-        x: 11
+        x: 6
         y: 3
-        width: 10
-        height: 19
-      spriteId: 2705f586dfe57464eb0005736ee69d98
-    - name: ChibiDemon_Frame_22
+        width: 20
+        height: 22
+      spriteId: 1c81508dffc373940a1b6ab62c2d5c13
+    - name: ChibiHellAngel_Frame_22
       frameIndex: 22
       cellRect:
-        x: 11
+        x: 6
         y: 3
-        width: 10
-        height: 19
-      spriteId: 575a1991d9f26ab40982e16d0749c9bb
-    - name: ChibiDemon_Frame_23
+        width: 20
+        height: 22
+      spriteId: 2fba81e717f1f2e459d241b3d8c5d367
+    - name: ChibiHellAngel_Frame_23
       frameIndex: 23
       cellRect:
-        x: 11
+        x: 6
         y: 3
-        width: 10
-        height: 19
-      spriteId: b66c0e1fafa85c24cb4aed0de396a55f
+        width: 20
+        height: 22
+      spriteId: ccc8b068240db044e9f29ed14dcc5c40
     linkedCells: []
     parentIndex: -1
   platformSettings: []
