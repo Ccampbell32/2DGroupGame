@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Basic Hell Enemy 1
+  - GameManager
   layers:
   - Default
   - TransparentFX
