@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Basic Hell Enemy 1
   - GameManager
+  - Spawner
   layers:
   - Default
   - TransparentFX
