@@ -20,6 +20,7 @@ public class GameManager : MonoBehaviour
     public float PlayerMaxHealth = 10;
     public static GameManager manager;
     public PlayerMovement PlayerMovement;
+    public SpriteRenderer PlayerSprite;
     void Awake()
     {
         if(manager == null)
@@ -35,7 +36,8 @@ public class GameManager : MonoBehaviour
     private void Gameplay()
     {
         OverworldRunning = true;
-        Debug.Log("In gameplay"); // delete this line after testing
+        PlayerMovement.enabled = true;
+        PlayerSprite.enabled = true;
     }
     private void GameOver()
     {
@@ -51,7 +53,7 @@ public class GameManager : MonoBehaviour
     {
         OverworldRunning = false;
         PlayerMovement.enabled = false;
-        
+        PlayerSprite.enabled = false;
         
     }
     private void Options()

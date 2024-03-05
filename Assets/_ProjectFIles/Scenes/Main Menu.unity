@@ -866,6 +866,7 @@ MonoBehaviour:
   OverworldRunning: 0
   PlayerMaxHealth: 10
   PlayerMovement: {fileID: 312703430}
+  PlayerSprite: {fileID: 312703432}
 --- !u!4 &640649594
 Transform:
   m_ObjectHideFlags: 0
