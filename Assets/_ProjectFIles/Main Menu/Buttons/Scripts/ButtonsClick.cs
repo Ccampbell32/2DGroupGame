@@ -7,6 +7,13 @@ public class ButtonsClick : MonoBehaviour
 {
     public int sceneBuildIndex;
 
+    void start()
+    {
+        
+
+
+    }
+        
     public void PlayButton()
     {
         SceneManager.LoadScene(sceneBuildIndex, LoadSceneMode.Single);
