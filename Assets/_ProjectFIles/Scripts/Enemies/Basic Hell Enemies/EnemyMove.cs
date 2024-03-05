@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 
 
@@ -20,8 +21,9 @@ public class EnemyMove : MonoBehaviour
     public Transform playerTransform;
     public bool isChasing;
     Transform target;
-    
-   
+    Vector2 moveDirection;
+    public GameObject detectionLight; 
+
     void Start()
     {
         animator = GetComponent<Animator>();
@@ -40,11 +42,10 @@ public class EnemyMove : MonoBehaviour
         //chase
         if (isChasing)
         {
-             
-            
+            detectionLight.SetActive(false);
 
-            
-
+             Vector3 direction = (target.position - transform.position).normalized;
+             moveDirection = direction;
 
         }
         //not in chase
@@ -71,16 +72,17 @@ public class EnemyMove : MonoBehaviour
             {
                 StartCoroutine(WaitAndFlip()); // Start waiting coroutine
                 currentPoint = pointB.transform;
-
             }
-
-
-
         }
+    }
+    private void FixedUpdate()
+    {
+        if (isChasing) 
+        { 
+          rb.velocity = new Vector2(moveDirection.x, moveDirection.y) * speed;
         
-
-     
-
+        
+        }
     }
 
     public void OnTriggerEnter2D(Collider2D collision)
