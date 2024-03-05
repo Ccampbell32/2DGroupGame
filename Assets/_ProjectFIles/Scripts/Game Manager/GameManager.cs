@@ -10,7 +10,7 @@ public enum GameState
     MainMenu,
     Options,
     Paused,
-    Running,
+    Gameplay,
     GameOver
 }
 public class GameManager : MonoBehaviour
@@ -71,14 +71,20 @@ public class GameManager : MonoBehaviour
     public void ChangeGameState(GameState newGameState)
     {
         CurrentGameState = newGameState;
+        if (CurrentGameState == GameState.MainMenu)
+        {
+            MainMenu();
+        }
+        if (CurrentGameState == GameState.Gameplay)
+        {
+            Gameplay();
+        }
     }
 
 
     // Start is called before the first frame update
     void Start()
     {
-        CurrentGameState = GameState.MainMenu;
-        MainMenu();
         
     }
 
