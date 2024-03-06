@@ -21,8 +21,8 @@ public class EnemyMove1 : MonoBehaviour
     public bool isChasing;
     Transform target;
     Vector2 moveDirection;
-    public GameObject detectionLight;
-
+    public GameObject detectionLightDown;
+    public GameObject detectionLightUp;
     
     void Start()
     {
@@ -30,22 +30,18 @@ public class EnemyMove1 : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         currentPoint = pointB.transform;
         animator.SetBool("IsMoving (Down)", true);
-
-        detectionLight.transform.eulerAngles = new Vector3
-        (detectionLight.transform.eulerAngles.x,
-        detectionLight.transform.eulerAngles.y,
-        detectionLight.transform.eulerAngles.z -90);
+        detectionLightUp.SetActive(false);
+        target = GameObject.FindWithTag("Player").transform;
     }
 
     void Update()
     {
     
-
         //chase
         if (isChasing)
         {
-            detectionLight.SetActive(false);
-
+            detectionLightDown.SetActive(false);
+            detectionLightUp.SetActive(false);
             Vector3 direction = (target.position - transform.position).normalized;
             moveDirection = direction;
 
@@ -53,7 +49,6 @@ public class EnemyMove1 : MonoBehaviour
         //not in chase
         else
         {
-
 
             Vector2 point = currentPoint.position - transform.position;
             if (currentPoint == pointB.transform)
@@ -96,9 +91,7 @@ public class EnemyMove1 : MonoBehaviour
         {
             isChasing = true;
 
-
         }
-
 
     }
     IEnumerator WaitAndFlip()
@@ -135,13 +128,17 @@ public class EnemyMove1 : MonoBehaviour
         }
        if (animator.GetBool("IsMoving (Up)") == true)
        {
-            //detectionLight.transform.eulerAngles.z = 90;
-
-
-       }
-
+            detectionLightDown.SetActive(false);
+            detectionLightUp.SetActive(true);
+        }
+        if (animator.GetBool("IsMoving (Down)") == true)
+        {
+            detectionLightUp.SetActive(false);
+            detectionLightDown.SetActive(true);
+            
+        }
     }
-
+    
 
 
     private void OnDrawGizmos()
