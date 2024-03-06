@@ -31,6 +31,7 @@ public class EnemyMove : MonoBehaviour
         currentPoint = pointB.transform;
         animator.SetBool("IsMoving (LeftRight)", true);
         detector = GetComponent<PolygonCollider2D>();
+
         target = GameObject.FindWithTag("Player").transform;
 
     }
@@ -43,6 +44,7 @@ public class EnemyMove : MonoBehaviour
         if (isChasing)
         {
             detectionLight.SetActive(false);
+            Component.Destroy(detector);
 
              Vector3 direction = (target.position - transform.position).normalized;
              moveDirection = direction;

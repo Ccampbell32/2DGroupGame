@@ -30,14 +30,16 @@ public class EnemyMove1 : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         currentPoint = pointB.transform;
         animator.SetBool("IsMoving (Down)", true);
-    }
 
-    void Update()
-    {
         detectionLight.transform.eulerAngles = new Vector3
         (detectionLight.transform.eulerAngles.x,
         detectionLight.transform.eulerAngles.y,
         detectionLight.transform.eulerAngles.z -90);
+    }
+
+    void Update()
+    {
+    
 
         //chase
         if (isChasing)
