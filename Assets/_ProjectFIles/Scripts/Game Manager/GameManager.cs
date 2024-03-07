@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-
+#region Game State
 public enum GameState
 {
     Battling,
@@ -13,16 +13,26 @@ public enum GameState
     Gameplay,
     GameOver
 }
+#endregion
+
+
 public class GameManager : MonoBehaviour
 {
     public GameState CurrentGameState; // current game state
     public bool OverworldRunning = false;
-    public float PlayerMaxHealth = 10;
+    
     public static GameManager manager;
     /*public PlayerMovement PlayerMovement = null;
     public SpriteRenderer PlayerSprite = null;*/
+    
+    //Player attributes
+    [SerializeField] float playerMaxHealth = 10;
+    [SerializeField] public float playerCurrentHealth = 10;
+
+    #region Initialise
     void Awake()
     {
+        //set the instance of GameManager to this instance and make it persist between scenes
         if(manager == null)
         {
             manager = this;
@@ -32,7 +42,9 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
         }
     }
+    #endregion
 
+    #region GameStates
     private void Gameplay()
     {
         OverworldRunning = true;
@@ -80,17 +92,24 @@ public class GameManager : MonoBehaviour
             Gameplay();
         }
     }
+    #endregion
 
 
-    // Start is called before the first frame update
-    void Start()
+    //get and set the players health - call to add health, take damage and check health
+    //health can be greater than max health
+    public float PlayerCurrentHealth
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        get { return playerCurrentHealth; }
+        set 
+        { 
+            if (value > playerMaxHealth)
+            {
+                playerCurrentHealth = playerMaxHealth;
+            }
+            else
+            {
+                playerCurrentHealth = value; 
+            }
+        }
     }
 }
