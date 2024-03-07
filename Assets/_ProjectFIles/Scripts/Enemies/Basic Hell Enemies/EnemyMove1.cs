@@ -23,7 +23,7 @@ public class EnemyMove1 : MonoBehaviour
     Vector2 moveDirection;
     public GameObject detectionLightDown;
     public GameObject detectionLightUp;
-    
+    public GameObject battleCanvas;
     void Start()
     {
         animator = GetComponent<Animator>();
@@ -36,7 +36,6 @@ public class EnemyMove1 : MonoBehaviour
 
     void Update()
     {
-    
         //chase
         if (isChasing)
         {
@@ -44,7 +43,7 @@ public class EnemyMove1 : MonoBehaviour
             detectionLightUp.SetActive(false);
             Vector3 direction = (target.position - transform.position).normalized;
             moveDirection = direction;
-
+            
         }
         //not in chase
         else
@@ -90,10 +89,13 @@ public class EnemyMove1 : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             isChasing = true;
-
         }
 
+        //StartCoroutine(WaitbetweenTrigger());
+
     }
+
+    // Wait at point before turning
     IEnumerator WaitAndFlip()
     {
       speed = 0; // Stop the object
@@ -108,7 +110,18 @@ public class EnemyMove1 : MonoBehaviour
       }
 
     }
+    /*IEnumerator WaitbetweenTrigger()
+    {
+        speed = 0;
+        yield return new WaitForSeconds(1f);
+        speed = 5;
+        if (isChasing == true  )
+        {
+            battleCanvas.gameObject.SetActive(true);
 
+
+        }
+    }*/
 
     private void Flip()
     {

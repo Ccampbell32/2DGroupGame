@@ -22,10 +22,12 @@ public class EnemyMove : MonoBehaviour
     public bool isChasing;
     Transform target;
     Vector2 moveDirection;
-    public GameObject detectionLight; 
+    public GameObject detectionLight;
+    public GameObject battleCanvas;
 
     void Start()
     {
+        battleCanvas.gameObject.SetActive(false);
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         currentPoint = pointB.transform;
@@ -48,6 +50,8 @@ public class EnemyMove : MonoBehaviour
 
              Vector3 direction = (target.position - transform.position).normalized;
              moveDirection = direction;
+            
+            
 
         }
         //not in chase
@@ -93,10 +97,14 @@ public class EnemyMove : MonoBehaviour
         {
             isChasing = true;
 
-
         }
+        
+        /*if (isChasing == true && collision.CompareTag("Player")) 
+        {
+            battleCanvas.gameObject.SetActive(true);
 
 
+        }*/
     }
 
 
