@@ -26,7 +26,7 @@ public class InitialiseScene : MonoBehaviour
             Debug.Log("GameManager found! " + " - Current State: " + gameManager.CurrentGameState.ToString());
         }
         else {
-            Debug.Log("GameManager not found!");
+            Debug.Log("GameManager not found! - Please add a GameManager to the scene!");
         }
 
     }
