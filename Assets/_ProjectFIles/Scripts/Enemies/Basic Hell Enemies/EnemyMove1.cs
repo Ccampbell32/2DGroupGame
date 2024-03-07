@@ -17,7 +17,7 @@ public class EnemyMove1 : MonoBehaviour
 
     //detection variables
     public PolygonCollider2D detector;
-    public Transform playerTransform;
+    public GameObject prefabPlayer;
     public bool isChasing;
     Transform target;
     Vector2 moveDirection;
@@ -31,7 +31,7 @@ public class EnemyMove1 : MonoBehaviour
         currentPoint = pointB.transform;
         animator.SetBool("IsMoving (Down)", true);
         detectionLightUp.SetActive(false);
-        target = GameObject.FindWithTag("Player").transform;
+        target = prefabPlayer.transform;
     }
 
     void Update()

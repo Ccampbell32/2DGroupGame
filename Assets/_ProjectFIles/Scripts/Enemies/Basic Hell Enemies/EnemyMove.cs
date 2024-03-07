@@ -18,13 +18,12 @@ public class EnemyMove : MonoBehaviour
 
     //detection variables
     public PolygonCollider2D detector;
-    public Transform playerTransform;
     public bool isChasing;
     Transform target;
     Vector2 moveDirection;
     public GameObject detectionLight;
     public GameObject battleCanvas;
-
+    public GameObject prefabPlayer;
     void Start()
     {
         battleCanvas.gameObject.SetActive(false);
@@ -34,7 +33,7 @@ public class EnemyMove : MonoBehaviour
         animator.SetBool("IsMoving (LeftRight)", true);
         detector = GetComponent<PolygonCollider2D>();
 
-        target = GameObject.FindWithTag("Player").transform;
+        target = prefabPlayer.transform;
 
     }
 
@@ -84,10 +83,13 @@ public class EnemyMove : MonoBehaviour
     private void FixedUpdate()
     {
         if (isChasing) 
-        { 
-          rb.velocity = new Vector2(moveDirection.x, moveDirection.y) * speed;
-        
-        
+        {
+            Vector3 direction = (target.position - transform.position).normalized;
+            moveDirection = direction;
+
+            rb.velocity = moveDirection * speed;
+
+
         }
     }
 
@@ -99,12 +101,7 @@ public class EnemyMove : MonoBehaviour
 
         }
         
-        /*if (isChasing == true && collision.CompareTag("Player")) 
-        {
-            battleCanvas.gameObject.SetActive(true);
 
-
-        }*/
     }
 
 
