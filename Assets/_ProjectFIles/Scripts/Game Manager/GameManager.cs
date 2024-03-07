@@ -19,8 +19,8 @@ public class GameManager : MonoBehaviour
     public bool OverworldRunning = false;
     public float PlayerMaxHealth = 10;
     public static GameManager manager;
-    public PlayerMovement PlayerMovement;
-    public SpriteRenderer PlayerSprite;
+    /*public PlayerMovement PlayerMovement = null;
+    public SpriteRenderer PlayerSprite = null;*/
     void Awake()
     {
         if(manager == null)
@@ -36,8 +36,8 @@ public class GameManager : MonoBehaviour
     private void Gameplay()
     {
         OverworldRunning = true;
-        PlayerMovement.enabled = true;
-        PlayerSprite.enabled = true;
+        /*PlayerMovement.enabled = true;
+        PlayerSprite.enabled = true;*/
     }
     private void GameOver()
     {
@@ -52,8 +52,8 @@ public class GameManager : MonoBehaviour
     private void MainMenu()
     {
         OverworldRunning = false;
-        PlayerMovement.enabled = false;
-        PlayerSprite.enabled = false;
+        /*PlayerMovement.enabled = false;
+        PlayerSprite.enabled = false;*/
         
     }
     private void Options()

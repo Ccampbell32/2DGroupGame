@@ -7,6 +7,8 @@ TagManager:
   - Basic Hell Enemy 1
   - GameManager
   - Spawner
+  - BattleUICanvas
+  - OverwordlUICanvas
   layers:
   - Default
   - TransparentFX
