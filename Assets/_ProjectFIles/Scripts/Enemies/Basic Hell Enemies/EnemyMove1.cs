@@ -4,6 +4,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
+using UnityEngine.Serialization;
 
 
 public class EnemyMove1 : MonoBehaviour
@@ -17,7 +18,7 @@ public class EnemyMove1 : MonoBehaviour
 
     //detection variables
     public PolygonCollider2D detector;
-    public GameObject prefabPlayer;
+    public GameObject prefabReference; // Reference to the player in the scene - the player needs to be found in the scene and assigned to this variable
     public bool isChasing;
     Transform target;
     Vector2 moveDirection;
@@ -31,13 +32,15 @@ public class EnemyMove1 : MonoBehaviour
         currentPoint = pointB.transform;
         animator.SetBool("IsMoving (Down)", true);
         detectionLightUp.SetActive(false);
-        target = prefabPlayer.transform;
+        
+        //the target is added from the collision
+        //target = prefabReference.transform;
     }
 
     void Update()
     {
-        //chase
-        if (isChasing)
+        //set to chase the player and check if there is a target to chase
+        if (isChasing && target != null)
         {
             detectionLightDown.SetActive(false);
             detectionLightUp.SetActive(false);
@@ -77,7 +80,8 @@ public class EnemyMove1 : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        if (isChasing)
+        //set to chase the player and check if there is a target to chase
+        if (isChasing && target != null)
         {
             rb.velocity = new Vector2(moveDirection.x, moveDirection.y) * speed;
 
@@ -88,6 +92,8 @@ public class EnemyMove1 : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
+            //get the target (Player) from the collision
+            target = collision.transform;
             isChasing = true;
         }
 
