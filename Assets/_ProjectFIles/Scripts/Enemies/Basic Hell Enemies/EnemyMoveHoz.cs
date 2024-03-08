@@ -22,11 +22,17 @@ public class EnemyMoveHoz : MonoBehaviour
     Transform target;
     Vector2 moveDirection;
     public GameObject detectionLight;
-    public GameObject battleCanvas;
+    public GameObject enemyBattle;
+    public GameObject battleInfo;
     
+
     void Start()
     {
-        battleCanvas.gameObject.SetActive(false);
+        // battle mode
+        enemyBattle.gameObject.SetActive(false);
+        battleInfo.gameObject.SetActive(false);
+
+        //getcomponents
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         currentPoint = pointB.transform;
@@ -99,8 +105,17 @@ public class EnemyMoveHoz : MonoBehaviour
             target = collision.transform;
             isChasing = true;
         }
-    }
+        
+        /* // activate battle UI for this enemy 
+        if (isChasing == true && collision.CompareTag("Player"))
+        {
+            enemyBattle.gameObject.SetActive(true);
+            battleInfo.gameObject.SetActive(true);
 
+
+        }*/
+    }
+   
 
     IEnumerator WaitAndFlip()
     {
@@ -118,6 +133,8 @@ public class EnemyMoveHoz : MonoBehaviour
         localScale.x *= -1;
         transform.localScale = localScale;
     }
+
+
 
     private void OnDrawGizmos()
     {
