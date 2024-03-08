@@ -33,7 +33,7 @@ public class EnemyMove : MonoBehaviour
         animator.SetBool("IsMoving (LeftRight)", true);
         detector = GetComponent<PolygonCollider2D>();
 
-        target = prefabPlayer.transform;
+        //target = prefabPlayer.transform;
 
     }
 
@@ -41,8 +41,8 @@ public class EnemyMove : MonoBehaviour
     {
 
 
-        //chase
-        if (isChasing)
+        //set to chase the player and check if there is a target to chase
+        if (isChasing && target != null)
         {
             detectionLight.SetActive(false);
             Component.Destroy(detector);
@@ -82,7 +82,8 @@ public class EnemyMove : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        if (isChasing) 
+        //set to chase the player and check if there is a target to chase
+        if (isChasing && target != null) 
         {
             Vector3 direction = (target.position - transform.position).normalized;
             moveDirection = direction;
@@ -97,6 +98,8 @@ public class EnemyMove : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
+            //get the target (Player) from the collision
+            target = collision.transform;
             isChasing = true;
 
         }
