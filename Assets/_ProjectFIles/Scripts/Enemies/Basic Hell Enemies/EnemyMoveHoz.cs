@@ -6,7 +6,7 @@ using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 
 
-public class EnemyMove : MonoBehaviour
+public class EnemyMoveHoz : MonoBehaviour
 {
     public float speed;
     private Animator animator;
@@ -23,7 +23,7 @@ public class EnemyMove : MonoBehaviour
     Vector2 moveDirection;
     public GameObject detectionLight;
     public GameObject battleCanvas;
-    public GameObject prefabPlayer;
+    
     void Start()
     {
         battleCanvas.gameObject.SetActive(false);
@@ -32,17 +32,14 @@ public class EnemyMove : MonoBehaviour
         currentPoint = pointB.transform;
         animator.SetBool("IsMoving (LeftRight)", true);
         detector = GetComponent<PolygonCollider2D>();
-
-        //target = prefabPlayer.transform;
-
     }
 
     void Update()
     {
 
 
-        //set to chase the player and check if there is a target to chase
-        if (isChasing && target != null)
+        //set to chase the player 
+        if (isChasing)
         {
             detectionLight.SetActive(false);
             Component.Destroy(detector);
@@ -82,8 +79,8 @@ public class EnemyMove : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        //set to chase the player and check if there is a target to chase
-        if (isChasing && target != null) 
+        //set to chase the player
+        if (isChasing) 
         {
             Vector3 direction = (target.position - transform.position).normalized;
             moveDirection = direction;
@@ -101,10 +98,7 @@ public class EnemyMove : MonoBehaviour
             //get the target (Player) from the collision
             target = collision.transform;
             isChasing = true;
-
         }
-        
-
     }
 
 
