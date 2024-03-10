@@ -23,7 +23,10 @@ public class EnemyMoveVert : MonoBehaviour
     Vector2 moveDirection;
     public GameObject detectionLightDown;
     public GameObject detectionLightUp;
-    public GameObject battleCanvas;
+    public GameObject enemyBattle;
+    public GameObject battleInfo;
+    public GameObject player;
+    public GameObject hellBackground;
     void Start()
     {
         animator = GetComponent<Animator>();
@@ -31,7 +34,10 @@ public class EnemyMoveVert : MonoBehaviour
         currentPoint = pointB.transform;
         animator.SetBool("IsMoving (Down)", true);
         detectionLightUp.SetActive(false);
-        
+
+        enemyBattle.gameObject.SetActive(false);
+        battleInfo.gameObject.SetActive(false);
+        hellBackground.gameObject.SetActive(false);
     }
 
     void Update()
@@ -92,10 +98,23 @@ public class EnemyMoveVert : MonoBehaviour
             //get the target (Player) from the collision
             target = collision.transform;
             isChasing = true;
+            speed = 5;
         }
 
-        //StartCoroutine(WaitbetweenTrigger());
 
+    }
+    public void OnCollisionEnter2D(Collision2D collision)
+    {
+        // activate battle UI for this enemy 
+        if (isChasing && collision.gameObject == player)
+        {
+            enemyBattle.gameObject.SetActive(true);
+            battleInfo.gameObject.SetActive(true);
+            hellBackground.gameObject.SetActive(true);
+
+            speed = 0;
+
+        }
     }
 
     // Wait at point before turning
@@ -113,18 +132,7 @@ public class EnemyMoveVert : MonoBehaviour
       }
 
     }
-    /*IEnumerator WaitbetweenTrigger()
-    {
-        speed = 0;
-        yield return new WaitForSeconds(1f);
-        speed = 5;
-        if (isChasing == true  )
-        {
-            battleCanvas.gameObject.SetActive(true);
-
-
-        }
-    }*/
+   
 
     private void Flip()
     {
