@@ -23,6 +23,7 @@ public class EnemyMoveHoz : MonoBehaviour
     Vector2 moveDirection;
     public GameObject detectionLight;
     public GameObject player;
+    public GameObject Spotted;
     void Start()
     {
         // battle mode
@@ -34,6 +35,7 @@ public class EnemyMoveHoz : MonoBehaviour
         currentPoint = pointB.transform;
         animator.SetBool("IsMoving (LeftRight)", true);
         detector = GetComponent<PolygonCollider2D>();
+        Spotted.gameObject.SetActive(false);
     }
 
     void Update()
@@ -100,7 +102,7 @@ public class EnemyMoveHoz : MonoBehaviour
             target = collision.transform;
             isChasing = true;
             speed = 5;
-
+            Spotted.gameObject.SetActive(true);
         }
         
        

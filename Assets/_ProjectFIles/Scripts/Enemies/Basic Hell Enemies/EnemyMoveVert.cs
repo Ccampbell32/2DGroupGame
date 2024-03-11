@@ -24,7 +24,7 @@ public class EnemyMoveVert : MonoBehaviour
     public GameObject detectionLightDown;
     public GameObject detectionLightUp;
     public GameObject player;
-   
+    public GameObject Spotted;
     void Start()
     {
         animator = GetComponent<Animator>();
@@ -32,8 +32,8 @@ public class EnemyMoveVert : MonoBehaviour
         currentPoint = pointB.transform;
         animator.SetBool("IsMoving (Down)", true);
         detectionLightUp.SetActive(false);
+        Spotted.gameObject.SetActive(false);
 
-      
     }
 
     void Update()
@@ -95,6 +95,7 @@ public class EnemyMoveVert : MonoBehaviour
             target = collision.transform;
             isChasing = true;
             speed = 5;
+            Spotted.gameObject.SetActive(true);
         }
 
 
