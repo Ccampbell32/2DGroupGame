@@ -2,25 +2,26 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using TMPro;
 public enum BattleState { START, PLAYERTURN, ENEMYTURN, WON, LOST }
 
 public class BattleSystem : MonoBehaviour
-{/*
+{
 
     public GameObject playerPrefab;
     public GameObject enemyPrefab;
+    public GameObject background;
 
-    public Transform playerBattleStation;
-    public Transform enemyBattleStation;
+    public Transform playerBattleSpawn;
+    public Transform enemyBattleSpawn;
 
-    Unit playerUnit;
-    Unit enemyUnit;
+    PlayerStats playerUnit;
+    EnemyStats enemyUnit;
 
-    public Text dialogueText;
+    public TMP_Text dialogueText;
 
-    public BattleHUD playerHUD;
-    public BattleHUD enemyHUD;
+    //public BattleHUD playerHUD;
+    //public BattleHUD enemyHUD;
 
     public BattleState state;
 
@@ -28,33 +29,33 @@ public class BattleSystem : MonoBehaviour
     void Start()
     {
         state = BattleState.START;
-        StartCoroutine(SetupBattle());
+        SetupBattle();
     }
 
-    IEnumerator SetupBattle()
+    void SetupBattle()
     {
-        GameObject playerGO = Instantiate(playerPrefab, playerBattleStation);
-        playerUnit = playerGO.GetComponent<Unit>();
+        GameObject playerBattle = Instantiate(playerPrefab, playerBattleSpawn);
+        playerUnit = playerBattle.GetComponent<PlayerStats>();
+        background.gameObject.SetActive(true);
 
-        GameObject enemyGO = Instantiate(enemyPrefab, enemyBattleStation);
-        enemyUnit = enemyGO.GetComponent<Unit>();
+        GameObject Enemy = Instantiate(enemyPrefab, enemyBattleSpawn);
+        enemyUnit = Enemy.GetComponent<EnemyStats>();
 
-        dialogueText.text = "A wild " + enemyUnit.unitName + " approaches...";
+       dialogueText.text = "A deadly " + enemyUnit.unitname + " approaches...";
 
-        playerHUD.SetHUD(playerUnit);
-        enemyHUD.SetHUD(enemyUnit);
+       // playerHUD.SetHUD(playerUnit);
+       // enemyHUD.SetHUD(enemyUnit);
 
-        yield return new WaitForSeconds(2f);
 
         state = BattleState.PLAYERTURN;
-        PlayerTurn();
+        //PlayerTurn();
     }
 
-    IEnumerator PlayerAttack()
+    /*IEnumerator PlayerAttack()
     {
         bool isDead = enemyUnit.TakeDamage(playerUnit.damage);
 
-        enemyHUD.SetHP(enemyUnit.currentHP);
+        //enemyHUD.SetHP(enemyUnit.currentHP);
         dialogueText.text = "The attack is successful!";
 
         yield return new WaitForSeconds(2f);
@@ -79,7 +80,7 @@ public class BattleSystem : MonoBehaviour
 
         bool isDead = playerUnit.TakeDamage(enemyUnit.damage);
 
-        playerHUD.SetHP(playerUnit.currentHP);
+        //playerHUD.SetHP(playerUnit.currentHP);
 
         yield return new WaitForSeconds(1f);
 
@@ -117,7 +118,7 @@ public class BattleSystem : MonoBehaviour
     {
         playerUnit.Heal(5);
 
-        playerHUD.SetHP(playerUnit.currentHP);
+       // playerHUD.SetHP(playerUnit.currentHP);
         dialogueText.text = "You feel renewed strength!";
 
         yield return new WaitForSeconds(2f);
@@ -141,5 +142,5 @@ public class BattleSystem : MonoBehaviour
 
         StartCoroutine(PlayerHeal());
     }
-*/
+    */
 }

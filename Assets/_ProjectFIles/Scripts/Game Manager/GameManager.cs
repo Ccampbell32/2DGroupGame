@@ -20,8 +20,10 @@ public class GameManager : MonoBehaviour
 {
     public GameState CurrentGameState; // current game state
     public bool OverworldRunning = false;
-    
+    public BattleSystem battleScript;
+
     public static GameManager manager;
+
     /*public PlayerMovement PlayerMovement = null;
     public SpriteRenderer PlayerSprite = null;*/
     
@@ -56,8 +58,9 @@ public class GameManager : MonoBehaviour
         OverworldRunning = false;
         //throw new NotImplementedException();
     }
-    private void Battling()
+    private void BattleState()
     {
+        battleScript = gameObject.AddComponent<BattleSystem>();
         OverworldRunning = false;
         //throw new NotImplementedException();
     }

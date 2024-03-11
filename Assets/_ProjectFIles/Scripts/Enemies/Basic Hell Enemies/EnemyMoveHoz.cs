@@ -22,16 +22,11 @@ public class EnemyMoveHoz : MonoBehaviour
     Transform target;
     Vector2 moveDirection;
     public GameObject detectionLight;
-    public GameObject enemyBattle;
-    public GameObject battleInfo;
     public GameObject player;
-    public GameObject hellBackground;
     void Start()
     {
         // battle mode
-        enemyBattle.gameObject.SetActive(false);
-        battleInfo.gameObject.SetActive(false);
-        hellBackground.gameObject.SetActive(false);
+ 
 
         //getcomponents
         animator = GetComponent<Animator>();
@@ -115,9 +110,6 @@ public class EnemyMoveHoz : MonoBehaviour
          // activate battle UI for this enemy 
         if (isChasing && collision.gameObject == player )
         {
-            enemyBattle.gameObject.SetActive(true);
-            battleInfo.gameObject.SetActive(true);
-            hellBackground.gameObject.SetActive(true);
             speed = 0;
 
         }
