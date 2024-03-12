@@ -12,7 +12,7 @@ public enum GameState
     MainMenu,
     Options,
     Paused,
-    Gameplay,
+    Overworld,
     GameOver
 }
 #endregion
@@ -54,11 +54,12 @@ public class GameManager : MonoBehaviour
     #endregion
 
     #region GameStates
-    private void Gameplay()
+    private void Overworld()
     {
         OverworldRunning = true;
         /*PlayerMovement.enabled = true;
         PlayerSprite.enabled = true;*/
+        Debug.Log("Overworld");
     }
     private void GameOver()
     {
@@ -76,6 +77,7 @@ public class GameManager : MonoBehaviour
         OverworldRunning = false;
         /*PlayerMovement.enabled = false;
         PlayerSprite.enabled = false;*/
+        Debug.Log("Main Menu");
         
     }
     private void Options()
@@ -97,9 +99,9 @@ public class GameManager : MonoBehaviour
         {
             MainMenu();
         }
-        if (CurrentGameState == GameState.Gameplay)
+        if (CurrentGameState == GameState.Overworld)
         {
-            Gameplay();
+            Overworld();
         }
         if (CurrentGameState == GameState.BattleState)
         {
