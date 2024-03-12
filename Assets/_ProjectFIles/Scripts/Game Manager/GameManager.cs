@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.SearchService;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 
 #region Game State
 public enum GameState
 {
-    Battling,
+    BattleState,
     MainMenu,
     Options,
     Paused,
@@ -24,9 +26,11 @@ public class GameManager : MonoBehaviour
 
     public static GameManager manager;
 
+    
+
     /*public PlayerMovement PlayerMovement = null;
     public SpriteRenderer PlayerSprite = null;*/
-    
+
     //Player attributes
     [SerializeField] float playerMaxHealth = 10;
     [SerializeField] public float playerCurrentHealth = 10;
@@ -43,7 +47,10 @@ public class GameManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        
     }
+    
     #endregion
 
     #region GameStates
@@ -94,9 +101,29 @@ public class GameManager : MonoBehaviour
         {
             Gameplay();
         }
+        if (CurrentGameState == GameState.BattleState)
+        {
+            BattleState();
+
+
+        }
+
     }
     #endregion
+    public void Start()
+    {
+        if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Main Menu"))
+        {
+            CurrentGameState = GameState.MainMenu;
+            Debug.Log("InMenu");
+        }
+        else 
+        {
+            //CurrentGameState = GameState.;
 
+
+        }
+    }
 
     //get and set the players health - call to add health, take damage and check health
     //health can be greater than max health

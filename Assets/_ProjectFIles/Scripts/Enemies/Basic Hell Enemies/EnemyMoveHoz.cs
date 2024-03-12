@@ -24,6 +24,15 @@ public class EnemyMoveHoz : MonoBehaviour
     public GameObject detectionLight;
     public GameObject player;
     public GameObject Spotted;
+
+    public GameManager gameManager;
+
+
+    private void Awake()
+    {
+        gameManager = GetComponent<GameManager>();
+    }
+
     void Start()
     {
         // battle mode
@@ -36,6 +45,9 @@ public class EnemyMoveHoz : MonoBehaviour
         animator.SetBool("IsMoving (LeftRight)", true);
         detector = GetComponent<PolygonCollider2D>();
         Spotted.gameObject.SetActive(false);
+
+
+   
     }
 
     void Update()
@@ -113,6 +125,8 @@ public class EnemyMoveHoz : MonoBehaviour
         if (isChasing && collision.gameObject == player )
         {
             speed = 0;
+
+            gameManager.ChangeGameState(GameState.BattleState);
 
         }
     }
