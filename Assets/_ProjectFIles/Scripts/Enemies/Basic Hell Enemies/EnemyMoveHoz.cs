@@ -45,9 +45,17 @@ public class EnemyMoveHoz : MonoBehaviour
         animator.SetBool("IsMoving (LeftRight)", true);
         detector = GetComponent<PolygonCollider2D>();
         Spotted.gameObject.SetActive(false);
+        if (GameManager.manager != null)
+        {     
+            gameManager = GameManager.manager;          
+            
+        }
+        else
+        {
+            Debug.Log("GameManager not found! - Please add a GameManager to the scene!");
+        }
 
 
-   
     }
 
     void Update()
