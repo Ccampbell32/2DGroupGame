@@ -8,7 +8,8 @@ public class InitialiseScene : MonoBehaviour{
     #region Initialise Variables
     private GameManager gameManager; //declare instance of GameManager
 
-    [Header("Set Game State")] public GameState gameState = GameState.Gameplay; // The game state to change to (this is set in the inspector)
+    [Header("Set Game State")] 
+    public GameState gameState = GameState.Overworld; // The game state to change to (this is set in the inspector)
 
     [Header("Initialise Player")] 
     public bool initialisePlayer = true; // Set to true to initialise the player

@@ -1,16 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.SearchService;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 
 #region Game State
 public enum GameState
 {
-    Battling,
+    BattleState,
     MainMenu,
     Options,
     Paused,
-    Gameplay,
+    Overworld,
     GameOver
 }
 #endregion
@@ -20,14 +22,19 @@ public class GameManager : MonoBehaviour
 {
     public GameState CurrentGameState; // current game state
     public bool OverworldRunning = false;
-    
+    public BattleSystem battleScript;
+
     public static GameManager manager;
+
+    
+
     /*public PlayerMovement PlayerMovement = null;
     public SpriteRenderer PlayerSprite = null;*/
-    
+
     //Player attributes
-    [SerializeField] float playerMaxHealth = 10;
-    [SerializeField] public float playerCurrentHealth = 10;
+    public float playerMaxHealth = 10;
+    [SerializeField] 
+    public float playerCurrentHealth = 10;
 
     #region Initialise
     void Awake()
@@ -41,23 +48,28 @@ public class GameManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        
     }
+    
     #endregion
 
     #region GameStates
-    private void Gameplay()
+    private void Overworld()
     {
         OverworldRunning = true;
         /*PlayerMovement.enabled = true;
         PlayerSprite.enabled = true;*/
+        Debug.Log("Overworld");
     }
     private void GameOver()
     {
         OverworldRunning = false;
         //throw new NotImplementedException();
     }
-    private void Battling()
+    private void BattleState()
     {
+        battleScript = gameObject.AddComponent<BattleSystem>();
         OverworldRunning = false;
         //throw new NotImplementedException();
     }
@@ -66,6 +78,7 @@ public class GameManager : MonoBehaviour
         OverworldRunning = false;
         /*PlayerMovement.enabled = false;
         PlayerSprite.enabled = false;*/
+        Debug.Log("Main Menu");
         
     }
     private void Options()
@@ -87,19 +100,46 @@ public class GameManager : MonoBehaviour
         {
             MainMenu();
         }
-        if (CurrentGameState == GameState.Gameplay)
+        if (CurrentGameState == GameState.Overworld)
         {
-            Gameplay();
+            Overworld();
         }
+        if (CurrentGameState == GameState.BattleState)
+        {
+            BattleState();
+
+
+        }
+
     }
     #endregion
+    public void Start()
+    {
+        if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Main Menu"))
+        {
+            CurrentGameState = GameState.MainMenu;
+            Debug.Log("InMenu");
+        }
+        else 
+        {
+            //CurrentGameState = GameState.;
 
+
+        }
+    }
+    public void update()
+    {
+        Debug.Log(playerMaxHealth);
+    }
 
     //get and set the players health - call to add health, take damage and check health
     //health can be greater than max health
     public float PlayerCurrentHealth
     {
-        get { return playerCurrentHealth; }
+        get 
+        { 
+            return playerCurrentHealth; 
+        }
         set 
         { 
             if (value > playerMaxHealth)
@@ -112,5 +152,5 @@ public class GameManager : MonoBehaviour
             }
         }
     }
-    
+   
 }
