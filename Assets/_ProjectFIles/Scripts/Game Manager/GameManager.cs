@@ -69,6 +69,7 @@ public class GameManager : MonoBehaviour
     private void BattleState()
     {
         battleScript = gameObject.AddComponent<BattleSystem>();
+        //battleScript.SetActive == true;
         OverworldRunning = false;
         //throw new NotImplementedException();
     }
@@ -112,20 +113,7 @@ public class GameManager : MonoBehaviour
 
     }
     #endregion
-    public void Start()
-    {
-        if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Main Menu"))
-        {
-            CurrentGameState = GameState.MainMenu;
-            Debug.Log("InMenu");
-        }
-        else 
-        {
-            //CurrentGameState = GameState.;
-
-
-        }
-    }
+    
 
     //get and set the players health - call to add health, take damage and check health
     //health can be greater than max health
