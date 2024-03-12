@@ -20,8 +20,8 @@ public class BattleSystem : MonoBehaviour
 
     public TMP_Text dialogueText;
 
-    //public BattleHUD playerHUD;
-    //public BattleHUD enemyHUD;
+    public BattleHUD playerHUD;
+    public BattleHUD enemyHUD;
 
     public BattleState state;
 
@@ -38,13 +38,13 @@ public class BattleSystem : MonoBehaviour
         playerUnit = playerBattle.GetComponent<PlayerStats>();
         background.gameObject.SetActive(true);
 
-        GameObject Enemy = Instantiate(enemyPrefab, enemyBattleSpawn);
-        enemyUnit = Enemy.GetComponent<EnemyStats>();
+        GameObject enemy = Instantiate(enemyPrefab, enemyBattleSpawn);
+        enemyUnit = enemy.GetComponent<EnemyStats>();
 
        dialogueText.text = "A deadly " + enemyUnit.unitname + " approaches...";
 
-       // playerHUD.SetHUD(playerUnit);
-       // enemyHUD.SetHUD(enemyUnit);
+       playerHUD.SetHUD(playerUnit);
+       enemyHUD.SetEnemyHUD(enemyUnit);
 
 
         state = BattleState.PLAYERTURN;
