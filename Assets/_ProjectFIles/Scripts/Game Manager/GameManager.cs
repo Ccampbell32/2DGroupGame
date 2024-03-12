@@ -21,12 +21,16 @@ public enum GameState
 public class GameManager : MonoBehaviour
 {
     public GameState CurrentGameState; // current game state
-    public bool OverworldRunning = false;
+    //public bool OverworldRunning = false;
     public BattleSystem battleScript;
-
     public static GameManager manager;
+    public GameObject player;
+    public GameObject[] enemies1;
+    public GameObject[] enemies2;
+    public EnemyMoveHoz enemyMove1;
+    public EnemyMoveVert enemyMove2;
 
-    
+
 
     /*public PlayerMovement PlayerMovement = null;
     public SpriteRenderer PlayerSprite = null;*/
@@ -57,25 +61,55 @@ public class GameManager : MonoBehaviour
     #region GameStates
     private void Overworld()
     {
-        OverworldRunning = true;
+        enemies1 = GameObject.FindGameObjectsWithTag("Basic Hell Enemy 1");
+        enemies2 = GameObject.FindGameObjectsWithTag("Basic Hell Enemy 2");
+        //OverworldRunning = true;
         /*PlayerMovement.enabled = true;
         PlayerSprite.enabled = true;*/
+        player.GetComponent<PlayerMovement>().enabled = true; 
         Debug.Log("Overworld");
+
+        foreach (GameObject Enemy in enemies1)
+        {
+            Enemy.GetComponent<EnemyMoveHoz>().enabled = true;           
+        }
+        foreach (GameObject Enemy2 in enemies2)
+        {
+            Enemy2.GetComponent<EnemyMoveVert>().enabled = true;           
+        }
     }
     private void GameOver()
     {
-        OverworldRunning = false;
+        //OverworldRunning = false;
         //throw new NotImplementedException();
     }
     private void BattleState()
     {
-        battleScript = gameObject.AddComponent<BattleSystem>();
-        OverworldRunning = false;
+        enemies1 = GameObject.FindGameObjectsWithTag("Basic Hell Enemy 1");
+        enemies2 = GameObject.FindGameObjectsWithTag("Basic Hell Enemy 2");
+        //battleScript = gameObject.AddComponent<BattleSystem>();
+        //OverworldRunning = false;
         //throw new NotImplementedException();
+        player.GetComponent<PlayerMovement>().enabled = false; 
+        
+        foreach (GameObject Enemy in enemies1)
+        {
+            //Enemy.GetComponent<EnemyMoveHoz>().enabled = false;
+            enemyMove1 = Enemy.GetComponent<EnemyMoveHoz>();
+            enemyMove1.enabled = false;
+        }
+        foreach (GameObject Enemy2 in enemies2)
+        {
+            //Enemy2.GetComponent<EnemyMoveVert>().enabled = false;
+            
+            enemyMove2 = Enemy2.GetComponent<EnemyMoveVert>();
+            enemyMove2.enabled = false;
+        }
+        Debug.Log("BattleState");
     }
     private void MainMenu()
     {
-        OverworldRunning = false;
+        //OverworldRunning = false;
         /*PlayerMovement.enabled = false;
         PlayerSprite.enabled = false;*/
         Debug.Log("Main Menu");
@@ -83,12 +117,12 @@ public class GameManager : MonoBehaviour
     }
     private void Options()
     {
-        OverworldRunning = false;
+        //OverworldRunning = false;
         //throw new NotImplementedException();
     }
     private void Paused()
     {
-        OverworldRunning = false;
+        //OverworldRunning = false;
         //throw new NotImplementedException();
     }
 
@@ -126,6 +160,8 @@ public class GameManager : MonoBehaviour
 
 
         }
+        player = GameObject.FindWithTag("Player");
+        
     }
     public void update()
     {
