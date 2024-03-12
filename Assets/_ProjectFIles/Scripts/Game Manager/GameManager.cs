@@ -32,8 +32,9 @@ public class GameManager : MonoBehaviour
     public SpriteRenderer PlayerSprite = null;*/
 
     //Player attributes
-    [SerializeField] float playerMaxHealth = 10;
-    [SerializeField] public float playerCurrentHealth = 10;
+    public float playerMaxHealth = 10;
+    [SerializeField] 
+    public float playerCurrentHealth = 10;
 
     #region Initialise
     void Awake()
@@ -69,7 +70,6 @@ public class GameManager : MonoBehaviour
     private void BattleState()
     {
         battleScript = gameObject.AddComponent<BattleSystem>();
-        //battleScript.SetActive == true;
         OverworldRunning = false;
         //throw new NotImplementedException();
     }
@@ -113,13 +113,33 @@ public class GameManager : MonoBehaviour
 
     }
     #endregion
-    
+    public void Start()
+    {
+        if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Main Menu"))
+        {
+            CurrentGameState = GameState.MainMenu;
+            Debug.Log("InMenu");
+        }
+        else 
+        {
+            //CurrentGameState = GameState.;
+
+
+        }
+    }
+    public void update()
+    {
+        Debug.Log(playerMaxHealth);
+    }
 
     //get and set the players health - call to add health, take damage and check health
     //health can be greater than max health
     public float PlayerCurrentHealth
     {
-        get { return playerCurrentHealth; }
+        get 
+        { 
+            return playerCurrentHealth; 
+        }
         set 
         { 
             if (value > playerMaxHealth)
@@ -132,5 +152,5 @@ public class GameManager : MonoBehaviour
             }
         }
     }
-    
+   
 }
