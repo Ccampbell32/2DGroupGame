@@ -9,7 +9,7 @@ public class InitialiseScene : MonoBehaviour
     private GameManager gameManager; //declare instance of GameManager
     
     [Header("Set Game State")]
-    public GameState gameState = GameState.Gameplay; // The game state to change to (this is set in the inspector)
+    public GameState gameState = GameState.Overworld; // The game state to change to (this is set in the inspector)
     
     #endregion
 
