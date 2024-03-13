@@ -9974,6 +9974,7 @@ MonoBehaviour:
   playerPrefab: {fileID: 370215899982315399, guid: 625ab59b47ee40b4b8eece1208db6c3a, type: 3}
   enemyPrefab: {fileID: 3208753474242251870, guid: 1f47fbb8cfb40794f8f8710fd91f1269, type: 3}
   background: {fileID: 299373533}
+  attackButton: {fileID: 900840840}
   playerBattleSpawn: {fileID: 44618989}
   enemyBattleSpawn: {fileID: 1005962227}
   dialogueText: {fileID: 532993046}
@@ -10297,8 +10298,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 1.3521061, y: 0.050799966, z: 0}
-    m_Extent: {x: 2.057606, y: 2.9724998, z: 0}
+    m_Center: {x: 1.360744, y: 0.049001694, z: 0}
+    m_Extent: {x: 2.058156, y: 2.9710016, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -11679,8 +11680,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 1.35585, y: 0.047701716, z: 0}
-    m_Extent: {x: 2.06125, y: 2.9723015, z: 0}
+    m_Center: {x: 1.355556, y: 0.051699996, z: 0}
+    m_Extent: {x: 2.054156, y: 2.9778, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -14210,8 +14211,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 1.3562, y: 0.049962044, z: 0}
-    m_Extent: {x: 2.059, y: 2.9700413, z: 0}
+    m_Center: {x: 1.3530561, y: 0.048750043, z: 0}
+    m_Extent: {x: 2.0566561, y: 2.9763498, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0

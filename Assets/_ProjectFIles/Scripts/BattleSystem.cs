@@ -11,6 +11,7 @@ public class BattleSystem : MonoBehaviour
     public GameObject playerPrefab;
     public GameObject enemyPrefab;
     public GameObject background;
+    public GameObject attackButton;
 
     public Transform playerBattleSpawn;
     public Transform enemyBattleSpawn;
@@ -34,6 +35,7 @@ public class BattleSystem : MonoBehaviour
 
     IEnumerator SetupBattle()
     {
+        attackButton.gameObject.SetActive(false);
         GameObject playerBattle = Instantiate(playerPrefab, playerBattleSpawn);
         playerUnit = playerBattle.GetComponent<PlayerStats>();
         background.gameObject.SetActive(true);
@@ -54,22 +56,26 @@ public class BattleSystem : MonoBehaviour
 
     IEnumerator PlayerAttack()
     {
-        bool isDead = enemyUnit.TakeDamage(playerUnit.damage);
+        attackButton.gameObject.SetActive(true);   bool isDead = enemyUnit.TakeDamage(playerUnit.damage);
 
         enemyHUD.SetEnemyHP(enemyUnit.currentHP);
 
         dialogueText.text = "The attack is successful!";
 
         yield return new WaitForSeconds(2f);
-        
+        attackButton.gameObject.SetActive(false);
         if (isDead)
         {
             state = BattleState.WON;
+           
             EndBattle();
         }
         else
         {
             state = BattleState.ENEMYTURN;
+
+            dialogueText.text = "You deal " + playerUnit.damage + " damage...";
+            yield return new WaitForSeconds(2f);
             StartCoroutine(EnemyTurn());
         }
         
@@ -77,6 +83,7 @@ public class BattleSystem : MonoBehaviour
     
     IEnumerator EnemyTurn()
     {
+        attackButton.gameObject.SetActive(false);    
         dialogueText.text = enemyUnit.unitname + " attacks!";
 
         yield return new WaitForSeconds(1f);
@@ -114,6 +121,7 @@ public class BattleSystem : MonoBehaviour
     
     void PlayerTurn()
     {
+        attackButton.gameObject.SetActive(true);
         dialogueText.text = "Choose an action:";
     }
     /*
