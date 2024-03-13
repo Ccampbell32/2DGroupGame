@@ -71,7 +71,7 @@ public class GameManager : MonoBehaviour
 
         foreach (GameObject Enemy in enemies1)
         {
-            Enemy.GetComponent<EnemyMoveHoz>().enabled = true;           
+            Enemy.GetComponent<EnemyMoveHoz>().enabled = true;
         }
         foreach (GameObject Enemy2 in enemies2)
         {
