@@ -63,7 +63,7 @@ public class BattleSystem : MonoBehaviour
         dialogueText.text = "The attack is successful!";
 
         yield return new WaitForSeconds(2f);
-        attackButton.gameObject.SetActive(false);
+        
         if (isDead)
         {
             state = BattleState.WON;
