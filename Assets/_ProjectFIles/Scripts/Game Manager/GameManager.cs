@@ -172,7 +172,7 @@ public class GameManager : MonoBehaviour
     }
     public void Update()
     {
-        Debug.Log(playerMaxHealth);
+       
         
         
     }
