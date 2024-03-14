@@ -128,7 +128,13 @@ public class BattleSystem : MonoBehaviour
     void PlayerTurn()
     {
         attackButton.gameObject.SetActive(true);
+
+        
+
         dialogueText.text = "Choose an action:";
+
+
+
     }
     /*
     IEnumerator PlayerHeal()
@@ -160,4 +166,15 @@ public class BattleSystem : MonoBehaviour
         StartCoroutine(PlayerHeal());
     }
     */
+
+    void AttacksMenu()
+    {
+        
+
+
+
+    }
+
+
+
 }
