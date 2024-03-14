@@ -31,31 +31,40 @@ public class GameManager : MonoBehaviour
     public EnemyMoveVert enemyMove2;
     public GameObject battleSys;
 
+    //player stats
+    public string unitname;
+    public int unitLevel;
+
+    public int damage;
+    public int maxHP;
+    public int currentHP;
+
 
     /*public PlayerMovement PlayerMovement = null;
     public SpriteRenderer PlayerSprite = null;*/
 
     //Player attributes
     public float playerMaxHealth = 10;
-    [SerializeField] 
+    [SerializeField]
     public float playerCurrentHealth = 10;
 
     #region Initialise
     void Awake()
     {
         //set the instance of GameManager to this instance and make it persist between scenes
-        if(manager == null)
+        if (manager == null)
         {
             manager = this;
             DontDestroyOnLoad(this);
-        } else if (manager != this)
+        }
+        else if (manager != this)
         {
             Destroy(gameObject);
         }
-
         
+
     }
-    
+
     #endregion
 
     #region GameStates
@@ -67,7 +76,7 @@ public class GameManager : MonoBehaviour
         //OverworldRunning = true;
         /*PlayerMovement.enabled = true;
         PlayerSprite.enabled = true;*/
-        player.GetComponent<PlayerMovement>().enabled = true; 
+        player.GetComponent<PlayerMovement>().enabled = true;
         Debug.Log("Overworld");
 
         foreach (GameObject Enemy in enemies1)
@@ -76,7 +85,7 @@ public class GameManager : MonoBehaviour
         }
         foreach (GameObject Enemy2 in enemies2)
         {
-            Enemy2.GetComponent<EnemyMoveVert>().enabled = true;           
+            Enemy2.GetComponent<EnemyMoveVert>().enabled = true;
         }
     }
     private void GameOver()
@@ -89,15 +98,15 @@ public class GameManager : MonoBehaviour
         enemies1 = GameObject.FindGameObjectsWithTag("Basic Hell Enemy 1");
         enemies2 = GameObject.FindGameObjectsWithTag("Basic Hell Enemy 2");
 
-       
+
         battleSys.SetActive(true);
         Debug.Log("Activate");
 
         battleScript = gameObject.AddComponent<BattleSystem>();
         //OverworldRunning = false;
         //throw new NotImplementedException();
-        player.GetComponent<PlayerMovement>().enabled = false; 
-        
+        player.GetComponent<PlayerMovement>().enabled = false;
+
         foreach (GameObject Enemy in enemies1)
         {
             //Enemy.GetComponent<EnemyMoveHoz>().enabled = false;
@@ -107,7 +116,7 @@ public class GameManager : MonoBehaviour
         foreach (GameObject Enemy2 in enemies2)
         {
             //Enemy2.GetComponent<EnemyMoveVert>().enabled = false;
-            
+
             enemyMove2 = Enemy2.GetComponent<EnemyMoveVert>();
             enemyMove2.enabled = false;
         }
@@ -119,7 +128,7 @@ public class GameManager : MonoBehaviour
         /*PlayerMovement.enabled = false;
         PlayerSprite.enabled = false;*/
         Debug.Log("Main Menu");
-        
+
     }
     private void Options()
     {
@@ -156,46 +165,73 @@ public class GameManager : MonoBehaviour
     public void Start()
     {
         
+
         if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Main Menu"))
         {
             CurrentGameState = GameState.MainMenu;
             Debug.Log("InMenu");
         }
-        else 
+        else
         {
-            //CurrentGameState = GameState.;
+            CurrentGameState = GameState.Overworld;
 
 
         }
         player = GameObject.FindWithTag("Player");
-        
+        battleSys.gameObject.SetActive(false);
     }
+
+  
+
     public void Update()
     {
-       
-        
-        
+
+
+
     }
 
     //get and set the players health - call to add health, take damage and check health
     //health can be greater than max health
     public float PlayerCurrentHealth
     {
-        get 
-        { 
-            return playerCurrentHealth; 
+        get
+        {
+            return playerCurrentHealth;
         }
-        set 
-        { 
+        set
+        {
             if (value > playerMaxHealth)
             {
                 playerCurrentHealth = playerMaxHealth;
             }
             else
             {
-                playerCurrentHealth = value; 
+                playerCurrentHealth = value;
             }
         }
     }
-   
+
+    public void PlayerStats()
+    {
+
+
+
+    }
+    public bool TakeDamage(int dmg)
+    {
+        currentHP -= dmg;
+        if (currentHP <= 0)
+        {
+            return true;
+
+        }
+        else
+        {
+
+            return false;
+        }
+    }
+
 }
+
+
