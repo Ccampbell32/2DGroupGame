@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1a7a42f0-e271-459a-a8ca-bb7c57a1693d" name="Changes" comment="" />
+    <list default="true" id="1a7a42f0-e271-459a-a8ca-bb7c57a1693d" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/Assets/_ProjectFIles/Scenes/FirstScene/Room3.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_ProjectFIles/Scenes/FirstScene/Room3.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_ProjectFIles/Scripts/Enemies/Basic Hell Enemies/EnemyMoveHoz.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_ProjectFIles/Scripts/Enemies/Basic Hell Enemies/EnemyMoveHoz.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_ProjectFIles/Scripts/Enemies/Basic Hell Enemies/EnemyMoveVert.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_ProjectFIles/Scripts/Enemies/Basic Hell Enemies/EnemyMoveVert.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_ProjectFIles/Scripts/Game Manager/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_ProjectFIles/Scripts/Game Manager/GameManager.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -19,9 +24,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 7
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
   <component name="ProjectId" id="2dMC45FsPiceb7VGBRvDaqQU8UB" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -35,6 +40,7 @@
     "ASKED_ADD_EXTERNAL_FILES": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
