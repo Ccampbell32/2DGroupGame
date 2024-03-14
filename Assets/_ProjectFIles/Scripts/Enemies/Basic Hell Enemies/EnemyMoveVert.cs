@@ -9,6 +9,9 @@ using UnityEngine.Serialization;
 
 public class EnemyMoveVert : MonoBehaviour
 {
+    [Tooltip("SET TO FALSE TO STOP THE ENEMY FROM MOVING - USED FOR BATTLE MODE")]
+    public bool canMove = true;
+    
     public float speed;
     private Animator animator;
     private Rigidbody2D rb;
@@ -54,12 +57,17 @@ public class EnemyMoveVert : MonoBehaviour
             Vector2 point = currentPoint.position - transform.position;
             if (currentPoint == pointB.transform)
             {
-                rb.velocity = new Vector2(0, -speed);
-
+                if (canMove)
+                {
+                    rb.velocity = new Vector2(0, -speed);
+                }
             }
             else
             {
-                rb.velocity = new Vector2(0, speed);
+                if (canMove)
+                {
+                    rb.velocity = new Vector2(0, speed);
+                }
             }
 
             if (Vector2.Distance(transform.position, currentPoint.position) < 0.5f && currentPoint == pointB.transform)
@@ -82,8 +90,10 @@ public class EnemyMoveVert : MonoBehaviour
         //set to chase the player
         if (isChasing)
         {
-            rb.velocity = new Vector2(moveDirection.x, moveDirection.y) * speed;
-
+            if (canMove)
+            {
+                rb.velocity = new Vector2(moveDirection.x, moveDirection.y) * speed;
+            }
 
         }
     }

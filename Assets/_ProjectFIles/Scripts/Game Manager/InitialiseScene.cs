@@ -21,7 +21,15 @@ public class InitialiseScene : MonoBehaviour{
     #region Initialise Level
     private void Awake(){
         //get the spawn point for the player from the hierarchy - child object called (Player Spwan Point)
-        playerSpawnPoint = GameObject.Find("Player Spawn Point").transform;
+        //check if the player spawn point exists in the scene
+        if (GameObject.Find("Player Spawn Point") != null){
+            //get the player spawn point
+            playerSpawnPoint = GameObject.Find("Player Spawn Point").transform;
+            Debug.Log("Player Spawn Point found!");
+        }
+        else{
+            Debug.Log("Player Spawn Point not found! - Please add a Player Spawn Point to the scene if it is not the menu!");
+        }
     }
 
     void Start(){
