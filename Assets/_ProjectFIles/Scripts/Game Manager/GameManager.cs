@@ -29,7 +29,7 @@ public class GameManager : MonoBehaviour
     public GameObject[] enemies2;
     public EnemyMoveHoz enemyMove1;
     public EnemyMoveVert enemyMove2;
-
+    public GameObject battleSys;
 
 
     /*public PlayerMovement PlayerMovement = null;
@@ -61,6 +61,7 @@ public class GameManager : MonoBehaviour
     #region GameStates
     private void Overworld()
     {
+        battleSys.SetActive(false);
         enemies1 = GameObject.FindGameObjectsWithTag("Basic Hell Enemy 1");
         enemies2 = GameObject.FindGameObjectsWithTag("Basic Hell Enemy 2");
         //OverworldRunning = true;
@@ -87,7 +88,12 @@ public class GameManager : MonoBehaviour
     {
         enemies1 = GameObject.FindGameObjectsWithTag("Basic Hell Enemy 1");
         enemies2 = GameObject.FindGameObjectsWithTag("Basic Hell Enemy 2");
-        //battleScript = gameObject.AddComponent<BattleSystem>();
+
+       
+        battleSys.SetActive(true);
+        Debug.Log("Activate");
+
+        battleScript = gameObject.AddComponent<BattleSystem>();
         //OverworldRunning = false;
         //throw new NotImplementedException();
         player.GetComponent<PlayerMovement>().enabled = false; 
@@ -149,6 +155,7 @@ public class GameManager : MonoBehaviour
     #endregion
     public void Start()
     {
+        
         if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Main Menu"))
         {
             CurrentGameState = GameState.MainMenu;
@@ -163,9 +170,11 @@ public class GameManager : MonoBehaviour
         player = GameObject.FindWithTag("Player");
         
     }
-    public void update()
+    public void Update()
     {
         Debug.Log(playerMaxHealth);
+        
+        
     }
 
     //get and set the players health - call to add health, take damage and check health
