@@ -15,12 +15,12 @@ public class BattleHUD : MonoBehaviour
     public Slider hpSlider;
     public Slider enemyhpSlider;
 
-    public void SetHUD(PlayerStats playerUnit)
+    public void SetHUD(PlayerStats gameManager)
 	{
-		nameText.text = playerUnit.unitname;
-		levelText.text = "Lvl " + playerUnit.unitLevel;
-		hpSlider.maxValue = playerUnit.maxHP;
-		hpSlider.value = playerUnit.currentHP;
+		nameText.text = gameManager.unitname;
+		levelText.text = "Lvl " + gameManager.unitLevel;
+		hpSlider.maxValue = gameManager.maxHP;
+		hpSlider.value = gameManager.currentHP;
 	}
     public void SetEnemyHUD(EnemyStats enemyUnit)
     {
