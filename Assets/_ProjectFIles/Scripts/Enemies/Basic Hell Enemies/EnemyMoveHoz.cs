@@ -135,7 +135,8 @@ public class EnemyMoveHoz : MonoBehaviour
             speed = 0;
 
             gameManager.ChangeGameState(GameState.BattleState);
-
+            
+            
         }
     }
 

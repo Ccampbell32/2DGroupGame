@@ -8,6 +8,8 @@ public enum BattleState { START, PLAYERTURN, ENEMYTURN, WON, LOST }
 public class BattleSystem : MonoBehaviour
 {
 
+    public GameManager gameManager;
+
     public GameObject playerPrefab;
     public GameObject enemyPrefab;
     public GameObject background;
@@ -56,7 +58,7 @@ public class BattleSystem : MonoBehaviour
 
     IEnumerator PlayerAttack()
     {
-        attackButton.gameObject.SetActive(true);   bool isDead = enemyUnit.TakeDamage(playerUnit.damage);
+        attackButton.gameObject.SetActive(false);   bool isDead = enemyUnit.TakeDamage(playerUnit.damage);
 
         enemyHUD.SetEnemyHP(enemyUnit.currentHP);
 
@@ -107,11 +109,15 @@ public class BattleSystem : MonoBehaviour
 
     }
     
-    void EndBattle()
+    IEnumerator EndBattle()
     {
+
         if (state == BattleState.WON)
         {
             dialogueText.text = "You won the battle!";
+            yield return new WaitForSeconds(2f);
+            gameManager.ChangeGameState(GameState.Overworld);
+            Debug.Log("Change to Overworld");
         }
         else if (state == BattleState.LOST)
         {
