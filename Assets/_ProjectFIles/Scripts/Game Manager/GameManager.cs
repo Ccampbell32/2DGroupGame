@@ -94,6 +94,7 @@ public class GameManager : MonoBehaviour
     #region GameStates
     private void Overworld()
     {
+        Initialise();
         battleSystem.SetActive(false);
 
     }
