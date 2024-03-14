@@ -5867,6 +5867,7 @@ GameObject:
   - component: {fileID: 1575070684}
   - component: {fileID: 1575070688}
   - component: {fileID: 1575070687}
+  - component: {fileID: 1575070689}
   m_Layer: 0
   m_Name: ChibiTheFallenOneLayersMerged_Frame_0
   m_TagString: Untagged
@@ -6053,6 +6054,27 @@ CapsuleCollider2D:
   m_Offset: {x: -0.03186096, y: 0.1302915}
   m_Size: {x: 0.21278022, y: 0.26964116}
   m_Direction: 0
+--- !u!95 &1575070689
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1575070683}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ea9e751063256304da0d9a6b8195ebfd, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &1846357272
 PrefabInstance:
   m_ObjectHideFlags: 0
