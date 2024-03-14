@@ -40,6 +40,7 @@ public class InitialiseScene : MonoBehaviour{
             //change the game state to the specified game state
             gameManager.ChangeGameState(gameState);
             Debug.Log("GameManager found! " + " - Current State: " + gameManager.CurrentGameState.ToString());
+            //gameManager.Initialise();
         }
         else{
             Debug.Log("GameManager not found! - Please add a GameManager to the scene!");
@@ -47,6 +48,7 @@ public class InitialiseScene : MonoBehaviour{
 
         if(initialisePlayer){
             InitialisePlayer();
+            
         }
     }
 

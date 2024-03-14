@@ -66,6 +66,11 @@ public class GameManager : MonoBehaviour
     
     public void Start()
     {
+        Initialise();
+    }
+
+    public void Initialise()
+    {
         //if we are in the menu set the gamestate to menu else find the player and battle system
         if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Main Menu"))
         {
@@ -77,12 +82,11 @@ public class GameManager : MonoBehaviour
             CurrentGameState = GameState.Overworld;
 
             player = GameObject.FindWithTag("Player");
-            battleSystem = GameObject.FindWithTag("BattleSystem");
+            battleSystem = GameObject.FindWithTag("BattleUICanvas");
             Debug.Log("player found");
             Debug.Log("battle system found");
             //battleSys.gameObject.SetActive(false);
         }
-
     }
 
     #endregion
@@ -218,18 +222,23 @@ public class GameManager : MonoBehaviour
         {
             if (t)
             {
-                enemy.GetComponent<EnemyMoveHoz>().canMove = false;
-                enemy.GetComponent<EnemyMoveVert>().canMove = false;
+                enemy.GetComponent<EnemyMoveHoz>().speed= 0;
+                enemy.GetComponent<EnemyMoveVert>().speed= 0;
             }
             else
             {
-                enemy.GetComponent<EnemyMoveHoz>().canMove = true;
-                enemy.GetComponent<EnemyMoveVert>().canMove = true;
+                enemy.GetComponent<EnemyMoveHoz>().speed = 5;
+                enemy.GetComponent<EnemyMoveVert>().speed = 5;
             }
         }
-        
+    }
 
-// Now enemyList contains all the enemies in the scene that have a EnemyMoveHoz script
+    void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.Space))
+        {
+            FreezeEnemies(true);
+        }
     }
 }
 
