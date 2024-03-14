@@ -51,7 +51,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   unitname: Ghoulag
   unitLevel: 2
-  damage: 2
+  damage: 1
   maxHP: 6
   currentHP: 6
 --- !u!1 &4734658928963286817

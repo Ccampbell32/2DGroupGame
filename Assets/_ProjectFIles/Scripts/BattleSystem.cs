@@ -11,6 +11,7 @@ public class BattleSystem : MonoBehaviour
     public GameObject playerPrefab;
     public GameObject enemyPrefab;
     public GameObject background;
+    public GameObject attackButton;
 
     public Transform playerBattleSpawn;
     public Transform enemyBattleSpawn;
@@ -20,8 +21,8 @@ public class BattleSystem : MonoBehaviour
 
     public TMP_Text dialogueText;
 
-    //public BattleHUD playerHUD;
-    //public BattleHUD enemyHUD;
+    public BattleHUD playerHUD;
+    public BattleHUD enemyHUD;
 
     public BattleState state;
 
@@ -29,58 +30,67 @@ public class BattleSystem : MonoBehaviour
     void Start()
     {
         state = BattleState.START;
-        SetupBattle();
+        StartCoroutine(SetupBattle());
     }
 
-    void SetupBattle()
+    IEnumerator SetupBattle()
     {
+        attackButton.gameObject.SetActive(false);
         GameObject playerBattle = Instantiate(playerPrefab, playerBattleSpawn);
         playerUnit = playerBattle.GetComponent<PlayerStats>();
         background.gameObject.SetActive(true);
 
-        GameObject Enemy = Instantiate(enemyPrefab, enemyBattleSpawn);
-        enemyUnit = Enemy.GetComponent<EnemyStats>();
+        GameObject enemy = Instantiate(enemyPrefab, enemyBattleSpawn);
+        enemyUnit = enemy.GetComponent<EnemyStats>();
 
        dialogueText.text = "A deadly " + enemyUnit.unitname + " approaches...";
 
-       // playerHUD.SetHUD(playerUnit);
-       // enemyHUD.SetHUD(enemyUnit);
-
+       playerHUD.SetHUD(playerUnit);
+       enemyHUD.SetEnemyHUD(enemyUnit);
+       
+        yield return new WaitForSeconds(2f);
 
         state = BattleState.PLAYERTURN;
-        //PlayerTurn();
+        PlayerTurn();
     }
 
-    /*IEnumerator PlayerAttack()
+    IEnumerator PlayerAttack()
     {
-        bool isDead = enemyUnit.TakeDamage(playerUnit.damage);
+        attackButton.gameObject.SetActive(true);   bool isDead = enemyUnit.TakeDamage(playerUnit.damage);
 
-        //enemyHUD.SetHP(enemyUnit.currentHP);
+        enemyHUD.SetEnemyHP(enemyUnit.currentHP);
+
         dialogueText.text = "The attack is successful!";
 
         yield return new WaitForSeconds(2f);
-
+        
         if (isDead)
         {
             state = BattleState.WON;
+           
             EndBattle();
         }
         else
         {
             state = BattleState.ENEMYTURN;
+
+            dialogueText.text = "You deal " + playerUnit.damage + " damage...";
+            yield return new WaitForSeconds(2f);
             StartCoroutine(EnemyTurn());
         }
+        
     }
-
+    
     IEnumerator EnemyTurn()
     {
-        dialogueText.text = enemyUnit.unitName + " attacks!";
+        attackButton.gameObject.SetActive(false);    
+        dialogueText.text = enemyUnit.unitname + " attacks!";
 
         yield return new WaitForSeconds(1f);
 
         bool isDead = playerUnit.TakeDamage(enemyUnit.damage);
 
-        //playerHUD.SetHP(playerUnit.currentHP);
+        playerHUD.SetHP(playerUnit.currentHP);
 
         yield return new WaitForSeconds(1f);
 
@@ -96,7 +106,7 @@ public class BattleSystem : MonoBehaviour
         }
 
     }
-
+    
     void EndBattle()
     {
         if (state == BattleState.WON)
@@ -108,12 +118,13 @@ public class BattleSystem : MonoBehaviour
             dialogueText.text = "You were defeated.";
         }
     }
-
+    
     void PlayerTurn()
     {
+        attackButton.gameObject.SetActive(true);
         dialogueText.text = "Choose an action:";
     }
-
+    /*
     IEnumerator PlayerHeal()
     {
         playerUnit.Heal(5);
@@ -126,7 +137,7 @@ public class BattleSystem : MonoBehaviour
         state = BattleState.ENEMYTURN;
         StartCoroutine(EnemyTurn());
     }
-
+    */
     public void OnAttackButton()
     {
         if (state != BattleState.PLAYERTURN)
@@ -134,7 +145,7 @@ public class BattleSystem : MonoBehaviour
 
         StartCoroutine(PlayerAttack());
     }
-
+    /*
     public void OnHealButton()
     {
         if (state != BattleState.PLAYERTURN)

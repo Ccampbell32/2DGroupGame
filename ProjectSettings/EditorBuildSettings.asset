@@ -15,11 +15,8 @@ EditorBuildSettings:
     path: Assets/_ProjectFIles/Scenes/FirstScene/Room2.unity
     guid: eb5e6b8d09a93944898404debde8a6f4
   - enabled: 1
-    path: Assets/_ProjectFIles/Scenes/FirstScene/Room3_niall.unity
-    guid: c25f2e37bd91546429e0edb0fc979b66
-  - enabled: 0
     path: Assets/_ProjectFIles/Scenes/FirstScene/Room3.unity
-    guid: d37224db687503d4094beb1aa97b120e
+    guid: 0ac27e6739710fc418c4065be114387c
   - enabled: 1
     path: Assets/_ProjectFIles/Scenes/FirstScene/Room4.unity
     guid: 8b0bcb9197522794c9467ed318441d2e
