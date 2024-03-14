@@ -157,8 +157,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 74.72088, y: 0.7947}
-  m_SizeDelta: {x: 302.8188, y: 82.4106}
+  m_AnchoredPosition: {x: 41.28328, y: 0.7947}
+  m_SizeDelta: {x: 259.3853, y: 82.4106}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &11575640
 MonoBehaviour:
@@ -4991,7 +4991,7 @@ Transform:
   m_GameObject: {fileID: 810581071}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.040306162, z: 0, w: 0.9991874}
-  m_LocalPosition: {x: -1.5319221, y: -7.606989, z: -35}
+  m_LocalPosition: {x: -2.686255, y: -7.606989, z: -35}
   m_LocalScale: {x: 1.7, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5891,7 +5891,18 @@ MonoBehaviour:
   dialouge:
   - ...
   - Hello Pharoah
-  - I am the fallen
+  - I am the Fallen, welcome to Duat
+  - I am the ruler of these lands and the one who decides the fate of all who fall
+    down here
+  - You have been unjustly ended along side all of your people
+  - I was unjustly cast here as well, so i shall offer you a deal
+  - i will give you the power to fight againts Arau and its forces
+  - All i ask is that you bring me along side you
+  - I too have a score to settle with them
+  - if you have made your choice then go forth, to leave Duat and reach Arau you
+    will have to fight
+  - some of those who rest here will try and stop you, dont let them inhibit your
+    revenge
   contButton: {fileID: 1262802115}
   wordSpeed: 0.06
   playerIsClose: 0
