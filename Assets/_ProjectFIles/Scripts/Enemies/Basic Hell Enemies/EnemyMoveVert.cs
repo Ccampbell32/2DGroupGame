@@ -9,8 +9,6 @@ using UnityEngine.Serialization;
 
 public class EnemyMoveVert : MonoBehaviour
 {
-    [Tooltip("SET TO FALSE TO STOP THE ENEMY FROM MOVING - USED FOR BATTLE MODE")]
-    public bool canMove = true;
     
     public float speed;
     private Animator animator;
@@ -57,17 +55,11 @@ public class EnemyMoveVert : MonoBehaviour
             Vector2 point = currentPoint.position - transform.position;
             if (currentPoint == pointB.transform)
             {
-                if (canMove)
-                {
-                    rb.velocity = new Vector2(0, -speed);
-                }
+                rb.velocity = new Vector2(0, -speed);
             }
             else
             {
-                if (canMove)
-                {
-                    rb.velocity = new Vector2(0, speed);
-                }
+                rb.velocity = new Vector2(0, speed);
             }
 
             if (Vector2.Distance(transform.position, currentPoint.position) < 0.5f && currentPoint == pointB.transform)
@@ -90,11 +82,7 @@ public class EnemyMoveVert : MonoBehaviour
         //set to chase the player
         if (isChasing)
         {
-            if (canMove)
-            {
-                rb.velocity = new Vector2(moveDirection.x, moveDirection.y) * speed;
-            }
-
+            rb.velocity = new Vector2(moveDirection.x, moveDirection.y) * speed;
         }
     }
     public void OnTriggerEnter2D(Collider2D collision)
@@ -167,6 +155,21 @@ public class EnemyMoveVert : MonoBehaviour
         }
     }
     
+    private void FreezeEnemy(bool t)
+    {
+        if (t)
+        {
+            //freeze the rigidbody2D X and Y
+            rb.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezePositionY;
+            //YOU CAN SET THE ANIMATION TO IDLE HERE
+        }
+        else
+        {
+            //unfreeze the rigidbody2D X and Y
+            rb.constraints = RigidbodyConstraints2D.None;
+            //YOU CAN SET THE ANIMATION TO WALK HERE
+        }
+    }
 
 
     private void OnDrawGizmos()
@@ -175,5 +178,21 @@ public class EnemyMoveVert : MonoBehaviour
         Gizmos.DrawWireSphere(pointB.transform.position, 0.5f);
         Gizmos.DrawLine(pointA.transform.position, pointB.transform.position);
     }
+    
+    
+    #region Event Subscriptions
+    //------------------EVENT SUBSCRIPTIONS------------------
+//event subscriptions OnEnable and OnDisable
+    private void OnEnable()
+    {
+        //subscribe to the event
+        GameManager.OnFreezeEnemyEvent += FreezeEnemy;
+    }
+    private void OnDisable()
+    {
+        //unsubscribe to the event
+        GameManager.OnFreezeEnemyEvent -= FreezeEnemy;
+    }
+    #endregion
 }
 

@@ -26,9 +26,6 @@ public class GameManager : MonoBehaviour
     public static GameManager manager;
     public GameObject player;
     
-    //define a list for enemyList
-    public List<GameObject> enemyList = new List<GameObject>();
-    
     public GameObject battleSystem; //battle system object - canvas to turn it on/off
     public BattleSystem battleScript; //battle system script to access the battle functions
 
@@ -47,7 +44,12 @@ public class GameManager : MonoBehaviour
     //Player attributes
     public float playerMaxHealth = 10;
     public float playerCurrentHealth = 10;
-
+    
+    //a delegate event to send to freeze enemies
+    public delegate void FreezeEnemy(bool t);
+    public static event FreezeEnemy OnFreezeEnemyEvent;
+    
+    
     #region Initialise
     void Awake()
     {
@@ -96,6 +98,8 @@ public class GameManager : MonoBehaviour
     {
         Initialise();
         battleSystem.SetActive(false);
+        
+        //call FreezeEnemies(false); to unfreeze the enemies
 
     }
     private void GameOver()
@@ -112,6 +116,8 @@ public class GameManager : MonoBehaviour
         //battleScript = gameObject.AddComponent<BattleSystem>(); //not sure what this is for as it adda a compontnete 
 
         Debug.Log("BattleState");
+        
+        //call FreezeEnemies(true); to freeze the enemies
     }
     private void MainMenu()
     {
@@ -195,50 +201,26 @@ public class GameManager : MonoBehaviour
     }
 
     
-    //---- enemy freeze - this is called from the battle system to freeze the enemies in the scene
-    //a function to get a list of all the enemies in the scene and freeze them
+    //---- enemy freeze - send the event to freeze the enemies
     public void FreezeEnemies(bool t)
     {
-        //find all enemies in the scene
-        // Find all instances of EnemyMoveHoz in the scene
-        EnemyMoveHoz[] enemiesWithHozMovement = GameObject.FindObjectsOfType<EnemyMoveHoz>();
-        EnemyMoveVert[] enemiesWithVertMovement = GameObject.FindObjectsOfType<EnemyMoveVert>();
-
-        //empty the list
-        enemyList.Clear();
-        
-        // add both enemy types to a lst of game objects
-        enemyList = new List<GameObject>();
-        foreach (EnemyMoveHoz enemy in enemiesWithHozMovement)
+        //broadcast the event to freeze/unfreeze the enemies
+        if (OnFreezeEnemyEvent != null)
         {
-            enemyList.Add(enemy.gameObject);
-        }
-        foreach (EnemyMoveVert enemy in enemiesWithVertMovement)
-        {
-            enemyList.Add(enemy.gameObject);
-        }
-        
-        //loop through the list and freeze the enemies
-        foreach (GameObject enemy in enemyList)
-        {
-            if (t)
-            {
-                enemy.GetComponent<EnemyMoveHoz>().speed= 0;
-                enemy.GetComponent<EnemyMoveVert>().speed= 0;
-            }
-            else
-            {
-                enemy.GetComponent<EnemyMoveHoz>().speed = 5;
-                enemy.GetComponent<EnemyMoveVert>().speed = 5;
-            }
+            OnFreezeEnemyEvent(t);
         }
     }
 
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Space))
+        //test freeze enemies
+        if(Input.GetKeyDown(KeyCode.P))
         {
             FreezeEnemies(true);
+        }
+        if(Input.GetKeyDown(KeyCode.O))
+        {
+            FreezeEnemies(false);
         }
     }
 }

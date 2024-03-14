@@ -8,8 +8,6 @@ using UnityEngine.InputSystem;
 
 public class EnemyMoveHoz : MonoBehaviour
 {
-    [Tooltip("SET TO FALSE TO STOP THE ENEMY FROM MOVING - USED FOR BATTLE MODE")]
-    public bool canMove = true;
     
     public float speed;
     private Animator animator;
@@ -29,7 +27,7 @@ public class EnemyMoveHoz : MonoBehaviour
     public GameObject Spotted;
 
     public GameManager gameManager;
-
+    
 
     private void Awake()
     {
@@ -84,19 +82,15 @@ public class EnemyMoveHoz : MonoBehaviour
             Vector2 point = currentPoint.position - transform.position;
             if (currentPoint == pointB.transform)
             {
-                if (canMove)
-                {
-                    rb.velocity = new Vector2(speed, 0);
-                }
+                rb.velocity = new Vector2(speed, 0);
+                
                 
             }
             else
             {
-                if (canMove)
-                {
-                    rb.velocity = new Vector2(-speed, 0);
-                }
-                
+
+                rb.velocity = new Vector2(-speed, 0);
+                                
             }
 
             if (Vector2.Distance(transform.position, currentPoint.position) < 0.5f && currentPoint == pointB.transform)
@@ -118,15 +112,12 @@ public class EnemyMoveHoz : MonoBehaviour
         {
             Vector3 direction = (target.position - transform.position).normalized;
             moveDirection = direction;
-
-            if (canMove)
-            {
-                rb.velocity = moveDirection * speed;
-            }
+            
+            rb.velocity = moveDirection * speed;
             
         }
     }
-
+ 
     public void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
@@ -170,7 +161,21 @@ public class EnemyMoveHoz : MonoBehaviour
         transform.localScale = localScale;
     }
 
-
+    private void FreezeEnemy(bool t)
+    {
+        if (t)
+        {
+            //freeze the rigidbody2D X and Y
+            rb.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezePositionY;
+            //YOU CAN SET THE ANIMATION TO IDLE HERE
+        }
+        else
+        {
+            //unfreeze the rigidbody2D X and Y
+            rb.constraints = RigidbodyConstraints2D.None;
+            //YOU CAN SET THE ANIMATION TO WALK HERE
+        }
+    }
 
     private void OnDrawGizmos()
     {
@@ -179,8 +184,20 @@ public class EnemyMoveHoz : MonoBehaviour
         Gizmos.DrawLine(pointA.transform.position, pointB.transform.position);
     }
 
-
-
-
+    #region Event Subscriptions
+    //------------------EVENT SUBSCRIPTIONS------------------
+//event subscriptions OnEnable and OnDisable
+    private void OnEnable()
+    {
+        //subscribe to the event
+        GameManager.OnFreezeEnemyEvent += FreezeEnemy;
+    }
+    private void OnDisable()
+    {
+        //unsubscribe to the event
+        GameManager.OnFreezeEnemyEvent -= FreezeEnemy;
+    }
+    #endregion
+    
 }
 
