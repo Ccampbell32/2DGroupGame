@@ -8,6 +8,9 @@ using UnityEngine.InputSystem;
 
 public class EnemyMoveHoz : MonoBehaviour
 {
+    [Tooltip("SET TO FALSE TO STOP THE ENEMY FROM MOVING - USED FOR BATTLE MODE")]
+    public bool canMove = true;
+    
     public float speed;
     private Animator animator;
     private Rigidbody2D rb;
@@ -81,11 +84,19 @@ public class EnemyMoveHoz : MonoBehaviour
             Vector2 point = currentPoint.position - transform.position;
             if (currentPoint == pointB.transform)
             {
-                rb.velocity = new Vector2(speed, 0);
+                if (canMove)
+                {
+                    rb.velocity = new Vector2(speed, 0);
+                }
+                
             }
             else
             {
-                rb.velocity = new Vector2(-speed, 0);
+                if (canMove)
+                {
+                    rb.velocity = new Vector2(-speed, 0);
+                }
+                
             }
 
             if (Vector2.Distance(transform.position, currentPoint.position) < 0.5f && currentPoint == pointB.transform)
@@ -108,9 +119,11 @@ public class EnemyMoveHoz : MonoBehaviour
             Vector3 direction = (target.position - transform.position).normalized;
             moveDirection = direction;
 
-            rb.velocity = moveDirection * speed;
-
-
+            if (canMove)
+            {
+                rb.velocity = moveDirection * speed;
+            }
+            
         }
     }
 
