@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 
 #region Game State
@@ -20,6 +21,7 @@ public enum GameState
 
 public class GameManager : MonoBehaviour
 {
+    #region Variables
     public GameState CurrentGameState; // current game state
     //public bool OverworldRunning = false;
     
@@ -36,6 +38,8 @@ public class GameManager : MonoBehaviour
     public int damage;
     public int maxHP;
     public int currentHP;
+    public GameObject OverwolrdUI;
+    public Slider HealthSlider;
 
 
     /*public PlayerMovement PlayerMovement = null;
@@ -48,8 +52,8 @@ public class GameManager : MonoBehaviour
     //a delegate event to send to freeze enemies
     public delegate void FreezeEnemy(bool t);
     public static event FreezeEnemy OnFreezeEnemyEvent;
-    
-    
+    #endregion
+
     #region Initialise
     void Awake()
     {
@@ -96,8 +100,18 @@ public class GameManager : MonoBehaviour
     #region GameStates
     private void Overworld()
     {
+        OverwolrdUI.SetActive(true);
         Initialise();
-        battleSystem.SetActive(false);
+        if (battleSystem != null)
+        {
+            battleSystem.SetActive(false);
+            Debug.Log("Not Active");
+        }
+        else
+        {
+            Debug.Log("No battle system");
+        }
+
         
         //call FreezeEnemies(false); to unfreeze the enemies
 
@@ -109,9 +123,17 @@ public class GameManager : MonoBehaviour
     }
     private void BattleState()
     {
-        
-        battleSystem.SetActive(true);
-        Debug.Log("Activate");
+        OverwolrdUI.SetActive(false);
+        if (battleSystem != null)
+        {
+            battleSystem.SetActive(true);
+            Debug.Log("Active");
+        }
+        else
+        {
+            Debug.Log("No battle system");
+        }
+
 
         //battleScript = gameObject.AddComponent<BattleSystem>(); //not sure what this is for as it adda a compontnete 
 
@@ -156,8 +178,8 @@ public class GameManager : MonoBehaviour
 
     }
     #endregion
-    
 
+    #region set player health
     //get and set the players health - call to add health, take damage and check health
     //health can be greater than max health
     public float PlayerCurrentHealth
@@ -178,13 +200,14 @@ public class GameManager : MonoBehaviour
             }
         }
     }
-
+    #endregion
     public void PlayerStats()
     {
 
 
 
     }
+    #region Take Damage 
     public bool TakeDamage(int dmg)
     {
         currentHP -= dmg;
@@ -199,8 +222,9 @@ public class GameManager : MonoBehaviour
             return false;
         }
     }
+    #endregion
 
-    
+    #region freeze enemies
     //---- enemy freeze - send the event to freeze the enemies
     public void FreezeEnemies(bool t)
     {
@@ -213,6 +237,8 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
+        HealthSlider.value = currentHP;
+        HealthSlider.maxValue = maxHP;
         //test freeze enemies
         if(Input.GetKeyDown(KeyCode.P))
         {
@@ -223,6 +249,7 @@ public class GameManager : MonoBehaviour
             FreezeEnemies(false);
         }
     }
+    #endregion
 }
 
 
