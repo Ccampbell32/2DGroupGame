@@ -5443,7 +5443,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ComponentVersion: 1
-  m_LightType: 3
+  m_LightType: 1
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
   m_Color: {r: 1, g: 0.30945963, b: 0, a: 1}
@@ -5464,8 +5464,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0, y: -0.00000011920929, z: 0}
-    m_Extent: {x: 0.9985302, y: 0.99853027, z: 0}
+    m_Center: {x: 0.8331003, y: 1.1991, z: 0}
+    m_Extent: {x: 9.3792, y: 9.7523, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0.84249353
@@ -5473,13 +5473,20 @@ MonoBehaviour:
   m_ShapeLightParametricSides: 5
   m_ShapeLightParametricAngleOffset: 0
   m_ShapeLightParametricRadius: 1
-  m_ShapeLightFalloffSize: 0.5
+  m_ShapeLightFalloffSize: 6.84
   m_ShapeLightFalloffOffset: {x: 0, y: 0}
   m_ShapePath:
-  - {x: -0.5, y: -0.5, z: 0}
-  - {x: 0.5, y: -0.5, z: 0}
-  - {x: 0.5, y: 0.5, z: 0}
-  - {x: -0.5, y: 0.5, z: 0}
+  - {x: 0.23588027, y: 0.03073248, z: 0}
+  - {x: 2.6269133, y: -1.7091624, z: 0}
+  - {x: 3.3743026, y: -1.0818366, z: 0}
+  - {x: 1.7961223, y: 0.27015486, z: 0}
+  - {x: 2.8930137, y: 1.8783603, z: 0}
+  - {x: 2.1124132, y: 2.502119, z: 0}
+  - {x: 2.579457, y: 3.25724, z: 0}
+  - {x: 1.4676576, y: 4.1041875, z: 0}
+  - {x: -0.3598772, y: 1.823116, z: 0}
+  - {x: -1.086608, y: 2.2885244, z: 0}
+  - {x: -1.7045255, y: 1.3676175, z: 0}
 --- !u!1 &1465796701
 GameObject:
   m_ObjectHideFlags: 0
@@ -5525,7 +5532,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ComponentVersion: 1
-  m_LightType: 3
+  m_LightType: 1
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
   m_Color: {r: 1, g: 0.30945963, b: 0, a: 1}
@@ -5546,8 +5553,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0, y: -0.00000011920929, z: 0}
-    m_Extent: {x: 0.9985302, y: 0.99853027, z: 0}
+    m_Center: {x: -0.098400116, y: 0.6258998, z: 0}
+    m_Extent: {x: 12.5864, y: 11.9911995, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0.84249353
@@ -5555,13 +5562,23 @@ MonoBehaviour:
   m_ShapeLightParametricSides: 5
   m_ShapeLightParametricAngleOffset: 0
   m_ShapeLightParametricRadius: 1
-  m_ShapeLightFalloffSize: 0.5
+  m_ShapeLightFalloffSize: 9.05
   m_ShapeLightFalloffOffset: {x: 0, y: 0}
   m_ShapePath:
   - {x: -0.5, y: -0.5, z: 0}
-  - {x: 0.5, y: -0.5, z: 0}
-  - {x: 0.5, y: 0.5, z: 0}
-  - {x: -0.5, y: 0.5, z: 0}
+  - {x: 1.0049757, y: -1.4076315, z: 0}
+  - {x: 2.4428258, y: -2.3182786, z: 0}
+  - {x: 1.9533244, y: -1.4999965, z: 0}
+  - {x: 3.4405434, y: 0.5975639, z: 0}
+  - {x: 2.7243357, y: 1.1134466, z: 0}
+  - {x: 3.2520883, y: 2.0102868, z: 0}
+  - {x: 1.2797421, y: 3.57285, z: 0}
+  - {x: 0.5944418, y: 2.8840818, z: 0}
+  - {x: -0.10619627, y: 3.3887494, z: 0}
+  - {x: -0.83635587, y: 2.6377025, z: 0}
+  - {x: -1.6042832, y: 3.048952, z: 0}
+  - {x: -2.8521755, y: 1.6776203, z: 0}
+  - {x: -3.641503, y: 1.9824408, z: 0}
 --- !u!1 &1564015243
 GameObject:
   m_ObjectHideFlags: 0
@@ -5767,6 +5784,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c9a1f7ba266ec247bb034e252a2c271, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dialougePanel: {fileID: 0}
+  dialougeText: {fileID: 0}
+  dialouge: []
+  contButton: {fileID: 0}
+  wordSpeed: 0
+  playerIsClose: 0
 --- !u!212 &1575070685
 SpriteRenderer:
   m_ObjectHideFlags: 0
