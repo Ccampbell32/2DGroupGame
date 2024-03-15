@@ -14,6 +14,14 @@ public class BattleSystem : MonoBehaviour
     public GameObject enemyPrefab;
     public GameObject background;
     public GameObject attackButton;
+    public GameObject moves;
+
+    //moves
+    public GameObject attack1;
+    public GameObject attack2;
+    public GameObject attack3;
+    public GameObject attack4;
+
 
     public Transform playerBattleSpawn;
     public Transform enemyBattleSpawn;
@@ -26,6 +34,7 @@ public class BattleSystem : MonoBehaviour
     public BattleHUD playerHUD;
     public BattleHUD enemyHUD;
 
+
     public BattleState state;
 
     // Start is called before the first frame update
@@ -33,11 +42,18 @@ public class BattleSystem : MonoBehaviour
     {
         state = BattleState.START;
         StartCoroutine(SetupBattle());
+
+        //finding moves in battleSys
+        attack1 = GameObject.FindWithTag("Attack1");
+        attack2 = GameObject.FindWithTag("Attack2");
+        attack3 = GameObject.FindWithTag("Attack3");
+        attack4 = GameObject.FindWithTag("Attack4");
     }
 
     IEnumerator SetupBattle()
     {
         attackButton.gameObject.SetActive(false);
+        moves.gameObject.SetActive(false);
         GameObject playerBattle = Instantiate(playerPrefab, playerBattleSpawn);
         playerUnit = playerBattle.GetComponent<PlayerStats>();
         background.gameObject.SetActive(true);
@@ -56,9 +72,10 @@ public class BattleSystem : MonoBehaviour
         PlayerTurn();
     }
 
-    IEnumerator PlayerAttack()
+    IEnumerator PlayerAttack1()
     {
         attackButton.gameObject.SetActive(false);   bool isDead = enemyUnit.TakeDamage(playerUnit.damage);
+        moves.gameObject.SetActive(false);
 
         enemyHUD.SetEnemyHP(enemyUnit.currentHP);
 
@@ -82,7 +99,87 @@ public class BattleSystem : MonoBehaviour
         }
         
     }
-    
+    IEnumerator PlayerAttack2()
+    {
+        attackButton.gameObject.SetActive(false); bool isDead = enemyUnit.TakeDamage(playerUnit.damage2);
+        moves.gameObject.SetActive(false);
+
+        enemyHUD.SetEnemyHP(enemyUnit.currentHP);
+
+        dialogueText.text = "The attack is successful!";
+
+        yield return new WaitForSeconds(2f);
+
+        if (isDead)
+        {
+            state = BattleState.WON;
+
+            EndBattle();
+        }
+        else
+        {
+            state = BattleState.ENEMYTURN;
+
+            dialogueText.text = "You deal " + playerUnit.damage2 + " damage...";
+            yield return new WaitForSeconds(2f);
+            StartCoroutine(EnemyTurn());
+        }
+
+    }
+    IEnumerator PlayerAttack3()
+    {
+        attackButton.gameObject.SetActive(false); bool isDead = enemyUnit.TakeDamage(playerUnit.damage3);
+        moves.gameObject.SetActive(false);
+
+        enemyHUD.SetEnemyHP(enemyUnit.currentHP);
+
+        dialogueText.text = "The attack is successful!";
+
+        yield return new WaitForSeconds(2f);
+
+        if (isDead)
+        {
+            state = BattleState.WON;
+
+            EndBattle();
+        }
+        else
+        {
+            state = BattleState.ENEMYTURN;
+
+            dialogueText.text = "You deal " + playerUnit.damage3 + " damage...";
+            yield return new WaitForSeconds(2f);
+            StartCoroutine(EnemyTurn());
+        }
+
+    }
+    IEnumerator PlayerAttack4()
+    {
+        attackButton.gameObject.SetActive(false); bool isDead = enemyUnit.TakeDamage(playerUnit.damage4);
+        moves.gameObject.SetActive(false);
+
+        enemyHUD.SetEnemyHP(enemyUnit.currentHP);
+
+        dialogueText.text = "The attack is successful!";
+
+        yield return new WaitForSeconds(2f);
+
+        if (isDead)
+        {
+            state = BattleState.WON;
+
+            EndBattle();
+        }
+        else
+        {
+            state = BattleState.ENEMYTURN;
+
+            dialogueText.text = "You deal " + playerUnit.damage4 + " damage...";
+            yield return new WaitForSeconds(2f);
+            StartCoroutine(EnemyTurn());
+        }
+
+    }
     IEnumerator EnemyTurn()
     {
         attackButton.gameObject.SetActive(false);    
@@ -133,8 +230,6 @@ public class BattleSystem : MonoBehaviour
 
         dialogueText.text = "Choose an action:";
 
-
-
     }
     /*
     IEnumerator PlayerHeal()
@@ -152,10 +247,7 @@ public class BattleSystem : MonoBehaviour
     */
     public void OnAttackButton()
     {
-        if (state != BattleState.PLAYERTURN)
-            return;
-
-        StartCoroutine(PlayerAttack());
+        AttacksMenu();
     }
     /*
     public void OnHealButton()
@@ -169,12 +261,45 @@ public class BattleSystem : MonoBehaviour
 
     void AttacksMenu()
     {
-        
+        attackButton.gameObject.SetActive(false);
+        moves.gameObject.SetActive(true);
 
+        attack1.gameObject.SetActive(true);
+        attack2.gameObject.SetActive(true);
+        attack3.gameObject.SetActive(true);
+        attack4.gameObject.SetActive(true);
 
 
     }
 
+    public void OnAttack1()
+    {
+        if (state != BattleState.PLAYERTURN)
+            return;
 
+        StartCoroutine(PlayerAttack1());
+    }
 
+    public void OnAttack2()
+    {
+        if (state != BattleState.PLAYERTURN)
+            return;
+
+        StartCoroutine(PlayerAttack2());
+    }
+
+    public void OnAttack3()
+    {
+        if (state != BattleState.PLAYERTURN)
+            return;
+
+        StartCoroutine(PlayerAttack3());
+    }
+    public void OnAttack4()
+    {
+        if (state != BattleState.PLAYERTURN)
+            return;
+
+        StartCoroutine(PlayerAttack4());
+    }
 }

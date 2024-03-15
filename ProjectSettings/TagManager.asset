@@ -10,6 +10,10 @@ TagManager:
   - BattleUICanvas
   - OverwordlUICanvas
   - Basic Hell Enemy 2
+  - Attack1
+  - Attack2
+  - Attack3
+  - Attack4
   layers:
   - Default
   - TransparentFX
