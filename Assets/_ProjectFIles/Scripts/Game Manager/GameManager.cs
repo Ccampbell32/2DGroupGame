@@ -38,6 +38,10 @@ public class GameManager : MonoBehaviour
     public int damage;
     public int maxHP;
     public int currentHP;
+    public int CurrentXP;
+    public int MaxXP;
+    public int XPLevel;
+    public Slider XPSlider;
     public GameObject OverwolrdUI;
     public Slider HealthSlider;
 
@@ -239,6 +243,8 @@ public class GameManager : MonoBehaviour
     {
         HealthSlider.value = currentHP;
         HealthSlider.maxValue = maxHP;
+        XPSlider.value = CurrentXP;
+        XPSlider.maxValue = maxHP;
         //test freeze enemies
         if(Input.GetKeyDown(KeyCode.P))
         {
