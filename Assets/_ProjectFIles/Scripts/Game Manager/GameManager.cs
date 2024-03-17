@@ -42,7 +42,7 @@ public class GameManager : MonoBehaviour
     public int MaxXP;
     public int XPLevel;
     public Slider XPSlider;
-    public GameObject OverwolrdUI;
+    public GameObject OverworldUI;
     public Slider HealthSlider;
 
 
@@ -104,10 +104,11 @@ public class GameManager : MonoBehaviour
     #region GameStates
     private void Overworld()
     {
-        OverwolrdUI.SetActive(true);
+        OverworldUI.SetActive(true);
         Initialise();
         if (battleSystem != null)
         {
+
             battleSystem.SetActive(false);
             Debug.Log("Not Active");
         }
@@ -127,7 +128,8 @@ public class GameManager : MonoBehaviour
     }
     private void BattleState()
     {
-        OverwolrdUI.SetActive(false);
+        OverworldUI.SetActive(false);
+        battleSystem.SetActive(true);
         if (battleSystem != null)
         {
             battleSystem.SetActive(true);
