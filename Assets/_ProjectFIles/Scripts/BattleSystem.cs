@@ -196,6 +196,7 @@ public class BattleSystem : MonoBehaviour
         if (isDead)
         {
             state = BattleState.LOST;
+
             EndBattle();
         }
         else
@@ -203,7 +204,10 @@ public class BattleSystem : MonoBehaviour
             state = BattleState.PLAYERTURN;
             PlayerTurn();
         }
-
+        if (isDead && state == BattleState.WON)
+        {
+            EndBattle();
+        }
     }
     
     IEnumerator EndBattle()

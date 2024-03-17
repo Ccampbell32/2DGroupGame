@@ -316,7 +316,7 @@ Transform:
   m_GameObject: {fileID: 44618988}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -555, y: -24, z: 0}
+  m_LocalPosition: {x: -555, y: -7, z: 0}
   m_LocalScale: {x: 343.80014, y: 291.26517, z: 37.8}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8366,7 +8366,7 @@ RectTransform:
   m_Father: {fileID: 1109661201}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -8474,8 +8474,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.011750221, y: -0.13090038, z: 0}
-    m_Extent: {x: 18.384449, y: 19.286499, z: 0}
+    m_Center: {x: -0.0075502396, y: -0.12164974, z: 0}
+    m_Extent: {x: 18.381851, y: 19.280449, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0.84249353
@@ -8915,7 +8915,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &441743664
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10737,8 +10737,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 1.361044, y: 0.04855168, z: 0}
-    m_Extent: {x: 2.058456, y: 2.9714518, z: 0}
+    m_Center: {x: 1.354406, y: 0.04940164, z: 0}
+    m_Extent: {x: 2.055306, y: 2.9706016, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -12284,8 +12284,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 1.355756, y: 0.049962044, z: 0}
-    m_Extent: {x: 2.053956, y: 2.9700413, z: 0}
+    m_Center: {x: 1.35615, y: 0.049962044, z: 0}
+    m_Extent: {x: 2.053562, y: 2.9700413, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -14831,8 +14831,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 1.35615, y: 0.04850161, z: 0}
-    m_Extent: {x: 2.053562, y: 2.9715018, z: 0}
+    m_Center: {x: 1.354506, y: 0.05314994, z: 0}
+    m_Extent: {x: 2.055206, y: 2.97475, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -16779,7 +16779,7 @@ RectTransform:
   m_Father: {fileID: 127814413}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
