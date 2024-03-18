@@ -6,7 +6,6 @@ public class BossStats : MonoBehaviour
 {
     
 
-
     public string unitname;
     public int unitLevel;
 

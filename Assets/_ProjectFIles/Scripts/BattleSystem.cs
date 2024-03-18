@@ -27,7 +27,7 @@ public class BattleSystem : MonoBehaviour
     public Transform enemyBattleSpawn;
 
     PlayerStats playerUnit;
-    EnemyStats enemyUnit;
+    public EnemyStats enemyUnit;
 
     public TMP_Text dialogueText;
 
@@ -42,6 +42,8 @@ public class BattleSystem : MonoBehaviour
     {
         state = BattleState.START;
         StartCoroutine(SetupBattle());
+
+       
 
         //finding moves in battleSys
         attack1 = GameObject.FindWithTag("Attack1");
