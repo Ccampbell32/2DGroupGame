@@ -43,8 +43,6 @@ public class BattleSystem : MonoBehaviour
         state = BattleState.START;
         StartCoroutine(SetupBattle());
 
-       
-
         //finding moves in battleSys
         attack1 = GameObject.FindWithTag("Attack1");
         attack2 = GameObject.FindWithTag("Attack2");
