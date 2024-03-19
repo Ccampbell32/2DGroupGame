@@ -86,8 +86,8 @@ public class BattleSystem : MonoBehaviour
         if (isDead)
         {
             Debug.Log("Won");
-            state = BattleState.WON;           
-            EndBattle();
+            state = BattleState.WON;
+            StartCoroutine(EndBattle());
         }
         else
         {
@@ -116,7 +116,7 @@ public class BattleSystem : MonoBehaviour
 
             state = BattleState.WON;
 
-            EndBattle();
+            StartCoroutine(EndBattle());
         }
         else
         {
@@ -133,19 +133,18 @@ public class BattleSystem : MonoBehaviour
         attackButton.gameObject.SetActive(false); bool isDead = enemyUnit.TakeDamage(playerUnit.damage3);
         moves.gameObject.SetActive(false);
 
-        enemyHUD.SetEnemyHP(enemyUnit.currentHP);
-
+        enemyHUD.SetEnemyHP(enemyUnit.currentHP);      
         dialogueText.text = "The attack is successful!";
-
+        Debug.Log(enemyUnit.currentHP);
         yield return new WaitForSeconds(2f);
-
+        
         if (isDead)
         {
             Debug.Log("Won");
 
             state = BattleState.WON;
 
-            EndBattle();
+            StartCoroutine(EndBattle());
         }
         else
         {
@@ -174,7 +173,7 @@ public class BattleSystem : MonoBehaviour
 
             state = BattleState.WON;
 
-            EndBattle();
+            StartCoroutine(EndBattle());
         }
         else
         {
@@ -203,7 +202,7 @@ public class BattleSystem : MonoBehaviour
         {
             state = BattleState.LOST;
 
-            EndBattle();
+            StartCoroutine(EndBattle());
         }
         else
         {
@@ -212,7 +211,7 @@ public class BattleSystem : MonoBehaviour
         }
         if (isDead && state == BattleState.WON)
         {
-            EndBattle();
+            StartCoroutine(EndBattle());
         }
     }
     
