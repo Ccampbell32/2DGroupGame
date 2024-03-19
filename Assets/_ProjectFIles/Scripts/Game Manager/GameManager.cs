@@ -63,6 +63,8 @@ public class GameManager : MonoBehaviour
     void Awake()
     {
         battleSystem = GameObject.FindWithTag("BattleUICanvas");
+        battleSystem.SetActive(false);
+
         //set the instance of GameManager to this instance and make it persist between scenes
         if (manager == null)
         {
@@ -75,7 +77,7 @@ public class GameManager : MonoBehaviour
         }
         
     }
-    
+   
     public void Start()
     {
         Initialise();
@@ -133,9 +135,12 @@ public class GameManager : MonoBehaviour
     }
     public void BattleState()
     {
+       
 
         OverworldUI.SetActive(false);
+
         battleSystem.SetActive(true);
+
         if (battleSystem != null)
         {
             battleSystem.SetActive(true);
@@ -272,7 +277,7 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        
+       
         HealthSlider.value = currentHP;
         HealthSlider.maxValue = maxHP;
         XPSlider.value = CurrentXP;
