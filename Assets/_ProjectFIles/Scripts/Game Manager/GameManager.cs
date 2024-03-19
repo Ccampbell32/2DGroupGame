@@ -96,11 +96,17 @@ public class GameManager : MonoBehaviour
             CurrentGameState = GameState.Overworld;
 
             player = GameObject.FindWithTag("Player");
-            battleSystem = GameObject.FindWithTag("BattleUICanvas");
+            if(battleSystem == null)
+            {
+                battleSystem = GameObject.FindWithTag("BattleUICanvas");
+                Debug.Log("Found Battle System");
+
+            }
             Debug.Log("player found");
             Debug.Log("battle system found");
             //battleSys.gameObject.SetActive(false);
         }
+        
     }
 
     #endregion
@@ -137,9 +143,7 @@ public class GameManager : MonoBehaviour
     {
        
 
-        OverworldUI.SetActive(false);
-
-        battleSystem.SetActive(true);
+        OverworldUI.SetActive(false);        
 
         if (battleSystem != null)
         {

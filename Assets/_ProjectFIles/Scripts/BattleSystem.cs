@@ -85,8 +85,8 @@ public class BattleSystem : MonoBehaviour
         
         if (isDead)
         {
-            state = BattleState.WON;
-           
+            Debug.Log("Won");
+            state = BattleState.WON;           
             EndBattle();
         }
         else
@@ -112,6 +112,8 @@ public class BattleSystem : MonoBehaviour
 
         if (isDead)
         {
+            Debug.Log("Won");
+
             state = BattleState.WON;
 
             EndBattle();
@@ -139,6 +141,8 @@ public class BattleSystem : MonoBehaviour
 
         if (isDead)
         {
+            Debug.Log("Won");
+
             state = BattleState.WON;
 
             EndBattle();
@@ -166,6 +170,8 @@ public class BattleSystem : MonoBehaviour
 
         if (isDead)
         {
+            Debug.Log("Won");
+
             state = BattleState.WON;
 
             EndBattle();
