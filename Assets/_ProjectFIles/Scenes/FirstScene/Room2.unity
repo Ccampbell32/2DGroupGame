@@ -5464,8 +5464,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.8331003, y: 1.1991, z: 0}
-    m_Extent: {x: 9.3792, y: 9.7523, z: 0}
+    m_Center: {x: 0.83430004, y: 1.1966, z: 0}
+    m_Extent: {x: 9.3793, y: 9.7496, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0.84249353
@@ -5553,8 +5553,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.098400116, y: 0.6258998, z: 0}
-    m_Extent: {x: 12.5864, y: 11.9911995, z: 0}
+    m_Center: {x: -0.105700016, y: 0.62325, z: 0}
+    m_Extent: {x: 12.5863, y: 11.99335, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0.84249353
@@ -5608,7 +5608,7 @@ Transform:
   m_GameObject: {fileID: 1564015243}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.621183, y: -21.234169, z: -12.540151}
+  m_LocalPosition: {x: -3.6211839, y: -21.234161, z: -12.540151}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5784,10 +5784,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c9a1f7ba266ec247bb034e252a2c271, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialougePanel: {fileID: 0}
-  dialougeText: {fileID: 0}
-  dialouge: []
-  contButton: {fileID: 0}
+  dialougePanel: {fileID: 1936979057}
+  dialougeText: {fileID: 11575640}
+  dialouge:
+  - ...
+  - Hello Pharoah
+  - I am the fallen
+  - I am the ruler of Duat, the place you fnd yourself in now
+  - I know you where sent here after your people had been slaughered and your home
+    ruined
+  - I too have been banished here
+  - I have a score to settle with those who did this to you, so i offer you a deal
+  - i shall give you the powers to take your revenge, upon on condition
+  - you must take me along with you, escape duat and move on to Arau
+  - there you will find your true enemies and the ones at fault for your death
+  - best of luck Pharoah, you'll need it
+  contButton: {fileID: 1262802115}
   wordSpeed: 0
   playerIsClose: 0
 --- !u!212 &1575070685
@@ -7315,7 +7327,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1936979058
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7335,7 +7347,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -206, y: 221}
+  m_AnchoredPosition: {x: -58, y: 221}
   m_SizeDelta: {x: 1237.8, y: 825.7747}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1936979059
