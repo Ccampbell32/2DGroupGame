@@ -93,7 +93,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4891567098909010958}
-  - component: {fileID: 8823565515612554114}
+  - component: {fileID: 8817649438152816445}
   m_Layer: 0
   m_Name: Boss
   m_TagString: Untagged
@@ -117,7 +117,7 @@ Transform:
   - {fileID: 6131855252844434927}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8823565515612554114
+--- !u!114 &8817649438152816445
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -126,11 +126,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 6144674479684568174}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 700840a7f55c50e4fad16657dd4ea36f, type: 3}
+  m_Script: {fileID: 11500000, guid: 001d8c881426d864bb0ca8f2c508dcd2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   unitname: Brian
   unitLevel: 10
   damage: 4
-  maxHP: 20
-  currentHP: 20
+  maxHP: 10
+  currentHP: 10
