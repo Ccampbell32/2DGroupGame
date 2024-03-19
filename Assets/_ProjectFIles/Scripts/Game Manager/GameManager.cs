@@ -62,6 +62,7 @@ public class GameManager : MonoBehaviour
     #region Initialise
     void Awake()
     {
+        battleSystem = GameObject.FindWithTag("BattleUICanvas");
         //set the instance of GameManager to this instance and make it persist between scenes
         if (manager == null)
         {
@@ -106,7 +107,10 @@ public class GameManager : MonoBehaviour
     private void Overworld()
     {
         OverworldUI.SetActive(true);
+        battleSystem.SetActive(false);
+        Debug.Log("BattleSys Deactivated");
         Initialise();
+
         if (battleSystem != null)
         {
 
@@ -127,8 +131,9 @@ public class GameManager : MonoBehaviour
         //OverworldRunning = false;
 
     }
-    private void BattleState()
+    public void BattleState()
     {
+
         OverworldUI.SetActive(false);
         battleSystem.SetActive(true);
         if (battleSystem != null)
@@ -267,6 +272,7 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
+        
         HealthSlider.value = currentHP;
         HealthSlider.maxValue = maxHP;
         XPSlider.value = CurrentXP;
