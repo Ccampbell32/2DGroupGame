@@ -5551,8 +5551,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.82875013, y: 1.191, z: 0}
-    m_Extent: {x: 9.379749, y: 9.7457, z: 0}
+    m_Center: {x: 0.83790016, y: 1.2021503, z: 0}
+    m_Extent: {x: 9.3786, y: 9.74255, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0.84249353
@@ -5640,8 +5640,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.103000164, y: 0.6265001, z: 0}
-    m_Extent: {x: 12.5917, y: 11.9846, z: 0}
+    m_Center: {x: -0.099600315, y: 0.6301999, z: 0}
+    m_Extent: {x: 12.5917, y: 11.9925, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0.84249353
@@ -5695,7 +5695,7 @@ Transform:
   m_GameObject: {fileID: 1564015243}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.621183, y: -21.23415, z: -12.540151}
+  m_LocalPosition: {x: -3.6211839, y: -21.234161, z: -12.540151}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5871,10 +5871,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c9a1f7ba266ec247bb034e252a2c271, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialougePanel: {fileID: 0}
-  dialougeText: {fileID: 0}
-  dialouge: []
-  contButton: {fileID: 0}
+  dialougePanel: {fileID: 1936979057}
+  dialougeText: {fileID: 11575640}
+  dialouge:
+  - ...
+  - Hello Pharoah
+  - I am The Fallen
+  - I am the ruler of these lands, Duat, where you find yourself now
+  - The ruler of Arau is the one who slaughered you and your people and is why you
+    find yourself here now
+  - I have a score to settle with them myself, so ill make you a deal
+  - ill give you the strength to take your revenge, all i ask is that you take me
+    with you
+  - 'so what do you say? '
+  - ......
+  - the silent type huh? well no matter, on you go
+  - best of luck and dont let anything stop you!
+  contButton: {fileID: 1262802115}
   wordSpeed: 0
   playerIsClose: 0
 --- !u!212 &1575070685
@@ -7422,7 +7435,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -206, y: 221}
+  m_AnchoredPosition: {x: -27, y: 221}
   m_SizeDelta: {x: 1237.8, y: 825.7747}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1936979059
