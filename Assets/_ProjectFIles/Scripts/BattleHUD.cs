@@ -15,7 +15,7 @@ public class BattleHUD : MonoBehaviour
     public Slider hpSlider;
     public Slider enemyhpSlider;
 
-    public void SetHUD(PlayerStats gameManager)
+    public void SetHUD(GameManager gameManager)
 	{
 		nameText.text = gameManager.unitname;
 		levelText.text = "Lvl " + gameManager.unitLevel;
