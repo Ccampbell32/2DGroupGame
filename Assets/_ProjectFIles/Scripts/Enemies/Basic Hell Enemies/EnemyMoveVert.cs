@@ -26,6 +26,12 @@ public class EnemyMoveVert : MonoBehaviour
     public GameObject detectionLightUp;
     public GameObject player;
     public GameObject Spotted;
+    public GameManager gameManager;
+
+    private void Awake()
+    {
+        gameManager = GetComponent<GameManager>();
+    }
     void Start()
     {
         animator = GetComponent<Animator>();
@@ -34,6 +40,15 @@ public class EnemyMoveVert : MonoBehaviour
         animator.SetBool("IsMoving (Down)", true);
         detectionLightUp.SetActive(false);
         Spotted.gameObject.SetActive(false);
+        if (GameManager.manager != null)
+        {
+            gameManager = GameManager.manager;
+
+        }
+        else
+        {
+            Debug.Log("GameManager not found! - Please add a GameManager to the scene!");
+        }
 
     }
 
@@ -103,7 +118,7 @@ public class EnemyMoveVert : MonoBehaviour
         // activate battle UI for this enemy 
         if (isChasing && collision.gameObject == player)
         {
-
+            gameManager.ChangeGameState(GameState.BattleState);
             speed = 0;
 
         }
