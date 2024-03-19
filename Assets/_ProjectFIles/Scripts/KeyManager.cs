@@ -5,6 +5,7 @@ using UnityEngine;
 public class KeyManager : MonoBehaviour
 
 {
+    /*
     [SerializeField] GameObject player;
 
     public bool isPickedUp;
@@ -35,6 +36,6 @@ public class KeyManager : MonoBehaviour
         }
 
     }
-
+    */
 }
-
+    
