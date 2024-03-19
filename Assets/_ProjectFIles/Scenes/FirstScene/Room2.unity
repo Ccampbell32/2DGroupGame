@@ -3561,6 +3561,7 @@ GameObject:
   - component: {fileID: 286541281}
   - component: {fileID: 286541283}
   - component: {fileID: 286541282}
+  - component: {fileID: 286541285}
   - component: {fileID: 286541284}
   m_Layer: 0
   m_Name: Lava
@@ -4303,8 +4304,8 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
---- !u!19719996 &286541284
-TilemapCollider2D:
+--- !u!68 &286541284
+EdgeCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -4336,9 +4337,95 @@ TilemapCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_MaximumTileChangeCount: 1000
-  m_ExtrusionFactor: 0
-  m_UseDelaunayMesh: 0
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: -8.99344, y: -19.474592}
+  - {x: -7.6264195, y: -19.512833}
+  - {x: -7.431536, y: -19.774097}
+  - {x: -7.401783, y: -20.318819}
+  - {x: -7.3062243, y: -20.418114}
+  - {x: -4.610512, y: -20.436111}
+  - {x: -4.436361, y: -20.73303}
+  - {x: -4.46381, y: -22.346712}
+  - {x: -4.695137, y: -22.567755}
+  - {x: -5.3142576, y: -22.562447}
+  - {x: -5.3781443, y: -22.619347}
+  - {x: -5.407342, y: -23.330805}
+  - {x: -5.652397, y: -23.556374}
+  - {x: -7.3033433, y: -23.570549}
+  - {x: -7.414052, y: -23.699808}
+  - {x: -7.3945246, y: -25.38502}
+  - {x: -7.7406487, y: -25.59733}
+  - {x: -9.005698, y: -25.557634}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0
+--- !u!68 &286541285
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 286541280}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: -8.999909, y: -5.4189315}
+  - {x: -8.6056385, y: -5.4571414}
+  - {x: -8.412759, y: -5.698085}
+  - {x: -8.3921175, y: -6.2218394}
+  - {x: -8.333195, y: -6.439813}
+  - {x: -6.6340036, y: -6.457484}
+  - {x: -6.416643, y: -6.6809387}
+  - {x: -6.434545, y: -7.2605343}
+  - {x: -6.358413, y: -7.4276123}
+  - {x: -5.645191, y: -7.4661455}
+  - {x: -5.418708, y: -7.696985}
+  - {x: -5.413417, y: -8.324542}
+  - {x: -5.319745, y: -8.452115}
+  - {x: -4.5863714, y: -8.494721}
+  - {x: -4.4462442, y: -8.68814}
+  - {x: -4.4285245, y: -11.288872}
+  - {x: -4.725159, y: -11.57262}
+  - {x: -5.2915196, y: -11.548797}
+  - {x: -5.4167905, y: -11.670911}
+  - {x: -5.380161, y: -12.37706}
+  - {x: -5.6700363, y: -12.571074}
+  - {x: -8.3544, y: -12.552777}
+  - {x: -8.453046, y: -12.698849}
+  - {x: -8.4519415, y: -13.318851}
+  - {x: -8.648531, y: -13.553375}
+  - {x: -9.018236, y: -13.592833}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0
 --- !u!1 &354654863
 GameObject:
   m_ObjectHideFlags: 0
@@ -5250,6 +5337,119 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1262802115}
   m_CullTransparentMesh: 1
+--- !u!1001 &1263671981
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5084065350210641350, guid: f3efd507609f0a141bd9dd2901de785a, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5084065350210641350, guid: f3efd507609f0a141bd9dd2901de785a, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5944139346733364961, guid: f3efd507609f0a141bd9dd2901de785a, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5944139346733364961, guid: f3efd507609f0a141bd9dd2901de785a, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5944139346733364961, guid: f3efd507609f0a141bd9dd2901de785a, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5944139346733364961, guid: f3efd507609f0a141bd9dd2901de785a, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5944139346733364961, guid: f3efd507609f0a141bd9dd2901de785a, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5944139346733364961, guid: f3efd507609f0a141bd9dd2901de785a, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5944139346733364961, guid: f3efd507609f0a141bd9dd2901de785a, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5944139346733364961, guid: f3efd507609f0a141bd9dd2901de785a, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5944139346733364961, guid: f3efd507609f0a141bd9dd2901de785a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5944139346733364961, guid: f3efd507609f0a141bd9dd2901de785a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5944139346733364961, guid: f3efd507609f0a141bd9dd2901de785a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5944139346733364961, guid: f3efd507609f0a141bd9dd2901de785a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5944139346733364961, guid: f3efd507609f0a141bd9dd2901de785a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5944139346733364961, guid: f3efd507609f0a141bd9dd2901de785a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5944139346733364961, guid: f3efd507609f0a141bd9dd2901de785a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5944139346733364961, guid: f3efd507609f0a141bd9dd2901de785a, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5944139346733364961, guid: f3efd507609f0a141bd9dd2901de785a, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5944139346733364961, guid: f3efd507609f0a141bd9dd2901de785a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5944139346733364961, guid: f3efd507609f0a141bd9dd2901de785a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5944139346733364961, guid: f3efd507609f0a141bd9dd2901de785a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8275162145989942765, guid: f3efd507609f0a141bd9dd2901de785a, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8275162145989942765, guid: f3efd507609f0a141bd9dd2901de785a, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8896506323172926377, guid: f3efd507609f0a141bd9dd2901de785a, type: 3}
+      propertyPath: m_Name
+      value: Overworld UI
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f3efd507609f0a141bd9dd2901de785a, type: 3}
 --- !u!1 &1314820881
 GameObject:
   m_ObjectHideFlags: 0
@@ -5464,8 +5664,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.8331003, y: 1.1991, z: 0}
-    m_Extent: {x: 9.3792, y: 9.7523, z: 0}
+    m_Center: {x: 0.8325, y: 1.1932998, z: 0}
+    m_Extent: {x: 9.3846, y: 9.7474, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0.84249353
@@ -5553,8 +5753,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.098400116, y: 0.6258998, z: 0}
-    m_Extent: {x: 12.5864, y: 11.9911995, z: 0}
+    m_Center: {x: -0.10529995, y: 0.62750006, z: 0}
+    m_Extent: {x: 12.5904, y: 11.996099, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0.84249353
@@ -5608,7 +5808,7 @@ Transform:
   m_GameObject: {fileID: 1564015243}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.621183, y: -21.234169, z: -12.540151}
+  m_LocalPosition: {x: -3.621183, y: -21.23415, z: -12.540151}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5784,10 +5984,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c9a1f7ba266ec247bb034e252a2c271, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialougePanel: {fileID: 0}
-  dialougeText: {fileID: 0}
-  dialouge: []
-  contButton: {fileID: 0}
+  dialougePanel: {fileID: 1936979057}
+  dialougeText: {fileID: 11575640}
+  dialouge:
+  - ...
+  - Hello Pharoah
+  - I am The Fallen
+  - I am the ruler of these lands, Duat, where you find yourself now
+  - The ruler of Arau is the one who slaughered you and your people and is why you
+    find yourself here now
+  - I have a score to settle with them myself, so ill make you a deal
+  - ill give you the strength to take your revenge, all i ask is that you take me
+    with you
+  - 'so what do you say? '
+  - ......
+  - the silent type huh? well no matter, on you go
+  - best of luck and dont let anything stop you!
+  contButton: {fileID: 1262802115}
   wordSpeed: 0
   playerIsClose: 0
 --- !u!212 &1575070685
@@ -7335,7 +7548,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -206, y: 221}
+  m_AnchoredPosition: {x: -27, y: 221}
   m_SizeDelta: {x: 1237.8, y: 825.7747}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1936979059
@@ -7381,6 +7594,7 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 1846357272}
+  - {fileID: 1263671981}
   - {fileID: 1350830713}
   - {fileID: 1041071836}
   - {fileID: 354654865}

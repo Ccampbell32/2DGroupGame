@@ -49,7 +49,7 @@ public class GameManager : MonoBehaviour
     /*public PlayerMovement PlayerMovement = null;
     public SpriteRenderer PlayerSprite = null;*/
 
-    //Player attributes
+    //Player attributes.
     public float playerMaxHealth = 10;
     public float playerCurrentHealth = 10;
     
@@ -207,12 +207,10 @@ public class GameManager : MonoBehaviour
         }
     }
     #endregion
-    public void PlayerStats()
-    {
 
-
-
-    }
+    #region playerStats
+    
+    #endregion
     #region Take Damage 
     public bool TakeDamage(int dmg)
     {
@@ -228,6 +226,8 @@ public class GameManager : MonoBehaviour
             return false;
         }
     }
+
+
     #endregion
 
     #region freeze enemies
