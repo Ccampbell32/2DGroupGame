@@ -57,7 +57,7 @@ public class BattleSystem : MonoBehaviour
         attackButton.gameObject.SetActive(false);
         moves.gameObject.SetActive(false);
         GameObject playerBattle = Instantiate(playerPrefab, playerBattleSpawn);
-        playerUnit = playerBattle.GetComponent<PlayerStats>();
+        playerUnit = gameManager.GetComponent<PlayerStats>();
         background.gameObject.SetActive(true);
 
         GameObject enemy = Instantiate(enemyPrefab, enemyBattleSpawn);

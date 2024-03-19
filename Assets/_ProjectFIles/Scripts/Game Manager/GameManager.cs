@@ -209,12 +209,7 @@ public class GameManager : MonoBehaviour
     #endregion
 
     #region playerStats
-    public void PlayerStats()
-    {
-
-
-
-    }
+    
     #endregion
     #region Take Damage 
     public bool TakeDamage(int dmg)
@@ -231,6 +226,8 @@ public class GameManager : MonoBehaviour
             return false;
         }
     }
+
+
     #endregion
 
     #region freeze enemies
