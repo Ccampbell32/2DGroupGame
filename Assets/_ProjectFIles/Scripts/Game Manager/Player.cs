@@ -5,6 +5,7 @@ using UnityEngine.Serialization;
 
 public class Player : MonoBehaviour
 {
+    /*
     private GameManager gameManager; //GET A REFERENCE TO THIS SO WE CAN ACCESS THE PLAYERS HEALTH AND ATTRIBUTES
     
     [Header("Player Prefab and Spawn Point")]

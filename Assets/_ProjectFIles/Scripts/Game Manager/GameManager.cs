@@ -36,6 +36,11 @@ public class GameManager : MonoBehaviour
     public int unitLevel;
 
     public int damage;
+    public int damage2;
+    public int damage3;
+    public int damage4;
+
+
     public int maxHP;
     public int currentHP;
     public int CurrentXP;
@@ -49,10 +54,6 @@ public class GameManager : MonoBehaviour
     /*public PlayerMovement PlayerMovement = null;
     public SpriteRenderer PlayerSprite = null;*/
 
-    //Player attributes.
-    public float playerMaxHealth = 10;
-    public float playerCurrentHealth = 10;
-    
     //a delegate event to send to freeze enemies
     public delegate void FreezeEnemy(bool t);
     public static event FreezeEnemy OnFreezeEnemyEvent;
@@ -185,28 +186,6 @@ public class GameManager : MonoBehaviour
     }
     #endregion
 
-    #region set player health
-    //get and set the players health - call to add health, take damage and check health
-    //health can be greater than max health
-    public float PlayerCurrentHealth
-    {
-        get
-        {
-            return playerCurrentHealth;
-        }
-        set
-        {
-            if (value > playerMaxHealth)
-            {
-                playerCurrentHealth = playerMaxHealth;
-            }
-            else
-            {
-                playerCurrentHealth = value;
-            }
-        }
-    }
-    #endregion
 
     #region playerStats
     
@@ -225,6 +204,51 @@ public class GameManager : MonoBehaviour
 
             return false;
         }
+    }
+    public bool TakeDamage2(int dmg2)
+    {
+        currentHP -= dmg2;
+        if (currentHP <= 0)
+        {
+            return true;
+
+        }
+        else
+        {
+
+            return false;
+        }
+
+    }
+    public bool TakeDamage3(int dmg3)
+    {
+        currentHP -= dmg3;
+        if (currentHP <= 0)
+        {
+            return true;
+
+        }
+        else
+        {
+
+            return false;
+        }
+
+    }
+    public bool TakeDamage4(int dmg4)
+    {
+        currentHP -= dmg4;
+        if (currentHP <= 0)
+        {
+            return true;
+
+        }
+        else
+        {
+
+            return false;
+        }
+
     }
 
 

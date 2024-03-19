@@ -26,7 +26,7 @@ public class BattleSystem : MonoBehaviour
     public Transform playerBattleSpawn;
     public Transform enemyBattleSpawn;
 
-    PlayerStats playerUnit;
+    GameManager playerUnit;
     public EnemyStats enemyUnit;
 
     public TMP_Text dialogueText;
@@ -57,7 +57,7 @@ public class BattleSystem : MonoBehaviour
         attackButton.gameObject.SetActive(false);
         moves.gameObject.SetActive(false);
         GameObject playerBattle = Instantiate(playerPrefab, playerBattleSpawn);
-        playerUnit = gameManager.GetComponent<PlayerStats>();
+        playerUnit = gameManager.GetComponent<GameManager>();
         background.gameObject.SetActive(true);
 
         GameObject enemy = Instantiate(enemyPrefab, enemyBattleSpawn);
