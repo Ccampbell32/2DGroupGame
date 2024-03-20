@@ -128,7 +128,7 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 256
-        width: 32
+        width: 64
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -147,9 +147,9 @@ TextureImporter:
       name: HellDoor_1
       rect:
         serializedVersion: 2
-        x: 32
+        x: 64
         y: 256
-        width: 32
+        width: 64
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -168,9 +168,9 @@ TextureImporter:
       name: HellDoor_2
       rect:
         serializedVersion: 2
-        x: 64
+        x: 128
         y: 256
-        width: 32
+        width: 64
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -189,9 +189,9 @@ TextureImporter:
       name: HellDoor_3
       rect:
         serializedVersion: 2
-        x: 96
-        y: 256
-        width: 32
+        x: 0
+        y: 224
+        width: 64
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -210,9 +210,9 @@ TextureImporter:
       name: HellDoor_4
       rect:
         serializedVersion: 2
-        x: 128
-        y: 256
-        width: 32
+        x: 64
+        y: 224
+        width: 64
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -231,9 +231,9 @@ TextureImporter:
       name: HellDoor_5
       rect:
         serializedVersion: 2
-        x: 160
-        y: 256
-        width: 32
+        x: 128
+        y: 224
+        width: 64
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -253,8 +253,8 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 224
-        width: 32
+        y: 192
+        width: 64
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -273,9 +273,9 @@ TextureImporter:
       name: HellDoor_7
       rect:
         serializedVersion: 2
-        x: 32
-        y: 224
-        width: 32
+        x: 64
+        y: 192
+        width: 64
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -294,9 +294,9 @@ TextureImporter:
       name: HellDoor_8
       rect:
         serializedVersion: 2
-        x: 64
-        y: 224
-        width: 32
+        x: 128
+        y: 192
+        width: 64
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -315,9 +315,9 @@ TextureImporter:
       name: HellDoor_9
       rect:
         serializedVersion: 2
-        x: 96
-        y: 224
-        width: 32
+        x: 0
+        y: 160
+        width: 64
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -336,9 +336,9 @@ TextureImporter:
       name: HellDoor_10
       rect:
         serializedVersion: 2
-        x: 128
-        y: 224
-        width: 32
+        x: 64
+        y: 160
+        width: 64
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -357,9 +357,9 @@ TextureImporter:
       name: HellDoor_11
       rect:
         serializedVersion: 2
-        x: 160
-        y: 224
-        width: 32
+        x: 128
+        y: 160
+        width: 64
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -379,8 +379,8 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 192
-        width: 32
+        y: 128
+        width: 64
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -399,9 +399,9 @@ TextureImporter:
       name: HellDoor_13
       rect:
         serializedVersion: 2
-        x: 32
-        y: 192
-        width: 32
+        x: 64
+        y: 128
+        width: 64
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -420,9 +420,9 @@ TextureImporter:
       name: HellDoor_14
       rect:
         serializedVersion: 2
-        x: 64
-        y: 192
-        width: 32
+        x: 128
+        y: 128
+        width: 64
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -441,9 +441,9 @@ TextureImporter:
       name: HellDoor_15
       rect:
         serializedVersion: 2
-        x: 96
-        y: 192
-        width: 32
+        x: 0
+        y: 96
+        width: 64
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -462,9 +462,9 @@ TextureImporter:
       name: HellDoor_16
       rect:
         serializedVersion: 2
-        x: 128
-        y: 192
-        width: 32
+        x: 64
+        y: 96
+        width: 64
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -483,9 +483,9 @@ TextureImporter:
       name: HellDoor_17
       rect:
         serializedVersion: 2
-        x: 160
-        y: 192
-        width: 32
+        x: 128
+        y: 96
+        width: 64
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -505,8 +505,8 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 160
-        width: 32
+        y: 64
+        width: 64
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -525,9 +525,9 @@ TextureImporter:
       name: HellDoor_19
       rect:
         serializedVersion: 2
-        x: 32
-        y: 160
-        width: 32
+        x: 64
+        y: 64
+        width: 64
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -546,9 +546,9 @@ TextureImporter:
       name: HellDoor_20
       rect:
         serializedVersion: 2
-        x: 64
-        y: 160
-        width: 32
+        x: 128
+        y: 64
+        width: 64
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -567,9 +567,9 @@ TextureImporter:
       name: HellDoor_21
       rect:
         serializedVersion: 2
-        x: 96
-        y: 160
-        width: 32
+        x: 0
+        y: 32
+        width: 64
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -588,9 +588,9 @@ TextureImporter:
       name: HellDoor_22
       rect:
         serializedVersion: 2
-        x: 128
-        y: 160
-        width: 32
+        x: 64
+        y: 32
+        width: 64
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -609,9 +609,9 @@ TextureImporter:
       name: HellDoor_23
       rect:
         serializedVersion: 2
-        x: 160
-        y: 160
-        width: 32
+        x: 128
+        y: 32
+        width: 64
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -631,8 +631,8 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 128
-        width: 32
+        y: 0
+        width: 64
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -651,9 +651,9 @@ TextureImporter:
       name: HellDoor_25
       rect:
         serializedVersion: 2
-        x: 32
-        y: 128
-        width: 32
+        x: 64
+        y: 0
+        width: 64
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -672,9 +672,9 @@ TextureImporter:
       name: HellDoor_26
       rect:
         serializedVersion: 2
-        x: 64
-        y: 128
-        width: 32
+        x: 128
+        y: 0
+        width: 64
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -685,573 +685,6 @@ TextureImporter:
       bones: []
       spriteID: 2edc76f8791037048895098c7d867bc3
       internalID: -729858726
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: HellDoor_27
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 128
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: de534aeb17be96e49959151f7548cb67
-      internalID: -968812582
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: HellDoor_28
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 128
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6fd8dc9023404dd4392cbbef65e617f8
-      internalID: 678718933
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: HellDoor_29
-      rect:
-        serializedVersion: 2
-        x: 160
-        y: 128
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ee4edc2120d814f46bdc1dc6655244ed
-      internalID: 1128756060
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: HellDoor_30
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 96
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 961553fddce5a2540b85e05926488c9b
-      internalID: 1769443466
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: HellDoor_31
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 96
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 03675ef80de4b9e409db699025badf65
-      internalID: 1505551522
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: HellDoor_32
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 96
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f0702e33e9e49eb40a00030d73d424bb
-      internalID: -1793724942
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: HellDoor_33
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 96
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: eb79e876e92c7d244b823c28235d22bc
-      internalID: 795385166
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: HellDoor_34
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 96
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4c4d3c2a0046e554a97b3174cd6626bb
-      internalID: -899345094
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: HellDoor_35
-      rect:
-        serializedVersion: 2
-        x: 160
-        y: 96
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5a46bdaf78579b6468da0149e97bf8dc
-      internalID: -1995389418
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: HellDoor_36
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 64
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 959b9431a18febd478f5a6178e3ae062
-      internalID: 1367063148
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: HellDoor_37
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 64
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 038c7eac8c107d04c889cfe197bead6d
-      internalID: 1542631357
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: HellDoor_38
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 64
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b29713e07d6fc0f4b92b9944485896e7
-      internalID: -2012796509
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: HellDoor_39
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 64
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2bc3050517160fc4b88bf4349735a05f
-      internalID: 1126773981
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: HellDoor_40
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 64
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 079888e0697266e41ad5b495959aca22
-      internalID: 421937626
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: HellDoor_41
-      rect:
-        serializedVersion: 2
-        x: 160
-        y: 64
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 97086aa6326bb5044bd3db144d68d2ac
-      internalID: -1461045018
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: HellDoor_42
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 32
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 32d0485185e59fb499e3b82ec50cd835
-      internalID: 380714334
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: HellDoor_43
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 32
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cde64cc5474329c4db5b9f661f0a04a0
-      internalID: 1877272432
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: HellDoor_44
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 32
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bb4f25dcbd1a62243b4fd437acacddb5
-      internalID: 1235998833
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: HellDoor_45
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 32
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6e4f9cc9569dbe04995352b33245bf5e
-      internalID: 527821693
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: HellDoor_46
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 32
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 23e7ae56e888da642a17edf32bbfe12f
-      internalID: 426424108
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: HellDoor_47
-      rect:
-        serializedVersion: 2
-        x: 160
-        y: 32
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3dd77d08ad91c594b9db02ad45090e20
-      internalID: -508993346
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: HellDoor_48
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7ba83ac6ed4384341aa651ccd65612ab
-      internalID: -303859683
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: HellDoor_49
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 206af9dad0ad85445b97092a9bbae840
-      internalID: -1212320193
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: HellDoor_50
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 72274bf59fc9a80448950f470b3d1c34
-      internalID: -1393108170
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: HellDoor_51
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 88e8fe71d3d9fad4ca230ebdcb462e81
-      internalID: -89048603
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: HellDoor_52
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 83d3f5689200d014d945545d109d20b4
-      internalID: 1886770337
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: HellDoor_53
-      rect:
-        serializedVersion: 2
-        x: 160
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a02b4c67ddcfa6347b99f13b7bc36318
-      internalID: 1435964963
       vertices: []
       indices: 
       edges: []
@@ -1287,36 +720,9 @@ TextureImporter:
       HellDoor_24: -1623133370
       HellDoor_25: -568708648
       HellDoor_26: -729858726
-      HellDoor_27: -968812582
-      HellDoor_28: 678718933
-      HellDoor_29: 1128756060
       HellDoor_3: -1361712311
-      HellDoor_30: 1769443466
-      HellDoor_31: 1505551522
-      HellDoor_32: -1793724942
-      HellDoor_33: 795385166
-      HellDoor_34: -899345094
-      HellDoor_35: -1995389418
-      HellDoor_36: 1367063148
-      HellDoor_37: 1542631357
-      HellDoor_38: -2012796509
-      HellDoor_39: 1126773981
       HellDoor_4: -2082006013
-      HellDoor_40: 421937626
-      HellDoor_41: -1461045018
-      HellDoor_42: 380714334
-      HellDoor_43: 1877272432
-      HellDoor_44: 1235998833
-      HellDoor_45: 527821693
-      HellDoor_46: 426424108
-      HellDoor_47: -508993346
-      HellDoor_48: -303859683
-      HellDoor_49: -1212320193
       HellDoor_5: -511044373
-      HellDoor_50: -1393108170
-      HellDoor_51: -89048603
-      HellDoor_52: 1886770337
-      HellDoor_53: 1435964963
       HellDoor_6: 2133525911
       HellDoor_7: 1969789708
       HellDoor_8: 84010924
