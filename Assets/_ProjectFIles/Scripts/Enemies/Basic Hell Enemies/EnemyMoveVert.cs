@@ -121,6 +121,7 @@ public class EnemyMoveVert : MonoBehaviour
             gameManager.ChangeGameState(GameState.BattleState);
             speed = 0;
 
+            Destroy(gameObject);
         }
     }
 

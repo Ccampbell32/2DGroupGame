@@ -140,7 +140,7 @@ public class EnemyMoveHoz : MonoBehaviour
 
             gameManager.ChangeGameState(GameState.BattleState);
             
-            
+            Destroy(gameObject);
         }
     }
 
