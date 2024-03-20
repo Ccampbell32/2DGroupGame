@@ -141,7 +141,6 @@ public class GameManager : MonoBehaviour
     }
     public void BattleState()
     {
-       
 
         OverworldUI.SetActive(false);        
 

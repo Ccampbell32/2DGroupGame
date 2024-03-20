@@ -40,8 +40,10 @@ public class BattleSystem : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        
         state = BattleState.START;
         StartCoroutine(SetupBattle());
+
 
         //finding moves in battleSys
         attack1 = GameObject.FindWithTag("Attack1");
@@ -49,9 +51,11 @@ public class BattleSystem : MonoBehaviour
         attack3 = GameObject.FindWithTag("Attack3");
         attack4 = GameObject.FindWithTag("Attack4");
     }
+    
 
     IEnumerator SetupBattle()
     {
+        Debug.Log("Setup Battle");
         attackButton.gameObject.SetActive(false);
         moves.gameObject.SetActive(false);
         GameObject playerBattle = Instantiate(playerPrefab, playerBattleSpawn);
@@ -65,13 +69,15 @@ public class BattleSystem : MonoBehaviour
 
        playerHUD.SetHUD(playerUnit);
        enemyHUD.SetEnemyHUD(enemyUnit);
-       
+        enemyUnit.currentHP = enemyUnit.maxHP;
         yield return new WaitForSeconds(2f);
 
+        Debug.Log("players turn");
         state = BattleState.PLAYERTURN;
         PlayerTurn();
     }
 
+    #region PlayerAttacks
     IEnumerator PlayerAttack1()
     {
         attackButton.gameObject.SetActive(false);   bool isDead = enemyUnit.TakeDamage(playerUnit.damage);
@@ -185,6 +191,8 @@ public class BattleSystem : MonoBehaviour
         }
 
     }
+    #endregion
+
     IEnumerator EnemyTurn()
     {
         attackButton.gameObject.SetActive(false);    
@@ -220,8 +228,10 @@ public class BattleSystem : MonoBehaviour
 
         if (state == BattleState.WON)
         {
-            dialogueText.text = "You won the battle!";
+            dialogueText.text = "You won the battle! and gained" + enemyUnit.XPheld + "XP!";
             yield return new WaitForSeconds(2f);
+
+
             gameManager.ChangeGameState(GameState.Overworld);
             Debug.Log("Change to Overworld");
         }
@@ -230,7 +240,16 @@ public class BattleSystem : MonoBehaviour
             dialogueText.text = "You were defeated.";
         }
     }
-    
+    void OnDisable()
+    {
+        Destroy(enemyUnit);
+        Debug.Log("PrintOnDisable: script was disabled");
+    }
+     void OnEnable()
+    {
+        Debug.Log("PrintOnDisable: script was enabled");
+        Start();
+    }
     void PlayerTurn()
     {
         attackButton.gameObject.SetActive(true);
@@ -267,7 +286,7 @@ public class BattleSystem : MonoBehaviour
         StartCoroutine(PlayerHeal());
     }
     */
-
+    #region Different Attacks
     void AttacksMenu()
     {
         attackButton.gameObject.SetActive(false);
@@ -281,6 +300,7 @@ public class BattleSystem : MonoBehaviour
 
     }
 
+    
     public void OnAttack1()
     {
         if (state != BattleState.PLAYERTURN)
@@ -311,4 +331,5 @@ public class BattleSystem : MonoBehaviour
 
         StartCoroutine(PlayerAttack4());
     }
+    #endregion
 }

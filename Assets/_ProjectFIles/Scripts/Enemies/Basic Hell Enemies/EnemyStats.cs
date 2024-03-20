@@ -14,6 +14,8 @@ public class EnemyStats : MonoBehaviour
     public int maxHP;
     public int currentHP;
 
+    public int XPheld;
+
     private void Update()
     {
         int randomNumber = Random.Range(0, 4);
