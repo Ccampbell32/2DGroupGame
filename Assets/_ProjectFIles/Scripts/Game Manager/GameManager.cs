@@ -116,6 +116,7 @@ public class GameManager : MonoBehaviour
     {
         OverworldUI.SetActive(true);
         battleSystem.SetActive(false);
+        player.SetActive(true);
         Debug.Log("BattleSys Deactivated");
         Initialise();
 
@@ -142,8 +143,8 @@ public class GameManager : MonoBehaviour
     public void BattleState()
     {
 
-        OverworldUI.SetActive(false);        
-
+        OverworldUI.SetActive(false);
+        player.SetActive(false);
         if (battleSystem != null)
         {
             battleSystem.SetActive(true);
