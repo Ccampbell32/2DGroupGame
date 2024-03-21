@@ -228,7 +228,7 @@ public class BattleSystem : MonoBehaviour
 
         if (state == BattleState.WON)
         {
-            dialogueText.text = "You won the battle! and gained" + enemyUnit.XPheld + "XP!";
+            dialogueText.text = "You won the battle! and gained " + enemyUnit.XPheld + "XP!";
             yield return new WaitForSeconds(2f);
             gameManager.CurrentXP += enemyUnit.XPheld;
 
