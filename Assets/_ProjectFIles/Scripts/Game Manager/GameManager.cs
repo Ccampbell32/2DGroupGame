@@ -50,6 +50,9 @@ public class GameManager : MonoBehaviour
     public GameObject OverworldUI;
     public Slider HealthSlider;
 
+    //Potion collection
+    public bool Potion1Collected;
+
 
     /*public PlayerMovement PlayerMovement = null;
     public SpriteRenderer PlayerSprite = null;*/
