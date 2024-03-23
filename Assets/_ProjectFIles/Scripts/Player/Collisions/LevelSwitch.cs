@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 public class LevelSwitch : MonoBehaviour
 {
     public int sceneBuildIndex;
+    public Transform PlayerSpawnPoint;
+    public Transform newSpawn;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -15,6 +17,7 @@ public class LevelSwitch : MonoBehaviour
         {
             SceneManager.LoadScene(sceneBuildIndex, LoadSceneMode.Single);
 
+            PlayerSpawnPoint.transform.position = newSpawn.transform.position;
 
         }
     }
