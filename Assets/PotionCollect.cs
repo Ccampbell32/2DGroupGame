@@ -13,8 +13,8 @@ public class PotionCollect : MonoBehaviour
 
        
     }
-    private void Start()
-    {
+     void Start()
+     {
         if (gameManager.Potion1Collected == true)
         {
             GameObject.Destroy(gameObject);
@@ -30,7 +30,7 @@ public class PotionCollect : MonoBehaviour
         {
             Debug.Log("GameManager not found! - Please add a GameManager to the scene!");
         }
-    }
+     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {

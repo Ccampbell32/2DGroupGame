@@ -116,7 +116,7 @@ public class EnemyMoveVert : MonoBehaviour
     public void OnCollisionEnter2D(Collision2D collision)
     {
         // activate battle UI for this enemy 
-        if (isChasing && collision.gameObject == player)
+        if (collision.gameObject == player)
         {
             gameManager.ChangeGameState(GameState.BattleState);
             speed = 0;
