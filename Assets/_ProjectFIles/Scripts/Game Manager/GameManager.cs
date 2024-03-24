@@ -66,6 +66,7 @@ public class GameManager : MonoBehaviour
     void Awake()
     {
         battleSystem = GameObject.FindWithTag("BattleUICanvas");
+        
         battleSystem.SetActive(false);
 
         //set the instance of GameManager to this instance and make it persist between scenes
@@ -103,6 +104,12 @@ public class GameManager : MonoBehaviour
             {
                 battleSystem = GameObject.FindWithTag("BattleUICanvas");
                 Debug.Log("Found Battle System");
+
+            }
+            if (player == null)
+            {
+                player = GameObject.FindWithTag("Player");
+                Debug.Log("Found Player");
 
             }
             Debug.Log("player found");

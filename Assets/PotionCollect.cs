@@ -4,21 +4,29 @@ using UnityEngine;
 
 public class PotionCollect : MonoBehaviour
 {
+
     public GameManager gameManager;
+    private GameManager script;
     public GameObject player;
+    public GameObject healthItem;
    
     private void Awake()
     {
-        gameManager = GetComponent<GameManager>();
+        script = gameManager.GetComponent<GameManager>();
 
        
     }
      void Start()
      {
-        if (gameManager.Potion1Collected == true)
+        if (script.Potion1Collected == true)
         {
-            GameObject.Destroy(gameObject);
+            healthItem.SetActive(false);
 
+        }
+        else
+        {
+
+            healthItem.SetActive(true);
         }
 
         if (GameManager.manager != null)
