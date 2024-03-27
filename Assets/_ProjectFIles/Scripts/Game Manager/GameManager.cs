@@ -53,6 +53,8 @@ public class GameManager : MonoBehaviour
     //Potion collection
     public bool Potion1Collected;
 
+    //BossDefeated
+    public bool BossBeaten;
 
     /*public PlayerMovement PlayerMovement = null;
     public SpriteRenderer PlayerSprite = null;*/
