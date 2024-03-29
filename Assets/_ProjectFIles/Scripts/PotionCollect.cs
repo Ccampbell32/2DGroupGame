@@ -39,6 +39,19 @@ public class PotionCollect : MonoBehaviour
             Debug.Log("GameManager not found! - Please add a GameManager to the scene!");
         }
      }
+    private void Update()
+    {
+        if (script.Potion1Collected == true)
+        {
+            healthItem.SetActive(false);
+
+        }
+        else
+        {
+
+            healthItem.SetActive(true);
+        }
+    }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {

@@ -32,13 +32,13 @@ public class GameManager : MonoBehaviour
     public BattleSystem battleScript; //battle system script to access the battle functions
 
     //player stats
-    public string unitname;
+    public string unitname = "Ramesses";
     public int unitLevel;
 
-    public int damage;
-    public int damage2;
-    public int damage3;
-    public int damage4;
+    public int damage = 2;
+    public int damage2 = 3;
+    public int damage3 = 4;
+    public int damage4 = 5;
 
 
     public int maxHP;
@@ -51,6 +51,7 @@ public class GameManager : MonoBehaviour
     public Slider HealthSlider;
 
     //Potion collection
+    public GameObject Potion1;
     public bool Potion1Collected;
 
     //BossDefeated
@@ -163,6 +164,9 @@ public class GameManager : MonoBehaviour
     private void Overworld()
     {
         OverworldUI.SetActive(true);
+
+        Potion1 = GameObject.FindWithTag("Potion1");
+
         if (battleSystem != null)
         {
             battleSystem.SetActive(false);
@@ -182,7 +186,16 @@ public class GameManager : MonoBehaviour
             Debug.Log("No battle system");
         }
 
-        
+        //potion collected
+        if (Potion1Collected == true) 
+        {  
+           Potion1.gameObject.SetActive(false);
+        }
+        else 
+        { 
+            Potion1.gameObject.SetActive(true);
+        }
+
         //call FreezeEnemies(false); to unfreeze the enemies
 
     }
@@ -207,7 +220,7 @@ public class GameManager : MonoBehaviour
         }
 
 
-        //battleScript = gameObject.AddComponent<BattleSystem>(); //not sure what this is for as it adda a compontnete 
+        battleScript = battleSystem.GetComponent<BattleSystem>();
 
         Debug.Log("BattleState");
         
