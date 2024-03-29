@@ -299,22 +299,28 @@ public class BattleSystem : MonoBehaviour
 
         attack1.gameObject.SetActive(true);
         attack2.gameObject.SetActive(true);
-        if (gameManager.unitLevel >=3)
+        if (attack3 != null)
         {
-            attack3.gameObject.SetActive(true);
+            if (gameManager.unitLevel >= 3)
+            {
+                attack3.gameObject.SetActive(true);
+            }
+            else
+            {
+                attack3.gameObject.SetActive(false);
+            }
         }
-        else
+        if (attack4 != null)
         {
-            attack3.gameObject.SetActive(false);
-        }
 
-        if (gameManager.unitLevel >= 5)
-        {
-            attack4.gameObject.SetActive(true);
-        }
-        else
-        {
-            attack4.gameObject.SetActive(false);
+            if (gameManager.unitLevel >= 5)
+            {
+                attack4.gameObject.SetActive(true);
+            }
+            else
+            {
+                attack4.gameObject.SetActive(false);
+            }
         }
 
 

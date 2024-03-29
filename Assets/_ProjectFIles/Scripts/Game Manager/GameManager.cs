@@ -186,14 +186,18 @@ public class GameManager : MonoBehaviour
             Debug.Log("No battle system");
         }
 
-        //potion collected
-        if (Potion1Collected == true) 
-        {  
-           Potion1.gameObject.SetActive(false);
-        }
-        else 
-        { 
-            Potion1.gameObject.SetActive(true);
+
+        if (Potion1 != null)
+        {
+            //potion collected
+            if (Potion1Collected == true)
+            {
+                Potion1.gameObject.SetActive(false);
+            }
+            else
+            {
+                Potion1.gameObject.SetActive(true);
+            }
         }
 
         //call FreezeEnemies(false); to unfreeze the enemies
