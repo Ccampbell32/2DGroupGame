@@ -99,7 +99,7 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            CurrentGameState = GameState.Overworld;
+           
 
             
             if(battleSystem == null)
@@ -147,7 +147,7 @@ public class GameManager : MonoBehaviour
                 Debug.Log("Found XP Slider");
 
             }
-
+            CurrentGameState = GameState.Overworld;
             //battleSys.gameObject.SetActive(false);
         }
         damage = 2;

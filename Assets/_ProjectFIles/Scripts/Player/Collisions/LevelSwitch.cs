@@ -17,7 +17,7 @@ public class LevelSwitch : MonoBehaviour
         {
             SceneManager.LoadScene(sceneBuildIndex, LoadSceneMode.Single);
 
-            PlayerSpawnPoint.transform.position = newSpawn.transform.position;
+           // PlayerSpawnPoint.transform.position = newSpawn.transform.position;
 
         }
     }

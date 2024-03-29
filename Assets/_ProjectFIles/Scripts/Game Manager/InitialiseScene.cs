@@ -6,7 +6,7 @@ using UnityEngine;
 public class InitialiseScene : MonoBehaviour{
     
     #region Initialise Variables
-    private GameManager gameManager; //declare instance of GameManager
+    public GameManager gameManager; //declare instance of GameManager
 
     [Header("Set Game State")] 
     public GameState gameState = GameState.Overworld; // The game state to change to (this is set in the inspector)
@@ -20,12 +20,13 @@ public class InitialiseScene : MonoBehaviour{
 
     #region Initialise Level
     private void Awake(){
+        gameManager = GameObject.FindWithTag("GameManager").GetComponent<GameManager>();
         //get the spawn point for the player from the hierarchy - child object called (Player Spwan Point)
         //check if the player spawn point exists in the scene
         if (GameObject.Find("Player Spawn Point") != null){
             //get the player spawn point
             playerSpawnPoint = GameObject.Find("Player Spawn Point").transform;
-            Debug.Log("Player Spawn Point found!");
+            Debug.Log("Player Spawn Point found!"); 
         }
         else{
             Debug.Log("Player Spawn Point not found! - Please add a Player Spawn Point to the scene if it is not the menu!");
@@ -34,11 +35,11 @@ public class InitialiseScene : MonoBehaviour{
 
     void Start(){
         //get the instance of GameManager for use in this script but check if it exists first
-        if (GameManager.manager != null){
+        if (gameManager != null){
             //get the instance of GameManager
-            gameManager = GameManager.manager;
+            
             //change the game state to the specified game state
-            gameManager.ChangeGameState(gameState);
+            //gameManager.ChangeGameState(gameState);
             Debug.Log("GameManager found! " + " - Current State: " + gameManager.CurrentGameState.ToString());
             //gameManager.Initialise();
         }
