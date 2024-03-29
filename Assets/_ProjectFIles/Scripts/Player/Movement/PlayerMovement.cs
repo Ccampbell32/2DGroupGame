@@ -12,12 +12,15 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D rb;
     private Animator animator;
     public PlayerInput playerinput;
+    public GameManager gameManager;
     private void Start()
     {
-        
+        gameManager.Start();
+
     }
     private void Awake()
     {
+        gameManager = GameObject.FindWithTag("GameManager").GetComponent<GameManager>();
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         

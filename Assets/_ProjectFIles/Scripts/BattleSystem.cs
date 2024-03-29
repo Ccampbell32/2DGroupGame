@@ -40,7 +40,7 @@ public class BattleSystem : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        gameManager = GameObject.FindWithTag("GameManager").GetComponent<GameManager>();
         state = BattleState.START;
         StartCoroutine(SetupBattle());
 

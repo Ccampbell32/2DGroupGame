@@ -45,7 +45,7 @@ public class InitialiseScene : MonoBehaviour{
         else{
             Debug.Log("GameManager not found! - Please add a GameManager to the scene!");
         }
-
+       
         if(initialisePlayer){
             InitialisePlayer();
             

@@ -280,7 +280,7 @@ GameObject:
   - component: {fileID: 5591609922092194438}
   m_Layer: 0
   m_Name: Health Slider
-  m_TagString: Untagged
+  m_TagString: HealthSlider
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -797,7 +797,7 @@ GameObject:
   - component: {fileID: 1470977608820251797}
   m_Layer: 0
   m_Name: XP
-  m_TagString: Untagged
+  m_TagString: XPSlider
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1182,7 +1182,7 @@ GameObject:
   - component: {fileID: 6254026141242729552}
   m_Layer: 0
   m_Name: Overworld UI
-  m_TagString: Untagged
+  m_TagString: OverwordlUICanvas
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

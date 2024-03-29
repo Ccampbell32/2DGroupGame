@@ -65,11 +65,9 @@ public class GameManager : MonoBehaviour
     #endregion
 
     #region Initialise
-    void Awake()
+    public void Awake()
     {
-        battleSystem = GameObject.FindWithTag("BattleUICanvas");
         
-        battleSystem.SetActive(false);
 
         //set the instance of GameManager to this instance and make it persist between scenes
         if (manager == null)
@@ -81,7 +79,9 @@ public class GameManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        
+        unitLevel = 1;
+        maxHP = 10;
+        currentHP = maxHP;
     }
    
     public void Start()
@@ -101,12 +101,27 @@ public class GameManager : MonoBehaviour
         {
             CurrentGameState = GameState.Overworld;
 
-            player = GameObject.FindWithTag("Player");
+            
             if(battleSystem == null)
             {
                 battleSystem = GameObject.FindWithTag("BattleUICanvas");
                 Debug.Log("Found Battle System");
 
+            }
+
+            if (GameObject.FindWithTag("BattleSystem") != null)
+            {
+                battleScript = GameObject.FindWithTag("BattleSystem").GetComponent<BattleSystem>();
+                Debug.Log("Found Battle System");
+
+            }
+            else
+            {
+                Debug.Log("No Battle System");
+            }
+            if (battleSystem != null)
+            {
+                battleSystem.SetActive(false);
             }
             if (player == null)
             {
@@ -114,10 +129,31 @@ public class GameManager : MonoBehaviour
                 Debug.Log("Found Player");
 
             }
-            Debug.Log("player found");
-            Debug.Log("battle system found");
+            if (OverworldUI == null)
+            {
+                OverworldUI = GameObject.FindWithTag("OverwordlUICanvas");
+                Debug.Log("Found OverworldUI");
+
+            }
+            if (HealthSlider == null)
+            {
+                HealthSlider = GameObject.FindWithTag("HealthSlider").GetComponent<Slider>();
+                Debug.Log("Found health Slider");
+
+            }
+            if (XPSlider == null)
+            {
+                XPSlider = GameObject.FindWithTag("XPSlider").GetComponent<Slider>();
+                Debug.Log("Found XP Slider");
+
+            }
+
             //battleSys.gameObject.SetActive(false);
         }
+        damage = 2;
+        damage2 = 3; 
+        damage3 = 4;
+        damage4 = 4;
         
     }
 
@@ -127,7 +163,10 @@ public class GameManager : MonoBehaviour
     private void Overworld()
     {
         OverworldUI.SetActive(true);
-        battleSystem.SetActive(false);
+        if (battleSystem != null)
+        {
+            battleSystem.SetActive(false);
+        }
         player.SetActive(true);
         Debug.Log("BattleSys Deactivated");
         Initialise();

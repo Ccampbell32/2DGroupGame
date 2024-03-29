@@ -16,6 +16,9 @@ TagManager:
   - Attack4
   - Hell Boss BS
   - Potion1
+  - HealthSlider
+  - XPSlider
+  - BattleSystem
   layers:
   - Default
   - TransparentFX
