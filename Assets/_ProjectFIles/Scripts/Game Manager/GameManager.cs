@@ -81,7 +81,7 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
         }
         unitLevel = 1;
-        maxHP = 10;
+        PlayerLevel();
         currentHP = maxHP;
     }
    
@@ -269,7 +269,35 @@ public class GameManager : MonoBehaviour
     #endregion
 
 
-    #region playerStats
+    #region PlayerLevels
+    public void PlayerLevel () 
+    {
+        if (unitLevel == 1)
+        {
+            maxHP = 10;
+        }
+
+        if (unitLevel == 2)
+        {
+            maxHP = 12;
+        }
+        if (unitLevel == 3)
+        {
+            maxHP = 14;
+        }
+        if (unitLevel == 4)
+        {
+            maxHP = 16;
+        }
+        if (unitLevel == 5)
+        {
+            maxHP = 18;
+        }
+        if (unitLevel == 6)
+        {
+            maxHP = 20;
+        }
+    }
     
     #endregion
     #region Take Damage 
