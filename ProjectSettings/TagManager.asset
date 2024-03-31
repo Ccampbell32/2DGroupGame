@@ -19,6 +19,7 @@ TagManager:
   - HealthSlider
   - XPSlider
   - BattleSystem
+  - BottleAmount
   layers:
   - Default
   - TransparentFX

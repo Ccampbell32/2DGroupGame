@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -51,6 +52,7 @@ public class GameManager : MonoBehaviour
     public Slider HealthSlider;
 
     //Potion collection
+    public TMP_Text potionsHeld;
     public GameObject Potion1;
     public bool Potion1Collected;
 
@@ -148,6 +150,10 @@ public class GameManager : MonoBehaviour
                 Debug.Log("Found XP Slider");
 
             }
+            if (potionsHeld == null) 
+            {
+                potionsHeld = GameObject.FindWithTag("BottleAmount").GetComponent<TMP_Text>();
+            }
             CurrentGameState = GameState.Overworld;
             //battleSys.gameObject.SetActive(false);
         }
@@ -189,6 +195,7 @@ public class GameManager : MonoBehaviour
 
         if (Potion1 != null)
         {
+            Potion1 = GameObject.FindWithTag("Potion1");
             //potion collected
             if (Potion1Collected == true)
             {
@@ -368,7 +375,7 @@ public class GameManager : MonoBehaviour
 
     #endregion
 
-    #region freeze enemies
+    #region Freeze Enemies
     //---- enemy freeze - send the event to freeze the enemies
     public void FreezeEnemies(bool t)
     {

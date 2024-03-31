@@ -147,7 +147,7 @@ GameObject:
   - component: {fileID: 7023719555890544418}
   m_Layer: 0
   m_Name: AmountOfBottles
-  m_TagString: Untagged
+  m_TagString: BottleAmount
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
