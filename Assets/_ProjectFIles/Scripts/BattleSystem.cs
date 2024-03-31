@@ -14,6 +14,7 @@ public class BattleSystem : MonoBehaviour
     public GameObject enemyPrefab;
     public GameObject background;
     public GameObject attackButton;
+    public GameObject healButton;
     public GameObject moves;
 
     //moves
@@ -55,26 +56,27 @@ public class BattleSystem : MonoBehaviour
 
     IEnumerator SetupBattle()
     {
-        Debug.Log("Setup Battle");
-        attackButton.gameObject.SetActive(false);
-        moves.gameObject.SetActive(false);
-        GameObject playerBattle = Instantiate(playerPrefab, playerBattleSpawn);
-        playerUnit = gameManager.GetComponent<GameManager>();
-        background.gameObject.SetActive(true);
+       Debug.Log("Setup Battle");
+       attackButton.gameObject.SetActive(false);
+       healButton.gameObject.SetActive(false);
+       moves.gameObject.SetActive(false);
+       GameObject playerBattle = Instantiate(playerPrefab, playerBattleSpawn);
+       playerUnit = gameManager.GetComponent<GameManager>();
+       background.gameObject.SetActive(true);
 
-        GameObject enemy = Instantiate(enemyPrefab, enemyBattleSpawn);
-        enemyUnit = enemy.GetComponent<EnemyStats>();
+       GameObject enemy = Instantiate(enemyPrefab, enemyBattleSpawn);
+       enemyUnit = enemy.GetComponent<EnemyStats>();
 
        dialogueText.text = "A deadly " + enemyUnit.unitname + " approaches...";
 
        playerHUD.SetHUD(playerUnit);
        enemyHUD.SetEnemyHUD(enemyUnit);
-        enemyUnit.currentHP = enemyUnit.maxHP;
-        yield return new WaitForSeconds(2f);
+       enemyUnit.currentHP = enemyUnit.maxHP;
+       yield return new WaitForSeconds(2f);
 
-        Debug.Log("players turn");
-        state = BattleState.PLAYERTURN;
-        PlayerTurn();
+       Debug.Log("players turn");
+       state = BattleState.PLAYERTURN;
+       PlayerTurn();
     }
 
     #region PlayerAttacks
@@ -195,7 +197,8 @@ public class BattleSystem : MonoBehaviour
 
     IEnumerator EnemyTurn()
     {
-        attackButton.gameObject.SetActive(false);    
+        attackButton.gameObject.SetActive(false);
+        healButton.gameObject.SetActive(false);
         dialogueText.text = enemyUnit.unitname + " attacks!";
 
         yield return new WaitForSeconds(1f);
@@ -253,18 +256,18 @@ public class BattleSystem : MonoBehaviour
     void PlayerTurn()
     {
         attackButton.gameObject.SetActive(true);
-
+        healButton.gameObject.SetActive(true);
         
 
         dialogueText.text = "Choose an action:";
 
     }
-    /*
+    
     IEnumerator PlayerHeal()
     {
-        playerUnit.Heal(5);
-
-       // playerHUD.SetHP(playerUnit.currentHP);
+        healButton.gameObject.SetActive(false);
+        attackButton.gameObject.SetActive(false);
+        // playerHUD.SetHP(playerUnit.currentHP);
         dialogueText.text = "You feel renewed strength!";
 
         yield return new WaitForSeconds(2f);
@@ -272,20 +275,21 @@ public class BattleSystem : MonoBehaviour
         state = BattleState.ENEMYTURN;
         StartCoroutine(EnemyTurn());
     }
-    */
+    
     public void OnAttackButton()
     {
+        healButton.gameObject.SetActive(false);
         AttacksMenu();
     }
-    /*
+    
     public void OnHealButton()
     {
         if (state != BattleState.PLAYERTURN)
             return;
-
+        
         StartCoroutine(PlayerHeal());
     }
-    */
+    
     #region Different Attacks
     void AttacksMenu()
     {

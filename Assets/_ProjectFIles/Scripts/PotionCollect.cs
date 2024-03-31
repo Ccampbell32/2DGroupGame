@@ -41,14 +41,13 @@ public class PotionCollect : MonoBehaviour
      }
     private void Update()
     {
-        if (script.Potion1Collected == true)
+        if (gameManager.Potion1Collected == true)
         {
             healthItem.SetActive(false);
-
+            gameObject.SetActive(false);
         }
         else
         {
-
             healthItem.SetActive(true);
         }
     }
