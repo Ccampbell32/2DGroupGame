@@ -58,7 +58,7 @@ public class PotionCollect : MonoBehaviour
         if (collision.gameObject == player)
         {
             gameManager.Potion1Collected = true;
-            gameManager.potionsHeld.text = "x 1";
+            gameManager.IncreaseBottles(1);
             Destroy(gameObject);
         }
         else

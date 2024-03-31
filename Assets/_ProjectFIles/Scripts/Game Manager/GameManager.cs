@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using UnityEditor.Rendering;
 using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -53,6 +54,7 @@ public class GameManager : MonoBehaviour
 
     //Potion collection
     public TMP_Text potionsHeld;
+    public int currentamountofPotions;
     public GameObject Potion1;
     public bool Potion1Collected;
 
@@ -153,6 +155,7 @@ public class GameManager : MonoBehaviour
             if (potionsHeld == null) 
             {
                 potionsHeld = GameObject.FindWithTag("BottleAmount").GetComponent<TMP_Text>();
+
             }
             CurrentGameState = GameState.Overworld;
             //battleSys.gameObject.SetActive(false);
@@ -162,6 +165,8 @@ public class GameManager : MonoBehaviour
         damage3 = 4;
         damage4 = 4;
         
+        potionsHeld.text = "x" + currentamountofPotions.ToString();
+
     }
 
     #endregion
@@ -370,6 +375,16 @@ public class GameManager : MonoBehaviour
         }
         HealthSlider.value = currentHP;
 
+    }
+
+
+    #endregion
+
+    #region HealthBottles
+    public void IncreaseBottles(int v)
+    {
+        currentamountofPotions += v;
+        potionsHeld.text = "x" + currentamountofPotions.ToString();
     }
 
 
