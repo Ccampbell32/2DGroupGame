@@ -267,9 +267,9 @@ public class BattleSystem : MonoBehaviour
     {
         healButton.gameObject.SetActive(false);
         attackButton.gameObject.SetActive(false);
-        // playerHUD.SetHP(playerUnit.currentHP);
-        dialogueText.text = "You feel renewed strength!";
-
+        playerHUD.SetHP(playerUnit.currentHP = playerUnit.maxHP);
+        dialogueText.text = "You feel your injuries fading!";
+        gameManager.currentamountofPotions --;
         yield return new WaitForSeconds(2f);
 
         state = BattleState.ENEMYTURN;
@@ -285,11 +285,26 @@ public class BattleSystem : MonoBehaviour
     public void OnHealButton()
     {
         if (state != BattleState.PLAYERTURN)
-            return;
-        
-        StartCoroutine(PlayerHeal());
+             return;
+        if (gameManager.currentamountofPotions >=1)
+        {
+            StartCoroutine(PlayerHeal());
+        }
+        else
+        {
+            StartCoroutine(NoHealingItems());
+         
+        }
     }
-    
+    IEnumerator NoHealingItems() 
+    {
+        dialogueText.text = "You have no Healing Items";
+        healButton.gameObject.SetActive(false);
+        attackButton.gameObject.SetActive(false);
+        yield return new WaitForSeconds(2f);
+        state = BattleState.PLAYERTURN;
+        PlayerTurn();
+    }
     #region Different Attacks
     void AttacksMenu()
     {
