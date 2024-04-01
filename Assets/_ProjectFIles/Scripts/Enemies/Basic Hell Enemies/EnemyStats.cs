@@ -16,10 +16,29 @@ public class EnemyStats : MonoBehaviour
 
     public int XPheld;
 
+    //animation
+    private Animator animator;
+
+    private void Start()
+    {
+        animator = GetComponentInChildren<Animator>();
+    }
+
     private void Update()
     {
         int randomNumber = Random.Range(1, 4);
         damage = randomNumber;
+
+
+        if (currentHP == 0)
+        {
+            animator.SetBool("IsDefeated", true);
+
+        }
+        else
+        {
+            animator.SetBool("IsDefeated", false);
+        }
     }
 
     public bool TakeDamage(int dmg)
@@ -37,4 +56,6 @@ public class EnemyStats : MonoBehaviour
         }
 
     }
+
+    
 }
