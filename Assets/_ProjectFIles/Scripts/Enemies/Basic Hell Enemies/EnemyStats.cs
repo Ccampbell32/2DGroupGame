@@ -18,10 +18,26 @@ public class EnemyStats : MonoBehaviour
 
     //animation
     private Animator animator;
+    public BattleSystem battleSystem;
 
     private void Start()
     {
         animator = GetComponentInChildren<Animator>();
+
+  
+
+        if (GameObject.FindWithTag("BattleSystem") != null)
+        {
+            battleSystem = GameObject.FindWithTag("BattleSystem").GetComponent<BattleSystem>();
+            Debug.Log("Found Battle System");
+
+        }
+        else
+        {
+            Debug.Log("No Battle System");
+        }
+      
+
     }
 
     private void Update()
@@ -30,7 +46,7 @@ public class EnemyStats : MonoBehaviour
         damage = randomNumber;
 
 
-        if (currentHP == 0)
+        if (battleSystem.state == BattleState.WON)
         {
             animator.SetBool("IsDefeated", true);
 
