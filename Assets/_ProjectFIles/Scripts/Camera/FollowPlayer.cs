@@ -7,12 +7,13 @@ public class FollowPlayer : MonoBehaviour
 {
     public CinemachineVirtualCamera Camera;
     public Transform tFollowTarget;
+    public GameObject Player;
     
     // Start is called before the first frame update
     void Start()
     {
 
-        GameObject Player = GameObject.FindWithTag("Player");
+        Player = GameObject.FindWithTag("Player");
         tFollowTarget = Player.transform;
         Camera.Follow = tFollowTarget;
     }

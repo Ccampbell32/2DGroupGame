@@ -57,6 +57,7 @@ public class GameManager : MonoBehaviour
     public int currentamountofPotions;
     public GameObject Potion1;
     public bool Potion1Collected;
+    public int CurrentScene;
 
     //BossDefeated
     public bool BossBeaten;
@@ -87,9 +88,11 @@ public class GameManager : MonoBehaviour
         unitLevel = 1;
         PlayerLevel();
         currentHP = maxHP;
-    }
-   
-    public void Start()
+        CurrentScene = 0;
+
+}
+
+public void Start()
     {
         Initialise();
     }

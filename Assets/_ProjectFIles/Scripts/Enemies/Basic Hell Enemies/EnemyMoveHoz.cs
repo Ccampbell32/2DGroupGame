@@ -46,6 +46,7 @@ public class EnemyMoveHoz : MonoBehaviour
         animator.SetBool("IsMoving (LeftRight)", true);
         detector = GetComponent<PolygonCollider2D>();
         Spotted.gameObject.SetActive(false);
+        player = GameObject.FindWithTag("Player");
         if (GameManager.manager != null)
         {     
             gameManager = GameManager.manager;          

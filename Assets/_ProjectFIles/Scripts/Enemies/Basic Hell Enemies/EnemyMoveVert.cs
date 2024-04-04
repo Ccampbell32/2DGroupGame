@@ -40,6 +40,7 @@ public class EnemyMoveVert : MonoBehaviour
         animator.SetBool("IsMoving (Down)", true);
         detectionLightUp.SetActive(false);
         Spotted.gameObject.SetActive(false);
+        player = GameObject.FindWithTag("Player");
         if (GameManager.manager != null)
         {
             gameManager = GameManager.manager;
