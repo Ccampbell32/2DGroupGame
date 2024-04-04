@@ -316,6 +316,7 @@ public class GameManager : MonoBehaviour
     public bool TakeDamage(int dmg)
     {
         currentHP -= dmg;
+        HealthSlider.value = currentHP;
         if (currentHP <= 0)
         {
             return true;
@@ -326,11 +327,12 @@ public class GameManager : MonoBehaviour
 
             return false;
         }
-        HealthSlider.value = currentHP;
+        
     }
     public bool TakeDamage2(int dmg2)
     {
         currentHP -= dmg2;
+        HealthSlider.value = currentHP;
         if (currentHP <= 0)
         {
             return true;
@@ -341,12 +343,12 @@ public class GameManager : MonoBehaviour
 
             return false;
         }
-        HealthSlider.value = currentHP;
 
     }
     public bool TakeDamage3(int dmg3)
     {
         currentHP -= dmg3;
+        HealthSlider.value = currentHP;
         if (currentHP <= 0)
         {
             return true;
@@ -357,12 +359,12 @@ public class GameManager : MonoBehaviour
 
             return false;
         }
-        HealthSlider.value = currentHP;
 
     }
     public bool TakeDamage4(int dmg4)
     {
         currentHP -= dmg4;
+        HealthSlider.value = currentHP;
         if (currentHP <= 0)
         {
             return true;
@@ -373,7 +375,6 @@ public class GameManager : MonoBehaviour
 
             return false;
         }
-        HealthSlider.value = currentHP;
 
     }
 

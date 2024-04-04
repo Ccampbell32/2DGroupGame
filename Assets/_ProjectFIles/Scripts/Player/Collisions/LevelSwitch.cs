@@ -13,7 +13,7 @@ public class LevelSwitch : MonoBehaviour
     {
         Debug.Log("Entered");
 
-        if (collision.tag == "Player");
+        if(collision.tag == "Player")
         {
             SceneManager.LoadScene(sceneBuildIndex, LoadSceneMode.Single);
 
