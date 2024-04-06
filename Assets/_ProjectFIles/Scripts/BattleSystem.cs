@@ -245,7 +245,10 @@ public class BattleSystem : MonoBehaviour
     }
     void OnDisable()
     {
-        Destroy(enemyUnit);
+        foreach (Transform child in enemyBattleSpawn)
+        {
+            Destroy(child.gameObject);
+        }
         Debug.Log("PrintOnDisable: script was disabled");
     }
      void OnEnable()
