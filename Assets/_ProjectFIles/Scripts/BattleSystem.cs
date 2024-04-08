@@ -68,6 +68,7 @@ public class BattleSystem : MonoBehaviour
        enemyUnit = enemy.GetComponent<EnemyStats>();
 
        dialogueText.text = "A deadly " + enemyUnit.unitname + " approaches...";
+       
 
        playerHUD.SetHUD(playerUnit);
        enemyHUD.SetEnemyHUD(enemyUnit);

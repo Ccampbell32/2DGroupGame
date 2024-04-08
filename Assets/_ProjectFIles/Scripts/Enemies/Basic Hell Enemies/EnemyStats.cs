@@ -20,7 +20,7 @@ public class EnemyStats : MonoBehaviour
     private Animator animator;
     public BattleSystem battleSystem;
 
-    private void Start()
+    public void Start()
     {
         animator = GetComponentInChildren<Animator>();
 
@@ -72,6 +72,6 @@ public class EnemyStats : MonoBehaviour
         }
 
     }
+   
 
-    
 }
