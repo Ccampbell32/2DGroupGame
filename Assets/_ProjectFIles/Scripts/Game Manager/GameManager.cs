@@ -58,6 +58,7 @@ public class GameManager : MonoBehaviour
     public GameObject Potion1;
     public bool Potion1Collected;
     public int CurrentScene;
+    public TMP_Text XPText;
 
     //BossDefeated
     public bool BossBeaten;
@@ -160,6 +161,13 @@ public void Start()
                 potionsHeld = GameObject.FindWithTag("BottleAmount").GetComponent<TMP_Text>();
 
             }
+            if (XPText == null)
+            {
+                XPText = GameObject.FindWithTag("XPLevel").GetComponent<TMP_Text>();
+            }
+            PlayerLevel();
+            XPLevelling();
+            
             CurrentGameState = GameState.Overworld;
             //battleSys.gameObject.SetActive(false);
         }
@@ -285,35 +293,75 @@ public void Start()
 
 
     #region PlayerLevels
-    public void PlayerLevel () 
+    public void PlayerLevel() 
     {
         if (unitLevel == 1)
         {
             maxHP = 10;
+            MaxXP = 10;
         }
 
         if (unitLevel == 2)
         {
             maxHP = 12;
+            MaxXP = 12;
         }
         if (unitLevel == 3)
         {
             maxHP = 14;
+            MaxXP = 14;
         }
         if (unitLevel == 4)
         {
             maxHP = 16;
+            MaxXP = 16;
         }
         if (unitLevel == 5)
         {
             maxHP = 18;
+            MaxXP = 18;
         }
         if (unitLevel == 6)
         {
             maxHP = 20;
+            MaxXP = 20;
         }
     }
-    
+    public void XPLevelling()
+    {
+        if (XPLevel == 1)
+        {
+         
+            MaxXP = 10;
+        }
+
+        if (XPLevel == 2)
+        {
+            
+            MaxXP = 12;
+        }
+        if (XPLevel == 3)
+        {
+           
+            MaxXP = 14;
+        }
+        if (XPLevel == 4)
+        {
+            
+            MaxXP = 16;
+        }
+        if (XPLevel == 5)
+        {
+            
+            MaxXP = 18;
+        }
+        if (XPLevel == 6)
+        {
+            
+            MaxXP = 20;
+        }
+    }
+
     #endregion
     #region Take Damage 
     public bool TakeDamage(int dmg)
@@ -420,6 +468,18 @@ public void Start()
         if(Input.GetKeyDown(KeyCode.O))
         {
             FreezeEnemies(false);
+        }
+        XPText.text = XPLevel.ToString();
+    }
+    #endregion
+    #region XP
+    public void AddXP(int xp)
+    {
+        CurrentXP += xp;
+        if(CurrentXP >= MaxXP)
+        {
+            XPLevel += 1;
+            CurrentXP -= MaxXP;
         }
     }
     #endregion

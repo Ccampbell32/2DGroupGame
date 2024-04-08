@@ -20,6 +20,7 @@ TagManager:
   - XPSlider
   - BattleSystem
   - BottleAmount
+  - XPLevel
   layers:
   - Default
   - TransparentFX
