@@ -234,7 +234,7 @@ public class BattleSystem : MonoBehaviour
         {
             dialogueText.text = "You won the battle! and gained " + enemyUnit.XPheld + "XP!";
             yield return new WaitForSeconds(2f);
-            gameManager.CurrentXP += enemyUnit.XPheld;
+            gameManager.AddXP(enemyUnit.XPheld);
 
             gameManager.ChangeGameState(GameState.Overworld);
             Debug.Log("Change to Overworld");
