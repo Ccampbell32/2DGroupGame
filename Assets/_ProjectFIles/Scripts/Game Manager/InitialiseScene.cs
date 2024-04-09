@@ -70,7 +70,7 @@ public class InitialiseScene : MonoBehaviour{
 
     private void InitialisePlayer(){
         //check if the player exists in the scene - if not then instantiate the player
-        if (GameObject.FindWithTag("Player") == null){
+        if (GameObject.FindWithTag("Player") == null && playerPrefab != null){
             if(gameManager.CurrentScene == FromScene1)
             {
                 player = Instantiate(playerPrefab, playerSpawnPoint1.position, playerSpawnPoint1.rotation);
