@@ -455,11 +455,17 @@ public void Start()
 
     void Update()
     {
-       
-        HealthSlider.value = currentHP;
-        HealthSlider.maxValue = maxHP;
-        XPSlider.value = CurrentXP;
-        XPSlider.maxValue = maxHP;
+
+        if (HealthSlider != null)
+        {
+            HealthSlider.value = currentHP;
+            HealthSlider.maxValue = maxHP;
+        }
+        if (XPSlider != null)
+        {
+            XPSlider.value = CurrentXP;
+            XPSlider.maxValue = maxHP;
+        }
         //test freeze enemies
         if(Input.GetKeyDown(KeyCode.P))
         {
