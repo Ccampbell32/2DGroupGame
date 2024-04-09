@@ -91,7 +91,7 @@ public class GameManager : MonoBehaviour
         currentHP = maxHP;
         CurrentScene = 0;
 
-}
+    }
 
 public void Start()
     {

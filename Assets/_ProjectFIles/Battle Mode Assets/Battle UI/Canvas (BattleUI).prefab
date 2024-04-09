@@ -634,7 +634,7 @@ GameObject:
   - component: {fileID: 4445078882251821108}
   m_Layer: 5
   m_Name: Attack3
-  m_TagString: Untagged
+  m_TagString: Attack3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
