@@ -21,6 +21,7 @@ TagManager:
   - BattleSystem
   - BottleAmount
   - XPLevel
+  - HellBoss
   layers:
   - Default
   - TransparentFX

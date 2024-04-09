@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyStats : MonoBehaviour
 {
     
-
+    GameManager gameManager;
 
     public string unitname;
     public int unitLevel;
@@ -23,8 +23,19 @@ public class EnemyStats : MonoBehaviour
     public void Start()
     {
         animator = GetComponentInChildren<Animator>();
+        gameManager = GameObject.FindWithTag("GameManager").GetComponent<GameManager>();
 
-  
+
+
+        if (GameManager.manager != null)
+        {
+            gameManager = GameManager.manager;
+
+        }
+        else
+        {
+            Debug.Log("GameManager not found! - Please add a GameManager to the scene!");
+        }
 
         if (GameObject.FindWithTag("BattleSystem") != null)
         {
@@ -55,6 +66,16 @@ public class EnemyStats : MonoBehaviour
         {
             animator.SetBool("IsDefeated", false);
         }
+
+        if (gameObject.tag == ("HellBoss") && currentHP == 0)
+        {
+            gameManager.BossBeaten = true;
+
+        }
+        else
+        {
+            gameManager.BossBeaten= false;  
+        }
     }
 
     public bool TakeDamage(int dmg)
@@ -73,5 +94,6 @@ public class EnemyStats : MonoBehaviour
 
     }
    
+    
 
 }

@@ -11,10 +11,10 @@ public class BossCollider : MonoBehaviour
     private void Awake()
     {
         
-        battleSystem = GameObject.FindWithTag("BattleSystem").GetComponent<BattleSystem>();
     }
     void Start()
     {
+        
         gameManager = GameObject.FindWithTag("GameManager").GetComponent<GameManager>();
         if (GameManager.manager != null)
         {
@@ -41,7 +41,15 @@ public class BossCollider : MonoBehaviour
             gameObject.SetActive(false);
 
         }
+        if (gameManager.BossBeaten == true)
+        {
+            gameObject.SetActive(false);
 
+        }
+        else
+        {
+            gameObject.SetActive(true);
+        }
 
     }
     private void Update()
@@ -55,10 +63,7 @@ public class BossCollider : MonoBehaviour
         {
             gameObject.SetActive(true);
         }
-        if (battleSystem.state == BattleState.WON)
-        {
-            gameManager.BossBeaten = true;
-        }
+     
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
