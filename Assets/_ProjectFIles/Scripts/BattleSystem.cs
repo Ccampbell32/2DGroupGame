@@ -282,6 +282,7 @@ public class BattleSystem : MonoBehaviour
     
     public void OnAttackButton()
     {
+        print("Attack Button");
         healButton.gameObject.SetActive(false);
         AttacksMenu();
     }
