@@ -242,6 +242,8 @@ public class BattleSystem : MonoBehaviour
         else if (state == BattleState.LOST)
         {
             dialogueText.text = "You were defeated.";
+            yield return new WaitForSeconds(3f);
+            gameManager.ChangeGameState(GameState.Overworld);
         }
     }
     void OnDisable()
