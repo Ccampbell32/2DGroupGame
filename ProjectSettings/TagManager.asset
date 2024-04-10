@@ -22,6 +22,7 @@ TagManager:
   - BottleAmount
   - XPLevel
   - HellBoss
+  - HeavenEnemy
   layers:
   - Default
   - TransparentFX
