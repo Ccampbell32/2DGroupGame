@@ -27,8 +27,10 @@ public class BattleSystem : MonoBehaviour
 
 #region Audio
     public AudioSource attackSound1;
-
-#endregion
+    public AudioSource attackSound2;
+    public AudioSource attackSound3;
+    public AudioSource attackSound4;
+    #endregion
 
     public Transform playerBattleSpawn;
     public Transform enemyBattleSpawn;
@@ -147,6 +149,7 @@ public class BattleSystem : MonoBehaviour
         attackButton.gameObject.SetActive(false); bool isDead = enemyUnit.TakeDamage(playerUnit.damage2);
         moves.gameObject.SetActive(false);
 
+        attackSound2.Play();
         //anim
         movesAnim.gameObject.SetActive(true);
         animator.SetBool("Attack2", true);
@@ -180,6 +183,7 @@ public class BattleSystem : MonoBehaviour
         attackButton.gameObject.SetActive(false); bool isDead = enemyUnit.TakeDamage(playerUnit.damage3);
         moves.gameObject.SetActive(false);
 
+        attackSound3.Play();
         //anim
         movesAnim.gameObject.SetActive(true);
         animator.SetBool("Attack3", true);
@@ -212,6 +216,7 @@ public class BattleSystem : MonoBehaviour
         attackButton.gameObject.SetActive(false); bool isDead = enemyUnit.TakeDamage(playerUnit.damage4);
         moves.gameObject.SetActive(false);
 
+        attackSound4.Play();
         //anim
         movesAnim.gameObject.SetActive(true);
         animator.SetBool("Attack4", true);

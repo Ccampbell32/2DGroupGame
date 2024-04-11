@@ -8183,8 +8183,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.006000519, y: -0.1264, z: 0}
-    m_Extent: {x: 18.3864, y: 19.281, z: 0}
+    m_Center: {x: -0.013600349, y: -0.11675072, z: 0}
+    m_Extent: {x: 18.3908, y: 19.28755, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0.84249353
@@ -9977,8 +9977,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 1.3522561, y: 0.04885161, z: 0}
-    m_Extent: {x: 2.057456, y: 2.9711518, z: 0}
+    m_Center: {x: 1.3544561, y: 0.04520166, z: 0}
+    m_Extent: {x: 2.0552561, y: 2.9748015, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -11341,8 +11341,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 1.35615, y: 0.049962044, z: 0}
-    m_Extent: {x: 2.053562, y: 2.9700413, z: 0}
+    m_Center: {x: 1.352206, y: 0.054450035, z: 0}
+    m_Extent: {x: 2.057506, y: 2.97475, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -13574,8 +13574,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 1.3545561, y: 0.05491042, z: 0}
-    m_Extent: {x: 2.055156, y: 2.9749897, z: 0}
+    m_Center: {x: 1.3568, y: 0.049251676, z: 0}
+    m_Extent: {x: 2.0588999, y: 2.9707518, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -15548,6 +15548,18 @@ PrefabInstance:
     - target: {fileID: 2638358035913834480, guid: ad4f155d604fd13438342c2af55baf76, type: 3}
       propertyPath: attackSound1
       value: 
+      objectReference: {fileID: 3222427475566069194}
+    - target: {fileID: 2638358035913834480, guid: ad4f155d604fd13438342c2af55baf76, type: 3}
+      propertyPath: attackSound2
+      value: 
+      objectReference: {fileID: 3222427475566069193}
+    - target: {fileID: 2638358035913834480, guid: ad4f155d604fd13438342c2af55baf76, type: 3}
+      propertyPath: attackSound3
+      value: 
+      objectReference: {fileID: 3222427475566069192}
+    - target: {fileID: 2638358035913834480, guid: ad4f155d604fd13438342c2af55baf76, type: 3}
+      propertyPath: attackSound4
+      value: 
       objectReference: {fileID: 3222427475566069191}
     - target: {fileID: 4021189724757086577, guid: ad4f155d604fd13438342c2af55baf76, type: 3}
       propertyPath: m_text
@@ -15592,7 +15604,22 @@ PrefabInstance:
   m_SourcePrefab: {fileID: 100100000, guid: ad4f155d604fd13438342c2af55baf76, type: 3}
 --- !u!82 &3222427475566069191 stripped
 AudioSource:
-  m_CorrespondingSourceObject: {fileID: 6773926378980247243, guid: ad4f155d604fd13438342c2af55baf76, type: 3}
+  m_CorrespondingSourceObject: {fileID: 8872612704110097226, guid: ad4f155d604fd13438342c2af55baf76, type: 3}
+  m_PrefabInstance: {fileID: 3222427475566069190}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &3222427475566069192 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 8582159330328128460, guid: ad4f155d604fd13438342c2af55baf76, type: 3}
+  m_PrefabInstance: {fileID: 3222427475566069190}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &3222427475566069193 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 6664337683732958875, guid: ad4f155d604fd13438342c2af55baf76, type: 3}
+  m_PrefabInstance: {fileID: 3222427475566069190}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &3222427475566069194 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 973867696857542478, guid: ad4f155d604fd13438342c2af55baf76, type: 3}
   m_PrefabInstance: {fileID: 3222427475566069190}
   m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
