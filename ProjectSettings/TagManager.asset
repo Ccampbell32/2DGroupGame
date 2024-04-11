@@ -23,6 +23,7 @@ TagManager:
   - XPLevel
   - HellBoss
   - HeavenEnemy
+  - AttackAnim
   layers:
   - Default
   - TransparentFX

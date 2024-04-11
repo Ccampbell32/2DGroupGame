@@ -16,6 +16,8 @@ public class BattleSystem : MonoBehaviour
     public GameObject attackButton;
     public GameObject healButton;
     public GameObject moves;
+    public GameObject movesAnim;
+    private Animator animator;
 
     //moves
     public GameObject attack1;
@@ -42,6 +44,7 @@ public class BattleSystem : MonoBehaviour
     void Start()
     {
         gameManager = GameObject.FindWithTag("GameManager").GetComponent<GameManager>();
+        animator = movesAnim.GetComponent<Animator>();
         state = BattleState.START;
         StartCoroutine(SetupBattle());
 
@@ -51,6 +54,8 @@ public class BattleSystem : MonoBehaviour
         attack2 = GameObject.FindWithTag("Attack2");
         attack3 = GameObject.FindWithTag("Attack3");
         attack4 = GameObject.FindWithTag("Attack4");
+
+        movesAnim = GameObject.FindWithTag("AttackAnim");
     }
     
 
@@ -86,6 +91,10 @@ public class BattleSystem : MonoBehaviour
         attackButton.gameObject.SetActive(false);   bool isDead = enemyUnit.TakeDamage(playerUnit.damage);
         moves.gameObject.SetActive(false);
 
+        //anim
+        movesAnim.gameObject.SetActive(true);
+        animator.SetBool("Attack1", true);
+
         enemyHUD.SetEnemyHP(enemyUnit.currentHP);
 
         dialogueText.text = "The attack is successful!";
@@ -112,6 +121,10 @@ public class BattleSystem : MonoBehaviour
     {
         attackButton.gameObject.SetActive(false); bool isDead = enemyUnit.TakeDamage(playerUnit.damage2);
         moves.gameObject.SetActive(false);
+
+        //anim
+        movesAnim.gameObject.SetActive(true);
+        animator.SetBool("Attack2", true);
 
         enemyHUD.SetEnemyHP(enemyUnit.currentHP);
 
@@ -142,6 +155,10 @@ public class BattleSystem : MonoBehaviour
         attackButton.gameObject.SetActive(false); bool isDead = enemyUnit.TakeDamage(playerUnit.damage3);
         moves.gameObject.SetActive(false);
 
+        //anim
+        movesAnim.gameObject.SetActive(true);
+        animator.SetBool("Attack3", true);
+
         enemyHUD.SetEnemyHP(enemyUnit.currentHP);      
         dialogueText.text = "The attack is successful!";
         Debug.Log(enemyUnit.currentHP);
@@ -169,6 +186,10 @@ public class BattleSystem : MonoBehaviour
     {
         attackButton.gameObject.SetActive(false); bool isDead = enemyUnit.TakeDamage(playerUnit.damage4);
         moves.gameObject.SetActive(false);
+
+        //anim
+        movesAnim.gameObject.SetActive(true);
+        animator.SetBool("Attack4", true);
 
         enemyHUD.SetEnemyHP(enemyUnit.currentHP);
 
@@ -198,6 +219,15 @@ public class BattleSystem : MonoBehaviour
 
     IEnumerator EnemyTurn()
     {
+        movesAnim.gameObject.SetActive(false);
+
+        //anim
+        animator.SetBool("Attack1", false);
+        animator.SetBool("Attack2", false);
+        animator.SetBool("Attack3", false);
+        animator.SetBool("Attack4", false);
+
+
         attackButton.gameObject.SetActive(false);
         healButton.gameObject.SetActive(false);
         dialogueText.text = enemyUnit.unitname + " attacks!";
@@ -229,6 +259,12 @@ public class BattleSystem : MonoBehaviour
     
     IEnumerator EndBattle()
     {
+        movesAnim.SetActive(false);
+        //anim
+        animator.SetBool("Attack1", false);
+        animator.SetBool("Attack2", false);
+        animator.SetBool("Attack3", false);
+        animator.SetBool("Attack4", false);
 
         if (state == BattleState.WON)
         {
@@ -261,6 +297,7 @@ public class BattleSystem : MonoBehaviour
     }
     void PlayerTurn()
     {
+        movesAnim.SetActive(false);
         attackButton.gameObject.SetActive(true);
         healButton.gameObject.SetActive(true);
         
