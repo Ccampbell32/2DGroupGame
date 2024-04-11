@@ -55,6 +55,7 @@ MonoBehaviour:
   maxHP: 6
   currentHP: 6
   XPheld: 3
+  battleSystem: {fileID: 0}
 --- !u!1 &4734658928963286817
 GameObject:
   m_ObjectHideFlags: 0
