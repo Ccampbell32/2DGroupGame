@@ -43,8 +43,8 @@ public class BattleSystem : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        gameManager = GameObject.FindWithTag("GameManager").GetComponent<GameManager>(); 
-      
+        gameManager = GameObject.FindWithTag("GameManager").GetComponent<GameManager>();
+
         
 
         state = BattleState.START;
@@ -57,30 +57,32 @@ public class BattleSystem : MonoBehaviour
         attack3 = GameObject.FindWithTag("Attack3");
         attack4 = GameObject.FindWithTag("Attack4");
 
-        
+       
     }
     
 
     IEnumerator SetupBattle()
     {
         movesAnim = GameObject.FindWithTag("AttackAnim");
-        if (movesAnim == null)
+
+        if (GameObject.FindWithTag("AttackAnim") == null)
         {
             movesAnim = GameObject.FindWithTag("AttackAnim");
+            Debug.Log("Found anim");
 
         }
         else
         {
-            Debug.Log("Animator not found!");
+            Debug.Log("No anim");
         }
-        
-        animator = GetComponent<Animator>();
+
+        animator = movesAnim.GetComponent<Animator>();
 
         Debug.Log("Setup Battle");
        attackButton.gameObject.SetActive(false);
        healButton.gameObject.SetActive(false);
        moves.gameObject.SetActive(false);
-       movesAnim.gameObject.SetActive(false);
+       
 
        GameObject playerBattle = Instantiate(playerPrefab, playerBattleSpawn);
        playerUnit = gameManager.GetComponent<GameManager>();

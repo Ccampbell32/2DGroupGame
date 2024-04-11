@@ -1108,6 +1108,7 @@ MonoBehaviour:
   healButton: {fileID: 2840289456863109165}
   moves: {fileID: 3395512341831319359}
   movesAnim: {fileID: 1486082793335481193}
+  animator: {fileID: 3077193471569469230}
   attack1: {fileID: 6064461896301502667}
   attack2: {fileID: 6539360917408210043}
   attack3: {fileID: 1702368214379708666}
