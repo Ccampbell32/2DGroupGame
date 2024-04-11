@@ -8183,8 +8183,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.0063505173, y: -0.12325001, z: 0}
-    m_Extent: {x: 18.38255, y: 19.280151, z: 0}
+    m_Center: {x: -0.006000519, y: -0.1264, z: 0}
+    m_Extent: {x: 18.3864, y: 19.281, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0.84249353
@@ -9977,8 +9977,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 1.354706, y: 0.049601674, z: 0}
-    m_Extent: {x: 2.055006, y: 2.9704018, z: 0}
+    m_Center: {x: 1.3522561, y: 0.04885161, z: 0}
+    m_Extent: {x: 2.057456, y: 2.9711518, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -11341,8 +11341,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 1.3526499, y: 0.05046034, z: 0}
-    m_Extent: {x: 2.05775, y: 2.9705396, z: 0}
+    m_Center: {x: 1.35615, y: 0.049962044, z: 0}
+    m_Extent: {x: 2.053562, y: 2.9700413, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -13574,8 +13574,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 1.3602, y: 0.050300002, z: 0}
-    m_Extent: {x: 2.0591002, y: 2.9777002, z: 0}
+    m_Center: {x: 1.3545561, y: 0.05491042, z: 0}
+    m_Extent: {x: 2.055156, y: 2.9749897, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -15545,6 +15545,10 @@ PrefabInstance:
       propertyPath: gameManager
       value: 
       objectReference: {fileID: 1580533140}
+    - target: {fileID: 2638358035913834480, guid: ad4f155d604fd13438342c2af55baf76, type: 3}
+      propertyPath: attackSound1
+      value: 
+      objectReference: {fileID: 3222427475566069191}
     - target: {fileID: 4021189724757086577, guid: ad4f155d604fd13438342c2af55baf76, type: 3}
       propertyPath: m_text
       value: Slash
@@ -15557,6 +15561,14 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1856234856}
+    - target: {fileID: 6773926378980247243, guid: ad4f155d604fd13438342c2af55baf76, type: 3}
+      propertyPath: m_Volume
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6773926378980247243, guid: ad4f155d604fd13438342c2af55baf76, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 1c8aa85a8c9f3004dae915a23c5a662f, type: 3}
     - target: {fileID: 7325482370842820573, guid: ad4f155d604fd13438342c2af55baf76, type: 3}
       propertyPath: m_text
       value: Mummy Mya
@@ -15578,6 +15590,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ad4f155d604fd13438342c2af55baf76, type: 3}
+--- !u!82 &3222427475566069191 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 6773926378980247243, guid: ad4f155d604fd13438342c2af55baf76, type: 3}
+  m_PrefabInstance: {fileID: 3222427475566069190}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

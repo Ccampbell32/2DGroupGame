@@ -25,6 +25,10 @@ public class BattleSystem : MonoBehaviour
     public GameObject attack3;
     public GameObject attack4;
 
+#region Audio
+    public AudioSource attackSound1;
+
+#endregion
 
     public Transform playerBattleSpawn;
     public Transform enemyBattleSpawn;
@@ -109,6 +113,8 @@ public class BattleSystem : MonoBehaviour
     {
         attackButton.gameObject.SetActive(false);   bool isDead = enemyUnit.TakeDamage(playerUnit.damage);
         moves.gameObject.SetActive(false);
+        
+        attackSound1.Play();
 
         //anim
         movesAnim.gameObject.SetActive(true);
@@ -308,6 +314,7 @@ public class BattleSystem : MonoBehaviour
             Destroy(child.gameObject);
         }
         Debug.Log("PrintOnDisable: script was disabled");
+        movesAnim.gameObject.SetActive(true);
     }
      void OnEnable()
     {
@@ -413,7 +420,7 @@ public class BattleSystem : MonoBehaviour
     {
         if (state != BattleState.PLAYERTURN)
             return;
-
+        
         StartCoroutine(PlayerAttack1());
     }
 
