@@ -25,7 +25,8 @@ public class BattleSystem : MonoBehaviour
     public GameObject attack3;
     public GameObject attack4;
 
-#region Audio
+    #region Audio
+    //atack sounds
     public AudioSource attackSound1;
     public AudioSource attackSound2;
     public AudioSource attackSound3;
