@@ -13,10 +13,13 @@ public class PlayerMovement : MonoBehaviour
     private Animator animator;
     public PlayerInput playerinput;
     public GameManager gameManager;
+
+
+
     private void Start()
     {
         gameManager.Start();
-
+        
     }
     private void Awake()
     {
@@ -46,10 +49,7 @@ public class PlayerMovement : MonoBehaviour
 
 
     }
-    
-
-
-
+   
     private void FixedUpdate()
     {
         
