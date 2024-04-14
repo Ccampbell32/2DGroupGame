@@ -72,7 +72,7 @@ public class EnemyMoveHoz : MonoBehaviour
             
              Vector3 direction = (target.position - transform.position).normalized;
              moveDirection = direction;
-            
+            speed = 7;
 
         }
         //not in chase

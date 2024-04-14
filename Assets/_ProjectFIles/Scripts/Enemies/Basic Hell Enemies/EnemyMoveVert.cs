@@ -62,7 +62,7 @@ public class EnemyMoveVert : MonoBehaviour
             detectionLightUp.SetActive(false);
             Vector3 direction = (target.position - transform.position).normalized;
             moveDirection = direction;
-            
+            speed = 7;
         }
         //not in chase
         else

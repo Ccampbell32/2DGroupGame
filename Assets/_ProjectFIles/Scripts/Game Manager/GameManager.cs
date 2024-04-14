@@ -60,8 +60,7 @@ public class GameManager : MonoBehaviour
     public int CurrentScene;
     public TMP_Text XPText;
 
-    //audio
-    public GameObject OverWorldAudio;
+   
     
 
     //BossDefeated
@@ -104,7 +103,7 @@ public void Start()
 
     public void Initialise()
     {
-        OverWorldAudio = GameObject.FindWithTag("OverworldMusic");
+        
         //if we are in the menu set the gamestate to menu else find the player and battle system
         if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Main Menu"))
         {
@@ -189,7 +188,7 @@ public void Start()
     #region GameStates
     private void Overworld()
     {
-        OverWorldAudio.GetComponent<AudioSource>().UnPause();
+        
         OverworldUI.SetActive(true);
 
         Potion1 = GameObject.FindWithTag("Potion1");
@@ -238,7 +237,7 @@ public void Start()
     }
     public void BattleState()
     {
-        OverWorldAudio.GetComponent<AudioSource>().Pause();
+        
         OverworldUI.SetActive(false);
         player.SetActive(false);
         if (battleSystem != null)
