@@ -29,6 +29,7 @@ public class EnemyMoveVert : MonoBehaviour
     public GameManager gameManager;
     public AudioSource audioSource; // Reference to the AudioSource component
     public AudioClip soundEffect; // Sound effect clip
+    private bool hasPlayed = false; // This variable is to track if the sound effect has played
 
     private void Awake()
     {
@@ -55,6 +56,8 @@ public class EnemyMoveVert : MonoBehaviour
 
     }
 
+    
+
     void Update()
     {
         //set to chase the player
@@ -66,7 +69,8 @@ public class EnemyMoveVert : MonoBehaviour
             moveDirection = direction;
             speed = 7;
             // Play the sound effect
-            audioSource.PlayOneShot(soundEffect);
+            audioSource.Play();
+            hasPlayed = true;
         }
         //not in chase
         else
