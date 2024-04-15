@@ -28,7 +28,8 @@ public class EnemyMoveHoz : MonoBehaviour
 
     public GameManager gameManager;
     public AudioSource audioSource; // Reference to the AudioSource component
-    public AudioClip soundEffect; // Sound effect clip
+    
+
 
     private void Awake()
     {
@@ -75,8 +76,7 @@ public class EnemyMoveHoz : MonoBehaviour
              moveDirection = direction;
             speed = 7;
 
-            // Play the sound effect
-            audioSource.PlayOneShot(soundEffect);
+            
 
         }
         //not in chase
