@@ -27,6 +27,8 @@ public class EnemyMoveVert : MonoBehaviour
     public GameObject player;
     public GameObject Spotted;
     public GameManager gameManager;
+    public AudioSource audioSource; // Reference to the AudioSource component
+    public AudioClip soundEffect; // Sound effect clip
 
     private void Awake()
     {
@@ -63,6 +65,8 @@ public class EnemyMoveVert : MonoBehaviour
             Vector3 direction = (target.position - transform.position).normalized;
             moveDirection = direction;
             speed = 7;
+            // Play the sound effect
+            audioSource.PlayOneShot(soundEffect);
         }
         //not in chase
         else
