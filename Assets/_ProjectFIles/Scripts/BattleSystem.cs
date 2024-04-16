@@ -19,11 +19,12 @@ public class BattleSystem : MonoBehaviour
     public GameObject movesAnim;
     public Animator animator;
 
-    //moves
+    #region Moves
     public GameObject attack1;
     public GameObject attack2;
     public GameObject attack3;
     public GameObject attack4;
+    #endregion
 
     #region Audio
     //atack sounds
@@ -32,6 +33,12 @@ public class BattleSystem : MonoBehaviour
     public AudioSource attackSound3;
     public AudioSource attackSound4;
     #endregion
+
+    #region Player Animator Bools
+    public bool PlayerAttacking;
+    public bool PlayerHealing;
+
+    #endregion region
 
     public Transform playerBattleSpawn;
     public Transform enemyBattleSpawn;
@@ -104,7 +111,8 @@ public class BattleSystem : MonoBehaviour
        playerHUD.SetHUD(playerUnit);
        enemyHUD.SetEnemyHUD(enemyUnit);
        enemyUnit.currentHP = enemyUnit.maxHP;
-       yield return new WaitForSeconds(2f);
+        PlayerAttacking = false;
+        yield return new WaitForSeconds(2f);
 
        Debug.Log("players turn");
        state = BattleState.PLAYERTURN;
@@ -114,11 +122,12 @@ public class BattleSystem : MonoBehaviour
     #region PlayerAttacks
     IEnumerator PlayerAttack1()
     {
+
         attackButton.gameObject.SetActive(false);   bool isDead = enemyUnit.TakeDamage(playerUnit.damage);
         moves.gameObject.SetActive(false);
         
         attackSound1.Play();
-
+        PlayerAttacking = true;
         //anim
         movesAnim.gameObject.SetActive(true);
         animator.SetBool("Attack1", true);
@@ -128,7 +137,7 @@ public class BattleSystem : MonoBehaviour
         dialogueText.text = "The attack is successful!";
 
         yield return new WaitForSeconds(2f);
-        
+        PlayerAttacking = false;
         if (isDead)
         {
             Debug.Log("Won");
@@ -151,6 +160,7 @@ public class BattleSystem : MonoBehaviour
         moves.gameObject.SetActive(false);
 
         attackSound2.Play();
+        PlayerAttacking = true;
         //anim
         movesAnim.gameObject.SetActive(true);
         animator.SetBool("Attack2", true);
@@ -160,7 +170,7 @@ public class BattleSystem : MonoBehaviour
         dialogueText.text = "The attack is successful!";
 
         yield return new WaitForSeconds(2f);
-
+        PlayerAttacking = false;
         if (isDead)
         {
             Debug.Log("Won");
@@ -185,6 +195,7 @@ public class BattleSystem : MonoBehaviour
         moves.gameObject.SetActive(false);
 
         attackSound3.Play();
+        PlayerAttacking = true;
         //anim
         movesAnim.gameObject.SetActive(true);
         animator.SetBool("Attack3", true);
@@ -193,7 +204,8 @@ public class BattleSystem : MonoBehaviour
         dialogueText.text = "The attack is successful!";
         Debug.Log(enemyUnit.currentHP);
         yield return new WaitForSeconds(2f);
-        
+        PlayerAttacking = false;
+
         if (isDead)
         {
             Debug.Log("Won");
@@ -218,6 +230,7 @@ public class BattleSystem : MonoBehaviour
         moves.gameObject.SetActive(false);
 
         attackSound4.Play();
+        PlayerAttacking = true;
         //anim
         movesAnim.gameObject.SetActive(true);
         animator.SetBool("Attack4", true);
@@ -227,7 +240,7 @@ public class BattleSystem : MonoBehaviour
         dialogueText.text = "The attack is successful!";
 
         yield return new WaitForSeconds(2f);
-
+        PlayerAttacking = false;
         if (isDead)
         {
             Debug.Log("Won");
@@ -345,9 +358,11 @@ public class BattleSystem : MonoBehaviour
         playerHUD.SetHP(playerUnit.currentHP = playerUnit.maxHP);
         dialogueText.text = "You feel your injuries fading!";
         gameManager.currentamountofPotions --;
+        PlayerHealing = true;
         yield return new WaitForSeconds(2f);
 
         state = BattleState.ENEMYTURN;
+        PlayerHealing = false;
         StartCoroutine(EnemyTurn());
     }
     
