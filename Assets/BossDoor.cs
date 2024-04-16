@@ -26,7 +26,7 @@ public class BossDoor : MonoBehaviour
         // activate battle UI for this enemy 
         if (collision.gameObject == GameObject.FindWithTag("Player") && gameManager.BossKeyObtained == true)
         {
-            gameManager.currentamountofKeys--;
+            
             StartCoroutine(BossDoorOpen());
             
         }
@@ -34,7 +34,7 @@ public class BossDoor : MonoBehaviour
 
     IEnumerator BossDoorOpen() 
     {
-
+        gameManager.currentamountofKeys--;
         animator.SetBool("Opening", true);
         
         yield return new WaitForSeconds(3f);
