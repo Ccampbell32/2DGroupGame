@@ -46,7 +46,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2788350849960530650}
   - component: {fileID: 203210887080052581}
-  - component: {fileID: 7595915870471921102}
+  - component: {fileID: 1608864420266361734}
   m_Layer: 0
   m_Name: PlayerBattle
   m_TagString: Untagged
@@ -121,7 +121,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &7595915870471921102
+--- !u!95 &1608864420266361734
 Animator:
   serializedVersion: 5
   m_ObjectHideFlags: 0
@@ -131,7 +131,7 @@ Animator:
   m_GameObject: {fileID: 2877942667877829477}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1c2915b9c76e16a40abbe806711a1054, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

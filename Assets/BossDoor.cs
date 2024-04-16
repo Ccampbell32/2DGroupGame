@@ -34,13 +34,13 @@ public class BossDoor : MonoBehaviour
 
     IEnumerator BossDoorOpen() 
     {
-        gameManager.currentamountofKeys--;
+        
         animator.SetBool("Opening", true);
         
         yield return new WaitForSeconds(3f);
         gameManager.BossDoorOpened = true;
         Destroy(detector);
-
+        gameManager.currentamountofKeys--;
     }
     private void Update()
     {
