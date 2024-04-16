@@ -89,7 +89,6 @@ public class EnemyMoveHoz : MonoBehaviour
             {
                 rb.velocity = new Vector2(speed, 0);
                 
-                
             }
             else
             {

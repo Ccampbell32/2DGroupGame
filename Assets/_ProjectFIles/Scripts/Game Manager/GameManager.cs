@@ -63,8 +63,10 @@ public class GameManager : MonoBehaviour
    
     
 
-    //BossDefeated
+    //Boss
     public bool BossBeaten;
+    public bool BossKeyObtained;
+    public bool BossDoorOpened;
 
     /*public PlayerMovement PlayerMovement = null;
     public SpriteRenderer PlayerSprite = null;*/

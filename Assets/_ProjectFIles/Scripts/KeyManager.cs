@@ -7,29 +7,37 @@ public class keyManager : MonoBehaviour
     [SerializeField] GameObject player;
 
     public bool isPickedUp;
-    private Vector2 vel;
-    public float smoothTime;
+    public GameManager gameManager;
     // Start is called before the first frame update
-    void Start()
-    {
-
-    }
+    
 
     // Update is called once per frame
     void Update()
     {
-        if (isPickedUp)
+        if (GameManager.manager != null)
         {
-            Vector3 offset = new Vector3(0, 1.7f, 0);
-            transform.position = Vector2.SmoothDamp(transform.position, player.transform.position + offset, ref vel, smoothTime);
+            gameManager = GameManager.manager;
+
         }
+        else
+        {
+            Debug.Log("GameManager not found! - Please add a GameManager to the scene!");
+        }
+
+        if (gameManager.BossKeyObtained == true)
+        {
+            gameObject.SetActive(false);
+            Destroy(gameObject);
+        }
+
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Player") && !isPickedUp)
         {
-            isPickedUp = true;
+            Destroy(gameObject);
+            gameManager.BossKeyObtained = true;
         }
     }
 }
