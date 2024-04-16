@@ -37,6 +37,7 @@ public class keyManager : MonoBehaviour
         if (other.gameObject.CompareTag("Player") && !isPickedUp)
         {
             Destroy(gameObject);
+            gameManager.IncreaseKeys(1);
             gameManager.BossKeyObtained = true;
         }
     }

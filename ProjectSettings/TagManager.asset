@@ -25,6 +25,7 @@ TagManager:
   - HeavenEnemy
   - AttackAnim
   - OverworldMusic
+  - KeyAmount
   layers:
   - Default
   - TransparentFX

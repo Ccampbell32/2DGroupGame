@@ -26,8 +26,9 @@ public class BossDoor : MonoBehaviour
         // activate battle UI for this enemy 
         if (collision.gameObject == GameObject.FindWithTag("Player") && gameManager.BossKeyObtained == true)
         {
+            gameManager.currentamountofKeys--;
             StartCoroutine(BossDoorOpen());
-            Destroy(detector);
+            
         }
     }
 
@@ -35,8 +36,10 @@ public class BossDoor : MonoBehaviour
     {
 
         animator.SetBool("Opening", true);
+        
         yield return new WaitForSeconds(3f);
         gameManager.BossDoorOpened = true;
+        Destroy(detector);
 
     }
     private void Update()

@@ -60,6 +60,7 @@ public class GameManager : MonoBehaviour
     public int CurrentScene;
     public TMP_Text XPText;
 
+    
    
     
 
@@ -68,6 +69,8 @@ public class GameManager : MonoBehaviour
     public bool BossKeyObtained;
     public bool BossDoorOpened;
 
+    public int currentamountofKeys;
+    public TMP_Text keysHeld;
     /*public PlayerMovement PlayerMovement = null;
     public SpriteRenderer PlayerSprite = null;*/
 
@@ -165,6 +168,11 @@ public void Start()
                 potionsHeld = GameObject.FindWithTag("BottleAmount").GetComponent<TMP_Text>();
 
             }
+            if (keysHeld == null)
+            {
+                keysHeld = GameObject.FindWithTag("KeyAmount").GetComponent<TMP_Text>();
+
+            }
             if (XPText == null)
             {
                 XPText = GameObject.FindWithTag("XPLevel").GetComponent<TMP_Text>();
@@ -182,7 +190,7 @@ public void Start()
         damage4 = 4;
         
         potionsHeld.text = "x" + currentamountofPotions.ToString();
-
+        keysHeld.text = "x" + currentamountofKeys.ToString();
     }
 
     #endregion
@@ -446,6 +454,14 @@ public void Start()
     }
 
 
+    #endregion
+
+    #region KeysInventory
+    public void IncreaseKeys(int v)
+    {
+        currentamountofKeys += v;
+        keysHeld.text = "x" + currentamountofKeys.ToString();
+    }
     #endregion
 
     #region Freeze Enemies
