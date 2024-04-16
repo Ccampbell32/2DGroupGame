@@ -27,6 +27,9 @@ public class EnemyMoveVert : MonoBehaviour
     public GameObject player;
     public GameObject Spotted;
     public GameManager gameManager;
+    public AudioSource audioSource; // Reference to the AudioSource component
+    
+   
 
     private void Awake()
     {
@@ -53,6 +56,8 @@ public class EnemyMoveVert : MonoBehaviour
 
     }
 
+    
+
     void Update()
     {
         //set to chase the player
@@ -62,7 +67,8 @@ public class EnemyMoveVert : MonoBehaviour
             detectionLightUp.SetActive(false);
             Vector3 direction = (target.position - transform.position).normalized;
             moveDirection = direction;
-            
+            speed = 7;
+           
         }
         //not in chase
         else
@@ -110,6 +116,7 @@ public class EnemyMoveVert : MonoBehaviour
             isChasing = true;
             speed = 5;
             Spotted.gameObject.SetActive(true);
+            audioSource.Play();
         }
 
 

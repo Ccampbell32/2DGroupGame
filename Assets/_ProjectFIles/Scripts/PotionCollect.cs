@@ -13,7 +13,7 @@ public class PotionCollect : MonoBehaviour
     private void Awake()
     {
         script = gameManager.GetComponent<GameManager>();
-
+        
        
     }
      void Start()
@@ -41,6 +41,7 @@ public class PotionCollect : MonoBehaviour
      }
     private void Update()
     {
+        player = GameObject.FindWithTag("Player");
         if (gameManager.Potion1Collected == true)
         {
             healthItem.SetActive(false);

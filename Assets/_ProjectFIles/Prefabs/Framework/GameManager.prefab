@@ -45,5 +45,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentGameState: 2
-  OverworldRunning: 0
-  PlayerMaxHealth: 10
+  player: {fileID: 0}
+  battleSystem: {fileID: 0}
+  battleScript: {fileID: 0}
+  unitname: Ramesses
+  unitLevel: 0
+  damage: 2
+  damage2: 3
+  damage3: 4
+  damage4: 5
+  maxHP: 0
+  currentHP: 0
+  CurrentXP: 0
+  MaxXP: 0
+  XPLevel: 0
+  XPSlider: {fileID: 0}
+  OverworldUI: {fileID: 0}
+  HealthSlider: {fileID: 0}
+  potionsHeld: {fileID: 0}
+  currentamountofPotions: 0
+  Potion1: {fileID: 0}
+  Potion1Collected: 0
+  CurrentScene: 0
+  XPText: {fileID: 0}
+  BossBeaten: 0

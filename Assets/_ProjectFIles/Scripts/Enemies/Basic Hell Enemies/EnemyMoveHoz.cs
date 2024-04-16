@@ -27,6 +27,8 @@ public class EnemyMoveHoz : MonoBehaviour
     public GameObject Spotted;
 
     public GameManager gameManager;
+    public AudioSource audioSource; // Reference to the AudioSource component
+    
     
 
     private void Awake()
@@ -57,9 +59,9 @@ public class EnemyMoveHoz : MonoBehaviour
             Debug.Log("GameManager not found! - Please add a GameManager to the scene!");
         }
 
-
+        audioSource = GetComponent<AudioSource>(); // Get the AudioSource component
     }
-
+   
     void Update()
     {
 
@@ -72,6 +74,9 @@ public class EnemyMoveHoz : MonoBehaviour
             
              Vector3 direction = (target.position - transform.position).normalized;
              moveDirection = direction;
+            speed = 7;
+
+            
             
 
         }
@@ -127,6 +132,7 @@ public class EnemyMoveHoz : MonoBehaviour
             isChasing = true;
             speed = 5;
             Spotted.gameObject.SetActive(true);
+            audioSource.Play();
         }
         
        

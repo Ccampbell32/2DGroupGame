@@ -60,6 +60,9 @@ public class GameManager : MonoBehaviour
     public int CurrentScene;
     public TMP_Text XPText;
 
+   
+    
+
     //BossDefeated
     public bool BossBeaten;
 
@@ -74,7 +77,6 @@ public class GameManager : MonoBehaviour
     #region Initialise
     public void Awake()
     {
-        
 
         //set the instance of GameManager to this instance and make it persist between scenes
         if (manager == null)
@@ -96,10 +98,12 @@ public class GameManager : MonoBehaviour
 public void Start()
     {
         Initialise();
+        
     }
 
     public void Initialise()
     {
+        
         //if we are in the menu set the gamestate to menu else find the player and battle system
         if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Main Menu"))
         {
@@ -108,9 +112,7 @@ public void Start()
         }
         else
         {
-           
-
-            
+  
             if(battleSystem == null)
             {
                 battleSystem = GameObject.FindWithTag("BattleUICanvas");
@@ -169,6 +171,7 @@ public void Start()
             XPLevelling();
             
             CurrentGameState = GameState.Overworld;
+            
             //battleSys.gameObject.SetActive(false);
         }
         damage = 2;
@@ -185,6 +188,7 @@ public void Start()
     #region GameStates
     private void Overworld()
     {
+        
         OverworldUI.SetActive(true);
 
         Potion1 = GameObject.FindWithTag("Potion1");
@@ -233,7 +237,7 @@ public void Start()
     }
     public void BattleState()
     {
-
+        
         OverworldUI.SetActive(false);
         player.SetActive(false);
         if (battleSystem != null)
