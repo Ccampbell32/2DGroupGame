@@ -90,9 +90,9 @@ public class BattleSystem : MonoBehaviour
             Debug.Log("No anim");
         }
 
-        animator = movesAnim.GetComponent<Animator>();
+       animator = movesAnim.GetComponent<Animator>();
 
-        Debug.Log("Setup Battle");
+       Debug.Log("Setup Battle");
        attackButton.gameObject.SetActive(false);
        healButton.gameObject.SetActive(false);
        moves.gameObject.SetActive(false);
@@ -103,6 +103,8 @@ public class BattleSystem : MonoBehaviour
        background.gameObject.SetActive(true);
 
        GameObject enemy = Instantiate(enemyPrefab, enemyBattleSpawn);
+       
+
        enemyUnit = enemy.GetComponent<EnemyStats>();
 
        dialogueText.text = "A deadly " + enemyUnit.unitname + " approaches...";
@@ -111,8 +113,8 @@ public class BattleSystem : MonoBehaviour
        playerHUD.SetHUD(playerUnit);
        enemyHUD.SetEnemyHUD(enemyUnit);
        enemyUnit.currentHP = enemyUnit.maxHP;
-        PlayerAttacking = false;
-        yield return new WaitForSeconds(2f);
+       PlayerAttacking = false;
+       yield return new WaitForSeconds(2f);
 
        Debug.Log("players turn");
        state = BattleState.PLAYERTURN;
@@ -278,12 +280,14 @@ public class BattleSystem : MonoBehaviour
 
         yield return new WaitForSeconds(1f);
 
+        enemyUnit.animator.SetBool("IsAttacking", true);
+
         bool isDead = playerUnit.TakeDamage(enemyUnit.damage);
 
         playerHUD.SetHP(playerUnit.currentHP);
 
         yield return new WaitForSeconds(1f);
-
+        enemyUnit.animator.SetBool("IsAttacking", false);
         if (isDead)
         {
             state = BattleState.LOST;

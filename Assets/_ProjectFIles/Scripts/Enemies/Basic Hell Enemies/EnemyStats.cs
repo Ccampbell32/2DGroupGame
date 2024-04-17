@@ -17,7 +17,7 @@ public class EnemyStats : MonoBehaviour
     public int XPheld;
 
     //animation
-    private Animator animator;
+    public Animator animator;
     public BattleSystem battleSystem;
 
     public void Start()

@@ -1,9 +1,5 @@
 fileFormatVersion: 2
-<<<<<<< HEAD
 guid: 47537fa0494e5e0448ce58aa8c1c97d9
-=======
-guid: c5bb6e1cdfeeabd4ab63fe004bebf2bc
->>>>>>> a44db0f7d2c52a518d08e899560403655768d439
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -38,33 +34,21 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-<<<<<<< HEAD
     filterMode: 0
-=======
-    filterMode: 1
->>>>>>> a44db0f7d2c52a518d08e899560403655768d439
     aniso: 1
     mipBias: 0
     wrapU: 1
     wrapV: 1
-    wrapW: 1
+    wrapW: 0
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-<<<<<<< HEAD
   spriteMode: 2
-=======
-  spriteMode: 1
->>>>>>> a44db0f7d2c52a518d08e899560403655768d439
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-<<<<<<< HEAD
   spritePixelsToUnits: 32
-=======
-  spritePixelsToUnits: 100
->>>>>>> a44db0f7d2c52a518d08e899560403655768d439
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -79,32 +63,16 @@ TextureImporter:
   compressionQualitySet: 0
   textureFormatSet: 0
   ignorePngGamma: 0
-  applyGammaDecoding: 0
+  applyGammaDecoding: 1
   swizzle: 50462976
-  cookieLightType: 0
+  cookieLightType: 2
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-<<<<<<< HEAD
     textureCompression: 0
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-=======
->>>>>>> a44db0f7d2c52a518d08e899560403655768d439
-    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -117,7 +85,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -130,7 +98,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -140,7 +108,6 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-<<<<<<< HEAD
     sprites:
     - serializedVersion: 2
       name: Ghost1-spritesheet_0
@@ -157,8 +124,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0832ac5dbf2115040ba3e42df499b001
-      internalID: -228516084
+      spriteID: c87469fe98d7c4c4ba258489921869b0
+      internalID: 400119643
       vertices: []
       indices: 
       edges: []
@@ -178,8 +145,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eb2afc1b4822d7f47be8f86b652bcf63
-      internalID: -331372929
+      spriteID: 19b27b75ed090114ead5b63939c6764e
+      internalID: -565402778
       vertices: []
       indices: 
       edges: []
@@ -199,8 +166,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b0f0c678e0431ea48a09300573491ecb
-      internalID: 956949078
+      spriteID: 72efd75dc89f5d54baa8f0a3aa9e270a
+      internalID: 748721546
       vertices: []
       indices: 
       edges: []
@@ -220,8 +187,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 13c0ba88902726549aa53e5e826e3910
-      internalID: -499991359
+      spriteID: 0cec3be1169f0134e86cedf7add61ad3
+      internalID: -800043363
       vertices: []
       indices: 
       edges: []
@@ -241,8 +208,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 20f9f8d6007000342b6774036abb1c46
-      internalID: -889124410
+      spriteID: d8f39e4dce0539b47ac256951ac2f89c
+      internalID: 1452033487
       vertices: []
       indices: 
       edges: []
@@ -262,8 +229,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8bd570092c9d0b94b9769ae6a0c3bc3c
-      internalID: -1747422401
+      spriteID: de233f0881dad9a4bbf4105eb2e131ab
+      internalID: 1437307653
       vertices: []
       indices: 
       edges: []
@@ -283,37 +250,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8bc24ff1c6572b146b70aca14c1e457d
-      internalID: -2122822866
+      spriteID: 230b773eb7b9da646a9de559819200ff
+      internalID: 1107768007
       vertices: []
       indices: 
       edges: []
       weights: []
-=======
-    sprites: []
->>>>>>> a44db0f7d2c52a518d08e899560403655768d439
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: c18129a08499c354e94c8a36f3a50788
     internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
-<<<<<<< HEAD
     nameFileIdTable:
-      Ghost1-spritesheet_0: -228516084
-      Ghost1-spritesheet_1: -331372929
-      Ghost1-spritesheet_2: 956949078
-      Ghost1-spritesheet_3: -499991359
-      Ghost1-spritesheet_4: -889124410
-      Ghost1-spritesheet_5: -1747422401
-      Ghost1-spritesheet_6: -2122822866
-=======
-    nameFileIdTable: {}
->>>>>>> a44db0f7d2c52a518d08e899560403655768d439
+      Ghost1-spritesheet_0: 400119643
+      Ghost1-spritesheet_1: -565402778
+      Ghost1-spritesheet_2: 748721546
+      Ghost1-spritesheet_3: -800043363
+      Ghost1-spritesheet_4: 1452033487
+      Ghost1-spritesheet_5: 1437307653
+      Ghost1-spritesheet_6: 1107768007
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
