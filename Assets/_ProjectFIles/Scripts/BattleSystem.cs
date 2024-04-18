@@ -59,7 +59,11 @@ public class BattleSystem : MonoBehaviour
     {
         gameManager = GameObject.FindWithTag("GameManager").GetComponent<GameManager>();
 
-        
+        foreach (Transform child in enemyBattleSpawn)
+        {
+            Destroy(child.gameObject);
+        }
+
 
         state = BattleState.START;
         StartCoroutine(SetupBattle());
@@ -340,10 +344,11 @@ public class BattleSystem : MonoBehaviour
         movesAnim.gameObject.SetActive(true);
     }
      void OnEnable()
-    {
+     {
         Debug.Log("PrintOnDisable: script was enabled");
+       
         Start();
-    }
+     }
     void PlayerTurn()
     {
         movesAnim.SetActive(false);

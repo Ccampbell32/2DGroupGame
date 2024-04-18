@@ -205,6 +205,7 @@ public void Start()
 
         if (battleSystem != null)
         {
+            
             battleSystem.SetActive(false);
         }
         player.SetActive(true);
