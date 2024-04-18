@@ -498,17 +498,18 @@ public void Start()
             FreezeEnemies(false);
         }
         XPText.text = XPLevel.ToString();
+        if (CurrentXP >= MaxXP)
+        {
+            XPLevel += 1;
+            CurrentXP -= MaxXP;
+        }
     }
     #endregion
     #region XP
     public void AddXP(int xp)
     {
         CurrentXP += xp;
-        if(CurrentXP >= MaxXP)
-        {
-            XPLevel += 1;
-            CurrentXP -= MaxXP;
-        }
+        
     }
     #endregion
 }
