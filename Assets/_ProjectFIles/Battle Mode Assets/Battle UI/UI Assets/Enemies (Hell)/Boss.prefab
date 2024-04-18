@@ -157,11 +157,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   unitname: Brian
-  unitLevel: 10
+  unitLevel: 5
   damage: 4
-  maxHP: 12
-  currentHP: 12
-  XPheld: 15
+  maxHP: 20
+  currentHP: 20
+  XPheld: 0
   animator: {fileID: 0}
   battleSystem: {fileID: 0}
 --- !u!82 &129452204065292835

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class EnemyStats : MonoBehaviour
@@ -47,14 +48,43 @@ public class EnemyStats : MonoBehaviour
         {
             Debug.Log("No Battle System");
         }
-      
+
+
+
+
+        if (battleSystem.enemyUnit == GameObject.FindWithTag("HellBoss"))
+        {
+            XPheld = gameManager.MaxXP;
+
+        }
+        if (battleSystem.enemyUnit == GameObject.FindWithTag("BattleHellEnemy"))
+        {
+            XPheld = 5;
+
+        }
 
     }
 
     private void Update()
     {
-        int randomNumber = Random.Range(1, 3);
-        damage = randomNumber;
+        
+
+        if (battleSystem.enemyUnit == GameObject.FindWithTag("HellBoss")) 
+        { 
+          XPheld = gameManager.MaxXP;
+
+            int randomNumber = Random.Range(1, 4);
+            damage = randomNumber;
+
+        }
+        if (battleSystem.enemyUnit == GameObject.FindWithTag("BattleHellEnemy"))
+        {
+            XPheld = 5;
+
+            
+            damage = 2;
+
+        }
 
 
         if (battleSystem.state == BattleState.WON)
@@ -94,6 +124,7 @@ public class EnemyStats : MonoBehaviour
 
     }
    
+    
     
 
 }
