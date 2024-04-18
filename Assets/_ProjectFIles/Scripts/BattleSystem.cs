@@ -128,6 +128,7 @@ public class BattleSystem : MonoBehaviour
     #region PlayerAttacks
     IEnumerator PlayerAttack1()
     {
+        gameManager.damage = 2;
 
         attackButton.gameObject.SetActive(false);   bool isDead = enemyUnit.TakeDamage(playerUnit.damage);
         moves.gameObject.SetActive(false);
@@ -162,6 +163,12 @@ public class BattleSystem : MonoBehaviour
     }
     IEnumerator PlayerAttack2()
     {
+        
+
+        int randomNumber2 = Random.Range(1, 4);
+        gameManager.damage2 = randomNumber2;
+
+
         attackButton.gameObject.SetActive(false); bool isDead = enemyUnit.TakeDamage(playerUnit.damage2);
         moves.gameObject.SetActive(false);
 
@@ -197,6 +204,9 @@ public class BattleSystem : MonoBehaviour
     }
     IEnumerator PlayerAttack3()
     {
+        int randomNumber3 = Random.Range(1, 4);
+        gameManager.damage3 = randomNumber3;
+
         attackButton.gameObject.SetActive(false); bool isDead = enemyUnit.TakeDamage(playerUnit.damage3);
         moves.gameObject.SetActive(false);
 
@@ -232,6 +242,9 @@ public class BattleSystem : MonoBehaviour
     }
     IEnumerator PlayerAttack4()
     {
+        int randomNumber4 = Random.Range(1, 4);
+        gameManager.damage4 = randomNumber4;
+
         attackButton.gameObject.SetActive(false); bool isDead = enemyUnit.TakeDamage(playerUnit.damage4);
         moves.gameObject.SetActive(false);
 

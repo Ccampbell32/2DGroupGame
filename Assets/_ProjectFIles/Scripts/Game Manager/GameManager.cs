@@ -185,16 +185,7 @@ public void Start()
             //battleSys.gameObject.SetActive(false);
         }
 
-        damage = 2;
 
-        int randomNumber2 = Random.Range(1, 4);
-        damage2 = randomNumber2;
-
-        int randomNumber3 = Random.Range(3, 5);
-        damage3 = randomNumber3;
-
-        int randomNumber4 = Random.Range(3, 6);
-        damage4 = randomNumber4;
 
 
         potionsHeld.text = "x" + currentamountofPotions.ToString();
