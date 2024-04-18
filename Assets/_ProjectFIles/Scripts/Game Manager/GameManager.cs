@@ -93,7 +93,7 @@ public class GameManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        unitLevel = 1;
+        XPLevel = 1;
         PlayerLevel();
         currentHP = maxHP;
         CurrentScene = 0;
@@ -497,6 +497,7 @@ public void Start()
         {
             FreezeEnemies(false);
         }
+        unitLevel = XPLevel;
         XPText.text = XPLevel.ToString();
         if (CurrentXP >= MaxXP)
         {

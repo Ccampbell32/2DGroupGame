@@ -3029,6 +3029,10 @@ PrefabInstance:
       value: GameManager
       objectReference: {fileID: 0}
     - target: {fileID: 7126946142340257471, guid: 7ee65d35981fdf748a1e31418d6a4bd8, type: 3}
+      propertyPath: XPLevel
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7126946142340257471, guid: 7ee65d35981fdf748a1e31418d6a4bd8, type: 3}
       propertyPath: playerCurrentHealth
       value: 10
       objectReference: {fileID: 0}
