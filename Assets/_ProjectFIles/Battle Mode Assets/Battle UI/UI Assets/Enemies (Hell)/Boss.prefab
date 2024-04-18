@@ -159,9 +159,9 @@ MonoBehaviour:
   unitname: Brian
   unitLevel: 5
   damage: 4
-  maxHP: 20
-  currentHP: 20
-  XPheld: 0
+  maxHP: 15
+  currentHP: 15
+  XPheld: 12
   animator: {fileID: 0}
   battleSystem: {fileID: 0}
 --- !u!82 &129452204065292835

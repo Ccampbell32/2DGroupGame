@@ -23,6 +23,8 @@ public class EnemyStats : MonoBehaviour
 
     public void Start()
     {
+       
+
         animator = GetComponentInChildren<Animator>();
         gameManager = GameObject.FindWithTag("GameManager").GetComponent<GameManager>();
 
@@ -52,16 +54,6 @@ public class EnemyStats : MonoBehaviour
 
 
 
-        if (battleSystem.enemyUnit == GameObject.FindWithTag("HellBoss"))
-        {
-            XPheld = gameManager.MaxXP;
-
-        }
-        if (battleSystem.enemyUnit == GameObject.FindWithTag("BattleHellEnemy"))
-        {
-            XPheld = 5;
-
-        }
 
     }
 
@@ -71,17 +63,13 @@ public class EnemyStats : MonoBehaviour
 
         if (battleSystem.enemyUnit == GameObject.FindWithTag("HellBoss")) 
         { 
-          XPheld = gameManager.MaxXP;
-
-            int randomNumber = Random.Range(1, 4);
+          
+           int randomNumber = Random.Range(1, 4);
             damage = randomNumber;
 
         }
         if (battleSystem.enemyUnit == GameObject.FindWithTag("BattleHellEnemy"))
         {
-            XPheld = 5;
-
-            
             damage = 2;
 
         }
