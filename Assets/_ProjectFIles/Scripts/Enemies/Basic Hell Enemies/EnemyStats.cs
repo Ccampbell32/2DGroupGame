@@ -53,7 +53,7 @@ public class EnemyStats : MonoBehaviour
 
     private void Update()
     {
-        int randomNumber = Random.Range(1, 4);
+        int randomNumber = Random.Range(1, 3);
         damage = randomNumber;
 
 

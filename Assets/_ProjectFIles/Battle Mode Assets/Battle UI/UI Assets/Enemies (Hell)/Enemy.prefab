@@ -53,9 +53,9 @@ MonoBehaviour:
   unitname: Ghoulag
   unitLevel: 2
   damage: 1
-  maxHP: 6
-  currentHP: 6
-  XPheld: 3
+  maxHP: 5
+  currentHP: 5
+  XPheld: 5
   animator: {fileID: 0}
   battleSystem: {fileID: 0}
 --- !u!82 &848719416636572395

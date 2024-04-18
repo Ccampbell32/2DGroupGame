@@ -37,10 +37,10 @@ public class GameManager : MonoBehaviour
     public string unitname = "Ramesses";
     public int unitLevel;
 
-    public int damage = 2;
-    public int damage2 = 3;
-    public int damage3 = 4;
-    public int damage4 = 5;
+    public int damage;
+    public int damage2;
+    public int damage3;
+    public int damage4;
 
 
     public int maxHP;
@@ -184,17 +184,25 @@ public void Start()
             
             //battleSys.gameObject.SetActive(false);
         }
+
         damage = 2;
-        damage2 = 3; 
-        damage3 = 4;
-        damage4 = 4;
-        
+
+        int randomNumber2 = Random.Range(1, 4);
+        damage2 = randomNumber2;
+
+        int randomNumber3 = Random.Range(3, 5);
+        damage3 = randomNumber3;
+
+        int randomNumber4 = Random.Range(3, 6);
+        damage4 = randomNumber4;
+
+
         potionsHeld.text = "x" + currentamountofPotions.ToString();
         keysHeld.text = "x" + currentamountofKeys.ToString();
     }
 
     #endregion
-
+   
     #region GameStates
     private void Overworld()
     {
