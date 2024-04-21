@@ -32,6 +32,8 @@ public class BattleSystem : MonoBehaviour
     public AudioSource attackSound2;
     public AudioSource attackSound3;
     public AudioSource attackSound4;
+
+    public AudioSource enemyAttackSound;
     #endregion
 
     #region Player Animator Bools
@@ -298,6 +300,7 @@ public class BattleSystem : MonoBehaviour
         yield return new WaitForSeconds(1f);
 
         enemyUnit.animator.SetBool("IsAttacking", true);
+        enemyAttackSound.Play();
 
         bool isDead = playerUnit.TakeDamage(enemyUnit.damage);
 
