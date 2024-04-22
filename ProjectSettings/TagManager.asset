@@ -26,6 +26,7 @@ TagManager:
   - AttackAnim
   - OverworldMusic
   - KeyAmount
+  - BattleHellEnemy
   layers:
   - Default
   - TransparentFX
