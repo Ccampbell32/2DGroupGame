@@ -57,7 +57,9 @@ public class GameManager : MonoBehaviour
     public TMP_Text potionsHeld;
     public int currentamountofPotions;
     public GameObject Potion1;
+    public GameObject Potion2;
     public bool Potion1Collected;
+    public bool Potion2Collected;   
     public int CurrentScene;
     public TMP_Text XPText;
     public bool JustDied;
@@ -225,7 +227,7 @@ public void Start()
         OverworldUI.SetActive(true);
         PlayerDeath.SetActive(false);
         Potion1 = GameObject.FindWithTag("Potion1");
-
+        Potion2 = GameObject.FindWithTag("Potion2");
         if (battleSystem != null)
         {
             
@@ -258,6 +260,19 @@ public void Start()
             else
             {
                 Potion1.gameObject.SetActive(true);
+            }
+        }
+        if (Potion2 != null)
+        {
+            Potion2 = GameObject.FindWithTag("Potion2");
+            //potion2 collected
+            if (Potion2Collected == true)
+            {
+                Potion2.gameObject.SetActive(false);
+            }
+            else
+            {
+                Potion2.gameObject.SetActive(true);
             }
         }
 

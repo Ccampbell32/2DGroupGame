@@ -1131,6 +1131,7 @@ MonoBehaviour:
   dialogueText: {fileID: 5214035991573642643}
   playerHUD: {fileID: 8405712233147586172}
   enemyHUD: {fileID: 268051887928315275}
+  player: {fileID: 0}
   state: 0
 --- !u!82 &973867696857542478
 AudioSource:
