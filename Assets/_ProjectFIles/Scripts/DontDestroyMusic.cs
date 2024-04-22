@@ -24,10 +24,14 @@ public class DontDestroyMusic : MonoBehaviour
         if (gameManager.CurrentGameState == GameState.BattleState) 
         { 
           gameObject.GetComponent<AudioSource>().Pause();
-        }
+        } 
         else
         {
             gameObject.GetComponent<AudioSource>().UnPause();
+        }
+        if (gameManager.JustDied == true)
+        {
+            Destroy(gameObject);
         }
     }
 }
