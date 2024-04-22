@@ -29,6 +29,7 @@ TagManager:
   - BattleHellEnemy
   - DeathUI
   - DeathScreen
+  - Potion2
   layers:
   - Default
   - TransparentFX
@@ -68,4 +69,7 @@ TagManager:
     locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Floor
+    uniqueID: 2626347163
     locked: 0
