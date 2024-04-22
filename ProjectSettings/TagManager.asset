@@ -28,7 +28,7 @@ TagManager:
   - KeyAmount
   - BattleHellEnemy
   - DeathUI
-  - Potion2
+  - DeathScreen
   layers:
   - Default
   - TransparentFX
