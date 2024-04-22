@@ -62,8 +62,8 @@ public class GameManager : MonoBehaviour
     public TMP_Text XPText;
     public bool JustDied;
     public GameObject DeathUI;
-   
-    
+    public GameObject PlayerDeath;
+    public Animator PlayerDeathAnim;
 
     //Boss
     public bool BossBeaten;
@@ -178,6 +178,16 @@ public void Start()
             {
                 XPText = GameObject.FindWithTag("XPLevel").GetComponent<TMP_Text>();
             }
+            if (playerMove == null)
+            {
+                playerMove = player.GetComponent<PlayerMovement>();
+            }
+            if (PlayerDeath == null)
+            {
+                PlayerDeath = GameObject.FindWithTag("DeathScreen");
+                PlayerDeathAnim = GameObject.FindWithTag("DeathScreen").GetComponent<Animator>();
+                PlayerDeath.SetActive(false);
+            }
             if (DeathUI == null)
             {
                 DeathUI = GameObject.FindWithTag("DeathUI");
@@ -187,9 +197,9 @@ public void Start()
                 }
 
             }
-            if (playerMove == null)
+           
             {
-                playerMove = player.GetComponent<PlayerMovement>();
+                
             }
             PlayerLevel();
             XPLevelling();
@@ -213,7 +223,7 @@ public void Start()
     {
         
         OverworldUI.SetActive(true);
-
+        PlayerDeath.SetActive(false);
         Potion1 = GameObject.FindWithTag("Potion1");
 
         if (battleSystem != null)
@@ -267,11 +277,17 @@ public void Start()
     public IEnumerator DeathScene()
     {
         Debug.Log("Death Scene");
-        playerMove.enabled = false;
-        yield return new WaitForSeconds(2);
         player.SetActive(false);
+        OverworldUI.SetActive(false);
+        playerMove.enabled = false;
+        PlayerDeath.SetActive(true);
+        PlayerDeathAnim.SetBool("IsDead", true);
+        yield return new WaitForSeconds(2);
         DeathUI.SetActive(true);
+        PlayerDeath.SetActive(false);
         JustDied = false;
+        player.SetActive(true);
+
     }
     private void GameOver()
     {
@@ -280,7 +296,7 @@ public void Start()
     }
     public void BattleState()
     {
-    
+        
         OverworldUI.SetActive(false);
         player.SetActive(false);
         if (battleSystem != null)
@@ -510,6 +526,7 @@ public void Start()
 
     void Update()
     {
+        PlayerDeath.SetActive(true);
 
         if (HealthSlider != null)
         {
@@ -550,11 +567,11 @@ public void Start()
     public void resetScene()
     {
         ResetStats();
+        OverworldUI.SetActive(true);
         SceneManager.LoadScene(0);
     }
     public void ResetStats()
     {
-        player.SetActive(true);
         playerMove.enabled = true;
         maxHP = 10;
         XPLevel = 1;
