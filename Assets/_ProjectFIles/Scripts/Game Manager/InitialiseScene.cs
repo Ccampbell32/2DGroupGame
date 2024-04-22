@@ -28,6 +28,7 @@ public class InitialiseScene : MonoBehaviour{
     [Header("SpawnPoint4")]
     public Transform playerSpawnPoint4;
     public int FromScene4;
+    public bool FixingStuff;
 
     #endregion
 
@@ -95,7 +96,7 @@ public class InitialiseScene : MonoBehaviour{
                     player = Instantiate(playerPrefab, playerSpawnPoint4.position, playerSpawnPoint4.rotation);
                 }
             }           
-                if (gameManager.CurrentScene == 0)
+                if (gameManager.CurrentScene == 0 && FixingStuff == false)
                 {
                     player = Instantiate(playerPrefab, playerSpawnPoint1.position, playerSpawnPoint1.rotation);
                 }
