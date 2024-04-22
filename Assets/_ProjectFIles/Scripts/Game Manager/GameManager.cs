@@ -29,6 +29,7 @@ public class GameManager : MonoBehaviour
     
     public static GameManager manager;
     public GameObject player;
+    public PlayerMovement playerMove;
     
     public GameObject battleSystem; //battle system object - canvas to turn it on/off
     public BattleSystem battleScript; //battle system script to access the battle functions
@@ -59,8 +60,8 @@ public class GameManager : MonoBehaviour
     public bool Potion1Collected;
     public int CurrentScene;
     public TMP_Text XPText;
-
-    
+    public bool JustDied;
+    public GameObject DeathUI;
    
     
 
@@ -93,7 +94,7 @@ public class GameManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        unitLevel = 1;
+        XPLevel = 1;
         PlayerLevel();
         currentHP = maxHP;
         CurrentScene = 0;
@@ -177,6 +178,19 @@ public void Start()
             {
                 XPText = GameObject.FindWithTag("XPLevel").GetComponent<TMP_Text>();
             }
+            if (DeathUI == null)
+            {
+                DeathUI = GameObject.FindWithTag("DeathUI");
+                if (DeathUI != null)
+                {
+                    DeathUI.SetActive(false);
+                }
+
+            }
+            if (playerMove == null)
+            {
+                playerMove = player.GetComponent<PlayerMovement>();
+            }
             PlayerLevel();
             XPLevelling();
             
@@ -238,7 +252,26 @@ public void Start()
         }
 
         //call FreezeEnemies(false); to unfreeze the enemies
-
+        if (JustDied)
+        {
+            Debug.Log("Just died is true");
+            StartCoroutine(DeathScene());
+        }
+        else
+        {
+            Debug.Log("Just Died false");
+            DeathUI.SetActive(false);
+        }
+    }
+  
+    public IEnumerator DeathScene()
+    {
+        Debug.Log("Death Scene");
+        playerMove.enabled = false;
+        yield return new WaitForSeconds(2);
+        player.SetActive(false);
+        DeathUI.SetActive(true);
+        JustDied = false;
     }
     private void GameOver()
     {
@@ -247,7 +280,7 @@ public void Start()
     }
     public void BattleState()
     {
-        
+    
         OverworldUI.SetActive(false);
         player.SetActive(false);
         if (battleSystem != null)
@@ -497,6 +530,7 @@ public void Start()
         {
             FreezeEnemies(false);
         }
+        unitLevel = XPLevel;
         XPText.text = XPLevel.ToString();
         if (CurrentXP >= MaxXP)
         {
@@ -510,6 +544,27 @@ public void Start()
     {
         CurrentXP += xp;
         
+    }
+    #endregion
+    #region Death
+    public void resetScene()
+    {
+        ResetStats();
+        SceneManager.LoadScene(0);
+    }
+    public void ResetStats()
+    {
+        player.SetActive(true);
+        playerMove.enabled = true;
+        maxHP = 10;
+        XPLevel = 1;
+        currentHP = maxHP;
+        MaxXP = 10;
+        CurrentXP = 0;
+        BossKeyObtained = false;
+        currentamountofKeys = 0;
+        currentamountofPotions = 0;
+        Potion1Collected = false;
     }
     #endregion
 }

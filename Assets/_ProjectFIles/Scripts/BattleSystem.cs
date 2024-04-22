@@ -32,6 +32,8 @@ public class BattleSystem : MonoBehaviour
     public AudioSource attackSound2;
     public AudioSource attackSound3;
     public AudioSource attackSound4;
+
+    public AudioSource enemyAttackSound;
     #endregion
 
     #region Player Animator Bools
@@ -50,6 +52,8 @@ public class BattleSystem : MonoBehaviour
 
     public BattleHUD playerHUD;
     public BattleHUD enemyHUD;
+    public GameObject player;
+    
 
 
     public BattleState state;
@@ -74,7 +78,6 @@ public class BattleSystem : MonoBehaviour
         attack2 = GameObject.FindWithTag("Attack2");
         attack3 = GameObject.FindWithTag("Attack3");
         attack4 = GameObject.FindWithTag("Attack4");
-
        
     }
     
@@ -298,6 +301,7 @@ public class BattleSystem : MonoBehaviour
         yield return new WaitForSeconds(1f);
 
         enemyUnit.animator.SetBool("IsAttacking", true);
+        enemyAttackSound.Play();
 
         bool isDead = playerUnit.TakeDamage(enemyUnit.damage);
 
@@ -336,7 +340,6 @@ public class BattleSystem : MonoBehaviour
             dialogueText.text = "You won the battle! and gained " + enemyUnit.XPheld + "XP!";
             yield return new WaitForSeconds(2f);
             gameManager.AddXP(enemyUnit.XPheld);
-
             gameManager.ChangeGameState(GameState.Overworld);
             Debug.Log("Change to Overworld");
         }
@@ -344,6 +347,7 @@ public class BattleSystem : MonoBehaviour
         {
             dialogueText.text = "You were defeated.";
             yield return new WaitForSeconds(3f);
+            gameManager.JustDied = true;
             gameManager.ChangeGameState(GameState.Overworld);
         }
     }
@@ -489,5 +493,8 @@ public class BattleSystem : MonoBehaviour
 
         StartCoroutine(PlayerAttack4());
     }
+    #endregion
+    #region death
+  
     #endregion
 }
