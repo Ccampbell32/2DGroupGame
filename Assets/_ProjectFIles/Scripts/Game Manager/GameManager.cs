@@ -116,7 +116,6 @@ public void Start()
         if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Main Menu"))
         {
             CurrentGameState = GameState.MainMenu;
-            Debug.Log("InMenu");
         }
         else
         {
@@ -145,26 +144,20 @@ public void Start()
             if (player == null)
             {
                 player = GameObject.FindWithTag("Player");
-                Debug.Log("Found Player");
-
             }
             if (OverworldUI == null)
             {
                 OverworldUI = GameObject.FindWithTag("OverwordlUICanvas");
-                Debug.Log("Found OverworldUI");
+
 
             }
             if (HealthSlider == null)
             {
                 HealthSlider = GameObject.FindWithTag("HealthSlider").GetComponent<Slider>();
-                Debug.Log("Found health Slider");
-
             }
             if (XPSlider == null)
             {
                 XPSlider = GameObject.FindWithTag("XPSlider").GetComponent<Slider>();
-                Debug.Log("Found XP Slider");
-
             }
             if (potionsHeld == null) 
             {
@@ -187,8 +180,11 @@ public void Start()
             if (PlayerDeath == null)
             {
                 PlayerDeath = GameObject.FindWithTag("DeathScreen");
-                PlayerDeathAnim = GameObject.FindWithTag("DeathScreen").GetComponent<Animator>();
-                PlayerDeath.SetActive(false);
+                if (PlayerDeath != null)
+                {
+                    PlayerDeathAnim = GameObject.FindWithTag("DeathScreen").GetComponent<Animator>();
+                    PlayerDeath.SetActive(false);
+                }
             }
             if (DeathUI == null)
             {
@@ -234,14 +230,12 @@ public void Start()
             battleSystem.SetActive(false);
         }
         player.SetActive(true);
-        Debug.Log("BattleSys Deactivated");
         Initialise();
 
         if (battleSystem != null)
         {
 
             battleSystem.SetActive(false);
-            Debug.Log("Not Active");
         }
         else
         {
@@ -279,19 +273,16 @@ public void Start()
         //call FreezeEnemies(false); to unfreeze the enemies
         if (JustDied)
         {
-            Debug.Log("Just died is true");
             StartCoroutine(DeathScene());
         }
         else
         {
-            Debug.Log("Just Died false");
             DeathUI.SetActive(false);
         }
     }
   
     public IEnumerator DeathScene()
     {
-        Debug.Log("Death Scene");
         player.SetActive(false);
         OverworldUI.SetActive(false);
         playerMove.enabled = false;
@@ -317,17 +308,14 @@ public void Start()
         if (battleSystem != null)
         {
             battleSystem.SetActive(true);
-            Debug.Log("Active");
         }
         else
         {
-            Debug.Log("No battle system");
         }
 
 
         battleScript = battleSystem.GetComponent<BattleSystem>();
 
-        Debug.Log("BattleState");
         
         //call FreezeEnemies(true); to freeze the enemies
     }
@@ -540,8 +528,7 @@ public void Start()
     }
 
     void Update()
-    {
-        PlayerDeath.SetActive(true);
+    {     
 
         if (HealthSlider != null)
         {
