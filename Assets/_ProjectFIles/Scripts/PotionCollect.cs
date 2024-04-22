@@ -45,11 +45,19 @@ public class PotionCollect : MonoBehaviour
     private void Update()
     {
         player = GameObject.FindWithTag("Player");
-        if (gameManager.Potion1Collected == true)
+
+
+        if (healthItem.tag == "Potion1" && gameManager.Potion1Collected == true)
         {
             healthItem.SetActive(false);
             gameObject.SetActive(false);
         }
+        if (healthItem.tag == "Potion2" && gameManager.Potion2Collected == true)
+        {
+            healthItem.SetActive(false);
+            gameObject.SetActive(false);
+        }
+
         else
         {
             healthItem.SetActive(true);
