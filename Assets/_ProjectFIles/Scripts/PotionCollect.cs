@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.PlasticSCM.Editor.WebApi;
 using UnityEngine;
+
 
 public class PotionCollect : MonoBehaviour
 {
@@ -13,8 +15,9 @@ public class PotionCollect : MonoBehaviour
     private void Awake()
     {
         script = gameManager.GetComponent<GameManager>();
+
         
-       
+
     }
      void Start()
      {
@@ -55,9 +58,18 @@ public class PotionCollect : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+       
+
         if (collision.gameObject == player)
         {
-            gameManager.Potion1Collected = true;
+            if (gameObject.tag == "Potion1")
+            {
+                gameManager.Potion1Collected = true;
+            }
+            if  (gameObject.tag == "Potion2")
+            {
+                gameManager.Potion2Collected = true;
+            }
             gameManager.IncreaseBottles(1);
             Destroy(gameObject);
         }
