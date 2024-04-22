@@ -27,6 +27,8 @@ TagManager:
   - OverworldMusic
   - KeyAmount
   - BattleHellEnemy
+  - DeathUI
+  - Potion2
   layers:
   - Default
   - TransparentFX
