@@ -207,7 +207,7 @@ public class BattleSystem : MonoBehaviour
     }
     IEnumerator PlayerAttack3()
     {
-        int randomNumber3 = Random.Range(1, 4);
+        int randomNumber3 = Random.Range(2, 5);
         gameManager.damage3 = randomNumber3;
 
         attackButton.gameObject.SetActive(false); bool isDead = enemyUnit.TakeDamage(playerUnit.damage3);
