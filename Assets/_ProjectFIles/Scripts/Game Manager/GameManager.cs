@@ -305,12 +305,15 @@ public void Start()
         
         OverworldUI.SetActive(false);
         player.SetActive(false);
+
         if (battleSystem != null)
         {
             battleSystem.SetActive(true);
         }
         else
         {
+            battleSystem.SetActive(true);
+            
         }
 
 
