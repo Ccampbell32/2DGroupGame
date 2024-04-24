@@ -11,7 +11,8 @@ public class PotionCollect : MonoBehaviour
     private GameManager script;
     public GameObject player;
     public GameObject healthItem;
-   
+    public AudioSource Pickup;
+
     private void Awake()
     {
         script = gameManager.GetComponent<GameManager>();
@@ -72,10 +73,12 @@ public class PotionCollect : MonoBehaviour
         {
             if (gameObject.tag == "Potion1")
             {
+                Pickup.Play();
                 gameManager.Potion1Collected = true;
             }
             if  (gameObject.tag == "Potion2")
             {
+                Pickup.Play();
                 gameManager.Potion2Collected = true;
             }
             gameManager.IncreaseBottles(1);
