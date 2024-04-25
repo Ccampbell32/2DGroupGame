@@ -13,8 +13,8 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: The Haters
-  productName: Sands Of Damnation
-  defaultCursor: {fileID: 0}
+  productName: SandsOfDamnation
+  defaultCursor: {fileID: 2800000, guid: 7ebef31cc0d121b4bad3edf2bda38f0b, type: 3}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
   m_ShowUnitySplashScreen: 1
@@ -156,7 +156,7 @@ PlayerSettings:
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
-    Standalone: com.The-Haters.Sands-Of-Damnation
+    Standalone: com.The-Haters.SandsOfDamnation
   buildNumber:
     Standalone: 0
     VisionOS: 0
