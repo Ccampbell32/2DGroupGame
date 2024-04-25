@@ -34,6 +34,8 @@ public class GameManager : MonoBehaviour
     public BattleSystem battleScript; //battle system script to access the battle functions
     public GameObject GlobalVolume;
 
+
+
     //player stats
     public string unitname = "Ramesses";
     public int unitLevel;
