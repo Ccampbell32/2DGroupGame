@@ -31,6 +31,7 @@ TagManager:
   - DeathScreen
   - Potion2
   - LevelComplete
+  - GlobalVol
   layers:
   - Default
   - TransparentFX
