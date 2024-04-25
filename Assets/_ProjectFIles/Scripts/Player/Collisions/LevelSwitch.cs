@@ -8,25 +8,23 @@ public class LevelSwitch : MonoBehaviour
     public int sceneBuildIndex;
     public Transform PlayerSpawnPoint;
     public Transform newSpawn;
-    private bool IfLevelComplete;
+    public bool IfLevelComplete;
     public PlayerMovement playerMove;
     public GameObject LevelCompleteUI;
 
     public void Start()
     {
-        Debug.Log("Level Switch start");
-        if (GameObject.FindWithTag("LevelComplete") != null)
+        Initialize();
+    }
+    public void Initialize()
+    {
+        if (IfLevelComplete)
         {
             LevelCompleteUI = GameObject.FindWithTag("LevelComplete");
             playerMove = GameObject.FindWithTag("Player").GetComponent<PlayerMovement>();
             LevelCompleteUI.SetActive(false);
-            IfLevelComplete = true;
-        }
-        else
-        {
-            IfLevelComplete = false;
-        }
 
+        }
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -34,9 +32,9 @@ public class LevelSwitch : MonoBehaviour
 
         if(collision.tag == "Player")
         {
-            if (IfLevelComplete)
+            if (IfLevelComplete == true)
             {
-                LevelComplete();
+                StartCoroutine(LevelComplete());
             }
             else
             {
