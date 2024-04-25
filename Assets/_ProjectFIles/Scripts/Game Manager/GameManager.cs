@@ -33,6 +33,7 @@ public class GameManager : MonoBehaviour
     
     public GameObject battleSystem; //battle system object - canvas to turn it on/off
     public BattleSystem battleScript; //battle system script to access the battle functions
+    public GameObject GlobalVolume;
 
     //player stats
     public string unitname = "Ramesses";
@@ -185,7 +186,11 @@ public void Start()
                 }
 
             }
-           
+            if (GlobalVolume == null)
+            {
+                GlobalVolume = GameObject.FindWithTag("GlobalVol");
+
+            }
             {
                 
             }
@@ -209,7 +214,7 @@ public void Start()
     #region GameStates
     private void Overworld()
     {
-        
+        GlobalVolume.SetActive(true);
         OverworldUI.SetActive(true);
         PlayerDeath.SetActive(false);
         Potion1 = GameObject.FindWithTag("Potion1");
@@ -292,7 +297,7 @@ public void Start()
     }
     public void BattleState()
     {
-        
+        GlobalVolume.SetActive(false);
         OverworldUI.SetActive(false);
         player.SetActive(false);
 
