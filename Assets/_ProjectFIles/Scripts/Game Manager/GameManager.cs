@@ -106,7 +106,7 @@ public class GameManager : MonoBehaviour
 public void Start()
     {
         Initialise();
-        
+
     }
 
     public void Initialise()
@@ -119,28 +119,18 @@ public void Start()
         }
         else
         {
-  
-            if(battleSystem == null)
-            {
-                battleSystem = GameObject.FindWithTag("BattleUICanvas");
-                Debug.Log("Found Battle System");
-
-            }
 
             if (GameObject.FindWithTag("BattleSystem") != null)
             {
+                battleSystem = GameObject.FindWithTag("BattleUICanvas");
                 battleScript = GameObject.FindWithTag("BattleSystem").GetComponent<BattleSystem>();
                 Debug.Log("Found Battle System");
-
+                battleSystem.SetActive(false);
             }
             else
             {
                 Debug.Log("No Battle System");
-            }
-            if (battleSystem != null)
-            {
-                battleSystem.SetActive(false);
-            }
+            }         
             if (player == null)
             {
                 player = GameObject.FindWithTag("Player");
@@ -305,12 +295,15 @@ public void Start()
         
         OverworldUI.SetActive(false);
         player.SetActive(false);
+
         if (battleSystem != null)
         {
             battleSystem.SetActive(true);
         }
         else
         {
+            battleSystem.SetActive(true);
+            
         }
 
 
