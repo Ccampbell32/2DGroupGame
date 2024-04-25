@@ -30,6 +30,7 @@ TagManager:
   - DeathUI
   - DeathScreen
   - Potion2
+  - LevelComplete
   layers:
   - Default
   - TransparentFX
