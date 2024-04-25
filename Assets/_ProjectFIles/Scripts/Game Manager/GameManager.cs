@@ -33,7 +33,7 @@ public class GameManager : MonoBehaviour
     public GameObject battleSystem; //battle system object - canvas to turn it on/off
     public BattleSystem battleScript; //battle system script to access the battle functions
     public GameObject GlobalVolume;
-
+    public DontDestroyMusic musicScript;
 
 
     //player stats
@@ -580,9 +580,12 @@ public void Start()
         MaxXP = 10;
         CurrentXP = 0;
         BossKeyObtained = false;
+        BossDoorOpened = false; 
         currentamountofKeys = 0;
         currentamountofPotions = 0;
         Potion1Collected = false;
+        Potion2Collected = false;
+        DontDestroyMusic.musicExists = false;
     }
     #endregion
 }

@@ -5,7 +5,7 @@ using UnityEngine;
 public class DontDestroyMusic : MonoBehaviour
 {
     public GameManager gameManager;
-    private static bool musicExists = false; // Flag to check if music already exists
+    public static bool musicExists = false; 
 
     private void Awake()
     {
