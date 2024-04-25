@@ -56,7 +56,10 @@ public class BossDoor : MonoBehaviour
         if (gameManager.BossDoorOpened == true )
         {
             animator.SetBool("isOpened", true);
-            detector.enabled = false;
+            if (detector != null)
+            {
+                detector.enabled = false;
+            }
         }
     }
 
