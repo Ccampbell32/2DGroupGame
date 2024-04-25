@@ -27,7 +27,10 @@ public class BossCollider : MonoBehaviour
         }
         if (battleSystem != null)
         {
-            battleSystem = GameObject.FindWithTag("BattleSystem").GetComponent<BattleSystem>(); 
+            if (GameObject.FindWithTag("BattleSystem") != null)
+            {
+                battleSystem = GameObject.FindWithTag("BattleSystem").GetComponent<BattleSystem>();
+            }
 
         }
         else
