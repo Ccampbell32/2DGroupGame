@@ -8,6 +8,7 @@ public class keyManager : MonoBehaviour
 
     public bool isPickedUp;
     public GameManager gameManager;
+    public AudioSource keyPickup;
     // Start is called before the first frame update
     
 
@@ -36,6 +37,7 @@ public class keyManager : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player") && !isPickedUp)
         {
+            keyPickup.Play();
             Destroy(gameObject);
             gameManager.IncreaseKeys(1);
             gameManager.BossKeyObtained = true;
