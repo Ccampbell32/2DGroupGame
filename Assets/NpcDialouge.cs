@@ -2,7 +2,10 @@ using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.LowLevel;
 using UnityEngine.UI;
+
 
 public class NpcDialouge : MonoBehaviour
 {
@@ -15,9 +18,11 @@ public class NpcDialouge : MonoBehaviour
     public float wordSpeed;
     public bool playerIsClose;
 
+
+
     void Update()
     {
-        if (Input.GetKeyUp(KeyCode.E) && playerIsClose)
+        if (Input.GetKeyDown(KeyCode.E) && playerIsClose)
         {
             if (dialougePanel.activeInHierarchy)
             {
@@ -85,4 +90,6 @@ public class NpcDialouge : MonoBehaviour
             zeroText();
         }
     }
+
+
 }

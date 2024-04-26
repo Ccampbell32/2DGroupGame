@@ -13,6 +13,7 @@ public class PlayerMovement : MonoBehaviour
     private Animator animator;
     public PlayerInput playerinput;
     public GameManager gameManager;
+    public bool interact = false;
 
 
 
@@ -60,9 +61,9 @@ public class PlayerMovement : MonoBehaviour
 
 
     }
-    /*private void Update()
+    private void Update()
     {
-        if (Input.GetKey(KeyCode.E))
+       /* if (Input.GetKey(KeyCode.E))
         {
             animator.SetBool("Interact", true);
 
@@ -72,10 +73,11 @@ public class PlayerMovement : MonoBehaviour
         {
             animator.SetBool("Interact", false);
 
-        }
+        }*/
 
 
 
     }
-    */
+    
+
 }
