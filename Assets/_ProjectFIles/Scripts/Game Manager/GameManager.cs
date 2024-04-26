@@ -34,6 +34,7 @@ public class GameManager : MonoBehaviour
     public BattleSystem battleScript; //battle system script to access the battle functions
     public GameObject GlobalVolume;
     public DontDestroyMusic musicScript;
+    public AudioSource gameOver;
 
 
     //player stats
@@ -279,6 +280,7 @@ public void Start()
   
     public IEnumerator DeathScene()
     {
+        gameOver.Play();
         player.SetActive(false);
         OverworldUI.SetActive(false);
         playerMove.enabled = false;
@@ -567,6 +569,7 @@ public void Start()
     #region Death
     public void resetScene()
     {
+        
         ResetStats();
         OverworldUI.SetActive(true);
         SceneManager.LoadScene(0);
