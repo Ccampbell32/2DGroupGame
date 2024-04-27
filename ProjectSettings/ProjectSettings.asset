@@ -8,12 +8,12 @@ PlayerSettings:
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   AndroidEnableSustainedPerformanceMode: 0
-  defaultScreenOrientation: 4
+  defaultScreenOrientation: 3
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: The Haters
-  productName: SandsOfDamnation
+  productName: Sands Of Damnation
   defaultCursor: {fileID: 2800000, guid: 7ebef31cc0d121b4bad3edf2bda38f0b, type: 3}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -154,8 +154,9 @@ PlayerSettings:
   resolutionScalingMode: 0
   resetResolutionOnWindowResize: 0
   androidSupportedAspectRatio: 1
-  androidMaxAspectRatio: 2.1
+  androidMaxAspectRatio: 16.9
   applicationIdentifier:
+    Android: com.TheHaters.SandsOfDamnation
     Standalone: com.The-Haters.SandsOfDamnation
   buildNumber:
     Standalone: 0

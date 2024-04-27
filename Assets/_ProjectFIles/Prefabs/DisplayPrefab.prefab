@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2456247379900514142}
   - component: {fileID: 4841900356679106804}
   m_Layer: 0
-  m_Name: ChibiGod_12
+  m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -177,8 +177,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4909130336534168789}
+  - component: {fileID: 8140767672045583681}
   m_Layer: 0
-  m_Name: ChibiPrefab
+  m_Name: DisplayPrefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -201,3 +202,21 @@ Transform:
   - {fileID: 2456247379900514142}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8140767672045583681
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5071686078479655740}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c9a1f7ba266ec247bb034e252a2c271, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialougePanel: {fileID: 0}
+  dialougeText: {fileID: 0}
+  dialouge: []
+  contButton: {fileID: 0}
+  wordSpeed: 0
+  playerIsClose: 0
