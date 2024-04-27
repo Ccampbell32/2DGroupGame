@@ -33,7 +33,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 7.106392, y: 3.1330266, z: 0}
-  m_LocalScale: {x: 2.1137, y: 2.1137, z: 2.1137}
+  m_LocalScale: {x: 2.1137, y: 2.1137, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3727095458512658847}
@@ -127,6 +127,7 @@ MonoBehaviour:
   speed: 4
   playerinput: {fileID: 1754463543940484820}
   gameManager: {fileID: 0}
+  interact: 0
 --- !u!50 &8522877117526224533
 Rigidbody2D:
   serializedVersion: 4

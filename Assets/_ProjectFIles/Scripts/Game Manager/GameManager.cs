@@ -226,7 +226,10 @@ public void Start()
             
             battleSystem.SetActive(false);
         }
+
         player.SetActive(true);
+        
+
         Initialise();
 
         if (battleSystem != null)
@@ -302,6 +305,8 @@ public void Start()
     {
         GlobalVolume.SetActive(false);
         OverworldUI.SetActive(false);
+
+        
         player.SetActive(false);
 
         if (battleSystem != null)
