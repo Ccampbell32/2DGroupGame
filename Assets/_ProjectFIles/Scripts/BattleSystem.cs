@@ -1,8 +1,11 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using Random = UnityEngine.Random;
+
 public enum BattleState { START, PLAYERTURN, ENEMYTURN, WON, LOST }
 
 public class BattleSystem : MonoBehaviour
@@ -80,7 +83,6 @@ public class BattleSystem : MonoBehaviour
         attack4 = GameObject.FindWithTag("Attack4");
        
     }
-    
 
     IEnumerator SetupBattle()
     {
@@ -359,6 +361,7 @@ public class BattleSystem : MonoBehaviour
         }
         Debug.Log("PrintOnDisable: script was disabled");
         movesAnim.gameObject.SetActive(true);
+        gameManager.player.GetComponent<PlayerMovement>().FreezeMovement(true); //freeze the player so they don't continue to move
     }
      void OnEnable()
      {
