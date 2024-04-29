@@ -40,6 +40,7 @@ public class NpcDialouge : MonoBehaviour
         {
             contButton.SetActive(true);
         }
+
     }
 
     public void zeroText()
