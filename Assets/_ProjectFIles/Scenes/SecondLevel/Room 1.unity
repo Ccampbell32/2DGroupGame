@@ -354,7 +354,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: BattleGodDisplay
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8140767672045583681, guid: 649a7380f15983046a6ff1a805ea620a, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -550,7 +551,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: BattleDeformedAngelDisplay
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8140767672045583681, guid: 649a7380f15983046a6ff1a805ea620a, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -1099,7 +1101,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: ChibiArmouredAngelDisplay
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8140767672045583681, guid: 649a7380f15983046a6ff1a805ea620a, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -2116,7 +2119,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: ChibiGodDisplay
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8140767672045583681, guid: 649a7380f15983046a6ff1a805ea620a, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -2380,7 +2384,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: BattleArmouredAngelDisplay
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8140767672045583681, guid: 649a7380f15983046a6ff1a805ea620a, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -2632,7 +2637,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: ChibiDeformedAngelDisplay
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8140767672045583681, guid: 649a7380f15983046a6ff1a805ea620a, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
