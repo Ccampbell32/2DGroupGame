@@ -20,7 +20,6 @@ public class PlayerMovement : MonoBehaviour
     private void Start()
     {
         gameManager.Start();
-        
     }
     private void Awake()
     {
@@ -78,6 +77,16 @@ public class PlayerMovement : MonoBehaviour
 
 
     }
-    
 
+    public void FreezeMovement(bool freeze)
+    {
+        if(freeze)
+        {
+            movement = Vector2.zero; // Stop the movement
+        }
+        else
+        {
+            // Do nothing, movement will be updated in the OnMovement method
+        }
+    }
 }
