@@ -4263,6 +4263,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7e050f82dea489f42b7a6763e0fe2232, type: 3}
+--- !u!1 &842168811 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4203675823810711034, guid: 7e050f82dea489f42b7a6763e0fe2232, type: 3}
+  m_PrefabInstance: {fileID: 842168810}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &866021011
 GameObject:
   m_ObjectHideFlags: 0
@@ -10342,6 +10347,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5714840729711104450, guid: f3efd507609f0a141bd9dd2901de785a, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5944139346733364961, guid: f3efd507609f0a141bd9dd2901de785a, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -11087,6 +11096,10 @@ PrefabInstance:
       propertyPath: OverworldUI
       value: 
       objectReference: {fileID: 1217872966}
+    - target: {fileID: 7126946142340257471, guid: 7ee65d35981fdf748a1e31418d6a4bd8, type: 3}
+      propertyPath: GlobalVolume
+      value: 
+      objectReference: {fileID: 842168811}
     - target: {fileID: 7126946142340257471, guid: 7ee65d35981fdf748a1e31418d6a4bd8, type: 3}
       propertyPath: HealthSlider
       value: 

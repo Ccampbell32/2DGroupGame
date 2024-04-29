@@ -8,7 +8,7 @@ public class BossDoor : MonoBehaviour
 
     public BoxCollider2D detector;
     private Animator animator;
-
+    public AudioSource doorOpening;
 
     private void Awake()
     {
@@ -36,6 +36,7 @@ public class BossDoor : MonoBehaviour
     {
         
         animator.SetBool("Opening", true);
+        doorOpening.Play();
         
         yield return new WaitForSeconds(3f);
         gameManager.BossDoorOpened = true;

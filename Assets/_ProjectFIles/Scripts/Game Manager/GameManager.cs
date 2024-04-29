@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEditor.Rendering;
-using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -33,6 +32,10 @@ public class GameManager : MonoBehaviour
     
     public GameObject battleSystem; //battle system object - canvas to turn it on/off
     public BattleSystem battleScript; //battle system script to access the battle functions
+    public GameObject GlobalVolume;
+    public DontDestroyMusic musicScript;
+    public AudioSource gameOver;
+
 
     //player stats
     public string unitname = "Ramesses";
@@ -185,7 +188,11 @@ public void Start()
                 }
 
             }
-           
+            if (GlobalVolume == null)
+            {
+                GlobalVolume = GameObject.FindWithTag("GlobalVol");
+
+            }
             {
                 
             }
@@ -209,7 +216,7 @@ public void Start()
     #region GameStates
     private void Overworld()
     {
-        
+        GlobalVolume.SetActive(true);
         OverworldUI.SetActive(true);
         PlayerDeath.SetActive(false);
         Potion1 = GameObject.FindWithTag("Potion1");
@@ -219,7 +226,10 @@ public void Start()
             
             battleSystem.SetActive(false);
         }
+
         player.SetActive(true);
+        
+
         Initialise();
 
         if (battleSystem != null)
@@ -273,6 +283,7 @@ public void Start()
   
     public IEnumerator DeathScene()
     {
+        gameOver.Play();
         player.SetActive(false);
         OverworldUI.SetActive(false);
         playerMove.enabled = false;
@@ -292,8 +303,10 @@ public void Start()
     }
     public void BattleState()
     {
-        
+        GlobalVolume.SetActive(false);
         OverworldUI.SetActive(false);
+
+        
         player.SetActive(false);
 
         if (battleSystem != null)
@@ -561,6 +574,7 @@ public void Start()
     #region Death
     public void resetScene()
     {
+        
         ResetStats();
         OverworldUI.SetActive(true);
         SceneManager.LoadScene(0);
@@ -574,9 +588,12 @@ public void Start()
         MaxXP = 10;
         CurrentXP = 0;
         BossKeyObtained = false;
+        BossDoorOpened = false; 
         currentamountofKeys = 0;
         currentamountofPotions = 0;
         Potion1Collected = false;
+        Potion2Collected = false;
+        DontDestroyMusic.musicExists = false;
     }
     #endregion
 }

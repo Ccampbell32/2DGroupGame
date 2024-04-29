@@ -5,15 +5,23 @@ using UnityEngine;
 public class DontDestroyMusic : MonoBehaviour
 {
     public GameManager gameManager;
+    public static bool musicExists = false; 
+
     private void Awake()
     {
-        GameObject[] musicObj = GameObject.FindGameObjectsWithTag("OverworldMusic");
-        if (musicObj.Length > 1 )
+        if (!musicExists)
+        {
+            DontDestroyOnLoad(this.gameObject);
+            musicExists = true;
+           
+        }
+        else
         {
             Destroy(this.gameObject);
         }
-        DontDestroyOnLoad(this.gameObject);
     }
+
+
     private void Start()
     {
         gameManager = GameObject.FindWithTag("GameManager").GetComponent<GameManager>();

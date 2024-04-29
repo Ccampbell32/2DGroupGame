@@ -1098,10 +1098,10 @@ MonoBehaviour:
 
     D = Right
 
-    E = Interact with
-    npc
+    E = Interact
 
-    Left Click =  Interact with menus'
+    Left
+    Click =  Interact (Battle)'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7da1670864f30de4195392e311cf940e, type: 2}
   m_sharedMaterial: {fileID: 6129376335330019458, guid: 7da1670864f30de4195392e311cf940e, type: 2}
@@ -1295,7 +1295,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: e18c58d832994c04492dcd8262c16ea1, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 1
   Mute: 0

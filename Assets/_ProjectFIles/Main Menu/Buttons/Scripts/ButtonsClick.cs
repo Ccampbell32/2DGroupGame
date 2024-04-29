@@ -11,7 +11,7 @@ public class ButtonsClick : MonoBehaviour
     {
         
 
-
+ 
     }
         
     public void PlayButton()
