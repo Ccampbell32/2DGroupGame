@@ -55,6 +55,8 @@ public class GameManager : MonoBehaviour
     public Slider XPSlider;
     public GameObject OverworldUI;
     public Slider HealthSlider;
+    
+ 
 
     //Potion collection
     public TMP_Text potionsHeld;
@@ -194,7 +196,7 @@ public void Start()
 
             }
             {
-                
+                                                                        
             }
             PlayerLevel();
             XPLevelling();
@@ -211,11 +213,14 @@ public void Start()
         keysHeld.text = "x" + currentamountofKeys.ToString();
     }
 
+    
     #endregion
-   
+
     #region GameStates
     private void Overworld()
     {
+        
+
         GlobalVolume.SetActive(true);
         OverworldUI.SetActive(true);
         PlayerDeath.SetActive(false);
@@ -227,8 +232,11 @@ public void Start()
             battleSystem.SetActive(false);
         }
 
+
+
         player.SetActive(true);
-        
+
+
 
         Initialise();
 
@@ -303,10 +311,12 @@ public void Start()
     }
     public void BattleState()
     {
+
         GlobalVolume.SetActive(false);
         OverworldUI.SetActive(false);
 
-        
+
+
         player.SetActive(false);
 
         if (battleSystem != null)
@@ -535,6 +545,7 @@ public void Start()
 
     void Update()
     {     
+        
 
         if (HealthSlider != null)
         {
