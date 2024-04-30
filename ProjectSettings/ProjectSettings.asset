@@ -39,7 +39,11 @@ PlayerSettings:
     y: 0
     width: 1
     height: 1
-  m_SplashScreenLogos: []
+  m_SplashScreenLogos:
+  - logo: {fileID: 21300000, guid: dfa5b1865a113d74597be4638df95416, type: 3}
+    duration: 2
+  - logo: {fileID: 21300000, guid: 98c8f5b8a79192f4da5683a342a8a6d8, type: 3}
+    duration: 2
   m_VirtualRealitySplashScreen: {fileID: 0}
   m_HolographicTrackingLossScreen: {fileID: 0}
   defaultScreenWidth: 1920
@@ -157,7 +161,7 @@ PlayerSettings:
   androidMaxAspectRatio: 16.9
   applicationIdentifier:
     Android: com.TheHaters.SandsOfDamnation
-    Standalone: com.The-Haters.SandsOfDamnation
+    Standalone: com.The-Haters.Sands-Of-Damnation
   buildNumber:
     Standalone: 0
     VisionOS: 0
@@ -736,7 +740,7 @@ PlayerSettings:
   ps4IncludedModules: []
   ps4attribVROutputEnabled: 0
   monoEnv: 
-  splashScreenBackgroundSourceLandscape: {fileID: 21300000, guid: 132ac4a32e66e3245878fb68de1c410a, type: 3}
+  splashScreenBackgroundSourceLandscape: {fileID: 21300000, guid: 132d516a23378ab4faf4c8602182b8bf, type: 3}
   splashScreenBackgroundSourcePortrait: {fileID: 0}
   blurSplashScreenBackground: 0
   spritePackerPolicy: 
