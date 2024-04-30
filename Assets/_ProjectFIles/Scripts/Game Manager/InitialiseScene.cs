@@ -65,7 +65,7 @@ public class InitialiseScene : MonoBehaviour{
        
         if(initialisePlayer){
             
-            
+
         }
     }
 
@@ -100,6 +100,10 @@ public class InitialiseScene : MonoBehaviour{
                 {
                     player = Instantiate(playerPrefab, playerSpawnPoint1.position, playerSpawnPoint1.rotation);
                 }
+                if (gameManager.CurrentScene != FromScene1 && gameManager.CurrentScene != FromScene2 && gameManager.CurrentScene != FromScene3 && gameManager.CurrentScene != FromScene4)
+            {
+                     player = Instantiate(playerPrefab, playerSpawnPoint1.position, playerSpawnPoint1.rotation);
+            }
             
             
             Debug.Log("Player instantiated!");

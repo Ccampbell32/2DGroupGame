@@ -276,8 +276,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: You Died
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 7da1670864f30de4195392e311cf940e, type: 2}
-  m_sharedMaterial: {fileID: 6129376335330019458, guid: 7da1670864f30de4195392e311cf940e, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 981edb1c64325024381a11417ed2f546, type: 2}
+  m_sharedMaterial: {fileID: 6129376335330019458, guid: 981edb1c64325024381a11417ed2f546, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
