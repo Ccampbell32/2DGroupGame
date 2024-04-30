@@ -18,12 +18,16 @@ public class NpcDialouge : MonoBehaviour
     public float wordSpeed;
     public bool playerIsClose;
 
+    public GameObject eButton;
 
 
     void Update()
     {
+
+
         if (Input.GetKeyDown(KeyCode.E) && playerIsClose)
         {
+            eButton.SetActive(false);
             if (dialougePanel.activeInHierarchy)
             {
                 zeroText();
@@ -39,6 +43,15 @@ public class NpcDialouge : MonoBehaviour
         if (dialougeText.text == dialouge[index])
         {
             contButton.SetActive(true);
+        }
+        if (playerIsClose) 
+        { 
+          eButton.SetActive(true);
+        
+        }
+        else
+        {
+            eButton.SetActive(false);
         }
 
     }
